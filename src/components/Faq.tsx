@@ -1,5 +1,4 @@
 import { useId, useState } from 'react';
-import { ChevronDown } from 'lucide-react';
 
 /** Аккордеон: открыт один вопрос; кнопки с aria-expanded/aria-controls, стрелки ↑↓ между вопросами */
 export function Faq({ items }: { items: { q: string; a: string }[] }) {
@@ -19,7 +18,7 @@ export function Faq({ items }: { items: { q: string; a: string }[] }) {
                   e.preventDefault();
                   document.getElementById(`${uid}-${(n + items.length) % items.length}-b`)?.focus();
                 }}>
-                <span>{it.q}</span><ChevronDown aria-hidden="true" />
+                <span>{it.q}</span><span className="acc-icon" aria-hidden="true" />
               </button>
             </h3>
             <div id={`${id}-p`} role="region" aria-labelledby={`${id}-b`} className={`faq-panel${isOpen ? ' is-open' : ''}`}>

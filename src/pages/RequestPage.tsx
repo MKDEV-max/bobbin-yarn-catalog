@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import { Trash2 } from 'lucide-react';
 import { Seo } from '../components/Seo';
+import { PageHead } from './PageHead';
 import { Bobbin } from '../components/Bobbin';
 import { ContactForm } from '../components/ContactForm';
-import { asset } from '../components/ProductCard';
-import { colorById, productById, productSubtitle, productTitle } from '../data/catalog';
+import { ColorChip } from '../components/ColorSwatch';
+import { productById, productSubtitle, productTitle } from '../data/catalog';
 import { useStore, type Unit } from '../state/store';
 
 export function RequestPage() {
@@ -19,13 +20,7 @@ export function RequestPage() {
   return (
     <>
       <Seo title="Заявка на пряжу" description="Список выбранной бобинной пряжи: укажите объём по каждой позиции и отправьте заявку на расчёт." noindex />
-      <div className="page-head">
-        <div className="container">
-          <nav className="breadcrumbs" aria-label="Хлебные крошки"><ol><li><Link to="/">Главная</Link></li><li aria-current="page">Заявка</li></ol></nav>
-          <h1>Заявка</h1>
-          <p className="lead">Укажите объём по каждой позиции и контакты — менеджер ответит с ценой, наличием и условиями.</p>
-        </div>
-      </div>
+      <PageHead title="Заявка" crumb="Заявка" lead={<>Укажите объём по каждой позиции и контакты — менеджер ответит с ценой, наличием и условиями.</>} />
 
       <section className="section" style={{ paddingTop: 'var(--space-6)' }}>
         <div className="container request-layout">
@@ -38,12 +33,11 @@ export function RequestPage() {
                 </div>
                 <ul className="req-list">
                   {items.map(({ p, qty, unit, comment }) => {
-                    const c = p.colorId ? colorById.get(p.colorId) : null;
                     return (
                       <li key={p.id} className="req-item">
                         <div className="req-visual">
                           <Bobbin hex={p.hex} type={p.yarnType} className="req-bobbin" />
-                          {c && <img src={asset(c.swatch)} width={220} height={99} alt="" />}
+                          <ColorChip hex={p.hex} size="md" />
                         </div>
                         <div className="req-main">
                           <Link to={`/product/${p.id}`} className="req-title">{productTitle(p)}</Link>

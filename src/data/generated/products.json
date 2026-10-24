@@ -6,7 +6,7 @@
   "colorMatch": "exact",
   "cardName": "авантюрин",
   "cardCode": "516/2",
-  "hex": "#7A2E24",
+  "hex": "#903B31",
   "group": "red",
   "groups": [
    "red"
@@ -202,7 +202,7 @@
   "colorMatch": "exact",
   "cardName": "антрацит",
   "cardCode": "816/М",
-  "hex": "#1A1B1C",
+  "hex": "#252528",
   "group": "melange",
   "groups": [
    "melange",
@@ -243,7 +243,7 @@
   "colorMatch": "exact",
   "cardName": "арктика",
   "cardCode": "530/3",
-  "hex": "#061E57",
+  "hex": "#0B2A77",
   "group": "blue",
   "groups": [
    "blue"
@@ -396,7 +396,7 @@
   "colorMatch": "exact",
   "cardName": "асфальт",
   "cardCode": "569/М",
-  "hex": "#2F2F2E",
+  "hex": "#3F4041",
   "group": "melange",
   "groups": [
    "melange",
@@ -473,10 +473,10 @@
   "colorMatch": "exact",
   "cardName": "бисер",
   "cardCode": "419/4",
-  "hex": "#828587",
-  "group": "grey",
+  "hex": "#A4ABBA",
+  "group": "blue",
   "groups": [
-   "grey"
+   "blue"
   ],
   "composition": "Шерсть 30%, ПАН 70%",
   "compositionSource": "Шерсть-30%, ПАН-70%",
@@ -513,7 +513,7 @@
   "colorMatch": "exact",
   "cardName": "болотный",
   "cardCode": "532/3",
-  "hex": "#0A0B05",
+  "hex": "#12150C",
   "group": "black",
   "groups": [
    "black"
@@ -591,10 +591,10 @@
   "colorMatch": "exact",
   "cardName": "брусника",
   "cardCode": "595/9",
-  "hex": "#642B38",
-  "group": "red",
+  "hex": "#7A3A4B",
+  "group": "pink",
   "groups": [
-   "red"
+   "pink"
   ],
   "composition": "ПАН 100% (акрил)",
   "compositionSource": "ПАН-100%",
@@ -669,7 +669,7 @@
   "colorMatch": "exact",
   "cardName": "валентинка",
   "cardCode": "513/5",
-  "hex": "#A70E1F",
+  "hex": "#BF1329",
   "group": "red",
   "groups": [
    "red"
@@ -707,7 +707,7 @@
   "colorMatch": "exact",
   "cardName": "василек",
   "cardCode": "520/0",
-  "hex": "#17296B",
+  "hex": "#1D3281",
   "group": "blue",
   "groups": [
    "blue"
@@ -747,7 +747,7 @@
   "colorMatch": "exact",
   "cardName": "василек",
   "cardCode": "520/0",
-  "hex": "#17296B",
+  "hex": "#1D3281",
   "group": "blue",
   "groups": [
    "blue"
@@ -785,10 +785,10 @@
   "colorMatch": "exact",
   "cardName": "вереск",
   "cardCode": "448/6",
-  "hex": "#6D505B",
-  "group": "pink",
+  "hex": "#896E80",
+  "group": "grey",
   "groups": [
-   "pink"
+   "grey"
   ],
   "composition": "Шерсть 30%, ПАН 70%",
   "compositionSource": "Шерсть-30%, ПАН-70%",
@@ -905,7 +905,7 @@
   "colorMatch": "exact",
   "cardName": "винная ягода",
   "cardCode": "446/6",
-  "hex": "#56191C",
+  "hex": "#6B2128",
   "group": "red",
   "groups": [
    "red"
@@ -945,7 +945,7 @@
   "colorMatch": "exact",
   "cardName": "виола",
   "cardCode": "543/7",
-  "hex": "#271154",
+  "hex": "#32196B",
   "group": "violet",
   "groups": [
    "violet"
@@ -983,7 +983,7 @@
   "colorMatch": "exact",
   "cardName": "вишневый",
   "cardCode": "541/0",
-  "hex": "#420509",
+  "hex": "#50080D",
   "group": "red",
   "groups": [
    "red"
@@ -1063,7 +1063,7 @@
   "colorMatch": "exact",
   "cardName": "габардин",
   "cardCode": "517/1",
-  "hex": "#202C3E",
+  "hex": "#2C384F",
   "group": "blue",
   "groups": [
    "blue"
@@ -1103,7 +1103,7 @@
   "colorMatch": "exact",
   "cardName": "габардин",
   "cardCode": "517/1",
-  "hex": "#202C3E",
+  "hex": "#2C384F",
   "group": "blue",
   "groups": [
    "blue"
@@ -1141,7 +1141,7 @@
   "colorMatch": "exact",
   "cardName": "георгин",
   "cardCode": "542/5",
-  "hex": "#4F151C",
+  "hex": "#601D27",
   "group": "red",
   "groups": [
    "red"
@@ -1259,7 +1259,7 @@
   "colorMatch": "exact",
   "cardName": "гжель",
   "cardCode": "450/3",
-  "hex": "#1A2F64",
+  "hex": "#274184",
   "group": "blue",
   "groups": [
    "blue"
@@ -1339,10 +1339,10 @@
   "colorMatch": "exact",
   "cardName": "горный",
   "cardCode": "320/6",
-  "hex": "#A19276",
-  "group": "sand",
+  "hex": "#BFB3A0",
+  "group": "cream",
   "groups": [
-   "sand"
+   "cream"
   ],
   "composition": "Шерсть 30%, ПАН 70%",
   "compositionSource": "Шерсть-30%, ПАН-70%",
@@ -1379,7 +1379,7 @@
   "colorMatch": "abbr",
   "cardName": "горький шоколад",
   "cardCode": "340/5",
-  "hex": "#26221C",
+  "hex": "#312C27",
   "group": "black",
   "groups": [
    "black",
@@ -1506,7 +1506,7 @@
   "colorMatch": "exact",
   "cardName": "джинсовый",
   "cardCode": "877/М",
-  "hex": "#252A35",
+  "hex": "#323746",
   "group": "melange",
   "groups": [
    "melange"
@@ -1546,7 +1546,7 @@
   "colorMatch": "exact",
   "cardName": "джинсовый",
   "cardCode": "877/М",
-  "hex": "#252A35",
+  "hex": "#323746",
   "group": "melange",
   "groups": [
    "melange"
@@ -1584,10 +1584,10 @@
   "colorMatch": "exact",
   "cardName": "дипломат",
   "cardCode": "594/2",
-  "hex": "#2A2B2A",
-  "group": "black",
+  "hex": "#363839",
+  "group": "grey",
   "groups": [
-   "black"
+   "grey"
   ],
   "composition": "Шерсть 30%, ПАН 70%",
   "compositionSource": "Шерсть-30%, ПАН-70%",
@@ -1624,10 +1624,10 @@
   "colorMatch": "exact",
   "cardName": "дипломат",
   "cardCode": "594/2",
-  "hex": "#2A2B2A",
-  "group": "black",
+  "hex": "#363839",
+  "group": "grey",
   "groups": [
-   "black"
+   "grey"
   ],
   "composition": "ПАН 100% (акрил)",
   "compositionSource": "ПАН-100%",
@@ -1742,7 +1742,7 @@
   "colorMatch": "exact",
   "cardName": "дыня",
   "cardCode": "361/7",
-  "hex": "#CAA808",
+  "hex": "#E6C813",
   "group": "yellow",
   "groups": [
    "yellow"
@@ -1782,7 +1782,7 @@
   "colorMatch": "exact",
   "cardName": "ежевика",
   "cardCode": "544/4",
-  "hex": "#2B1A25",
+  "hex": "#372230",
   "group": "red",
   "groups": [
    "red"
@@ -1822,7 +1822,7 @@
   "colorMatch": "exact",
   "cardName": "ежевика",
   "cardCode": "544/4",
-  "hex": "#2B1A25",
+  "hex": "#372230",
   "group": "red",
   "groups": [
    "red"
@@ -1978,7 +1978,7 @@
   "colorMatch": "abbr",
   "cardName": "изумрудный город",
   "cardCode": "529/2",
-  "hex": "#05535A",
+  "hex": "#0A6B76",
   "group": "turquoise",
   "groups": [
    "turquoise"
@@ -2020,10 +2020,10 @@
   "colorMatch": "exact",
   "cardName": "изысканный кофейный",
   "cardCode": "348/3",
-  "hex": "#2B2727",
-  "group": "black",
+  "hex": "#373233",
+  "group": "grey",
   "groups": [
-   "black",
+   "grey",
    "brown"
   ],
   "composition": "ПАН 100% (акрил)",
@@ -2059,7 +2059,7 @@
   "colorMatch": "exact",
   "cardName": "императорский",
   "cardCode": "522/9",
-  "hex": "#1F171E",
+  "hex": "#281F29",
   "group": "black",
   "groups": [
    "black"
@@ -2099,7 +2099,7 @@
   "colorMatch": "exact",
   "cardName": "испанский",
   "cardCode": "558/4",
-  "hex": "#0B2E2B",
+  "hex": "#153F3E",
   "group": "turquoise",
   "groups": [
    "turquoise"
@@ -2139,7 +2139,7 @@
   "colorMatch": "exact",
   "cardName": "испанский",
   "cardCode": "558/4",
-  "hex": "#0B2E2B",
+  "hex": "#153F3E",
   "group": "turquoise",
   "groups": [
    "turquoise"
@@ -2177,7 +2177,7 @@
   "colorMatch": "exact",
   "cardName": "камелия",
   "cardCode": "537/7",
-  "hex": "#911857",
+  "hex": "#B02B77",
   "group": "pink",
   "groups": [
    "pink"
@@ -2215,7 +2215,7 @@
   "colorMatch": "exact",
   "cardName": "капучино",
   "cardCode": "592/6",
-  "hex": "#624728",
+  "hex": "#7A5A38",
   "group": "brown",
   "groups": [
    "brown"
@@ -2293,7 +2293,7 @@
   "colorMatch": "exact",
   "cardName": "кедр",
   "cardCode": "531/2",
-  "hex": "#151E23",
+  "hex": "#1C282E",
   "group": "black",
   "groups": [
    "black"
@@ -2371,7 +2371,7 @@
   "colorMatch": "exact",
   "cardName": "киви",
   "cardCode": "457/1",
-  "hex": "#3E5739",
+  "hex": "#557652",
   "group": "green",
   "groups": [
    "green"
@@ -2447,10 +2447,10 @@
   "colorMatch": "exact",
   "cardName": "клевер",
   "cardCode": "595/1",
-  "hex": "#9E6268",
-  "group": "red",
+  "hex": "#BA7B8B",
+  "group": "pink",
   "groups": [
-   "red"
+   "pink"
   ],
   "composition": "ПАН 100% (акрил)",
   "compositionSource": "ПАН-100%",
@@ -2485,7 +2485,7 @@
   "colorMatch": "exact",
   "cardName": "клеверная дымка",
   "cardCode": "595/3",
-  "hex": "#7E5B5E",
+  "hex": "#9E7A82",
   "group": "red",
   "groups": [
    "red"
@@ -2605,10 +2605,10 @@
   "colorMatch": "abbr",
   "cardName": "кокосовое молоко",
   "cardCode": "565/5",
-  "hex": "#A59C85",
-  "group": "sand",
+  "hex": "#C6C2B9",
+  "group": "grey",
   "groups": [
-   "sand"
+   "grey"
   ],
   "composition": "ПАН 100% (акрил)",
   "compositionSource": "ПАН-100%",
@@ -2685,7 +2685,7 @@
   "colorMatch": "exact",
   "cardName": "коньяк",
   "cardCode": "318/3",
-  "hex": "#483025",
+  "hex": "#593E32",
   "group": "brown",
   "groups": [
    "brown"
@@ -2927,7 +2927,7 @@
   "colorMatch": "exact",
   "cardName": "королевский синий",
   "cardCode": "607/5",
-  "hex": "#263552",
+  "hex": "#324568",
   "group": "blue",
   "groups": [
    "blue"
@@ -2965,7 +2965,7 @@
   "colorMatch": "exact",
   "cardName": "космос",
   "cardCode": "596/6",
-  "hex": "#3D459C",
+  "hex": "#4E59C0",
   "group": "blue",
   "groups": [
    "blue"
@@ -3003,7 +3003,7 @@
   "colorMatch": "exact",
   "cardName": "кофейный",
   "cardCode": "743/1",
-  "hex": "#5A5750",
+  "hex": "#75736C",
   "group": "melange",
   "groups": [
    "melange",
@@ -3044,7 +3044,7 @@
   "colorMatch": "exact",
   "cardName": "кофейный",
   "cardCode": "743/1",
-  "hex": "#5A5750",
+  "hex": "#75736C",
   "group": "melange",
   "groups": [
    "melange",
@@ -3083,7 +3083,7 @@
   "colorMatch": "exact",
   "cardName": "красный мак",
   "cardCode": "513/2",
-  "hex": "#970B0D",
+  "hex": "#AD1115",
   "group": "red",
   "groups": [
    "red"
@@ -3163,10 +3163,10 @@
   "colorMatch": "exact",
   "cardName": "лагуна",
   "cardCode": "729/7",
-  "hex": "#0C343F",
-  "group": "turquoise",
+  "hex": "#144454",
+  "group": "blue",
   "groups": [
-   "turquoise"
+   "blue"
   ],
   "composition": "Шерсть 30%, ПАН 70%",
   "compositionSource": "Шерсть-30%, ПАН-70%",
@@ -3243,7 +3243,7 @@
   "colorMatch": "exact",
   "cardName": "ламинария",
   "cardCode": "369/2",
-  "hex": "#0C0F08",
+  "hex": "#151911",
   "group": "black",
   "groups": [
    "black"
@@ -3283,7 +3283,7 @@
   "colorMatch": "exact",
   "cardName": "лед",
   "cardCode": "560/1",
-  "hex": "#6FB2AA",
+  "hex": "#87D3DC",
   "group": "turquoise",
   "groups": [
    "turquoise"
@@ -3439,7 +3439,7 @@
   "colorMatch": "exact",
   "cardName": "м.синий",
   "cardCode": "571/2",
-  "hex": "#0C0C13",
+  "hex": "#11111A",
   "group": "black",
   "groups": [
    "black",
@@ -3522,7 +3522,7 @@
   "colorMatch": "exact",
   "cardName": "м.синий",
   "cardCode": "571/2",
-  "hex": "#0C0C13",
+  "hex": "#11111A",
   "group": "black",
   "groups": [
    "black",
@@ -3563,7 +3563,7 @@
   "colorMatch": "exact",
   "cardName": "мадера",
   "cardCode": "345/0",
-  "hex": "#43192A",
+  "hex": "#532237",
   "group": "red",
   "groups": [
    "red"
@@ -3603,7 +3603,7 @@
   "colorMatch": "exact",
   "cardName": "мармелад",
   "cardCode": "603/5",
-  "hex": "#B63E5F",
+  "hex": "#D25983",
   "group": "pink",
   "groups": [
    "pink"
@@ -3805,7 +3805,7 @@
   "colorMatch": "exact",
   "cardName": "металл",
   "cardCode": "567/4",
-  "hex": "#545551",
+  "hex": "#6B6E6E",
   "group": "grey",
   "groups": [
    "grey"
@@ -3843,7 +3843,7 @@
   "colorMatch": "exact",
   "cardName": "миндаль",
   "cardCode": "536/3",
-  "hex": "#BC698C",
+  "hex": "#D98AB9",
   "group": "pink",
   "groups": [
    "pink"
@@ -3959,7 +3959,7 @@
   "colorMatch": "exact",
   "cardName": "морская волна",
   "cardCode": "530/0",
-  "hex": "#10222F",
+  "hex": "#162D3E",
   "group": "black",
   "groups": [
    "black"
@@ -3999,7 +3999,7 @@
   "colorMatch": "exact",
   "cardName": "морская волна",
   "cardCode": "530/0",
-  "hex": "#10222F",
+  "hex": "#162D3E",
   "group": "black",
   "groups": [
    "black"
@@ -4077,7 +4077,7 @@
   "colorMatch": "abbr",
   "cardName": "мятная свежесть",
   "cardCode": "547/6",
-  "hex": "#B8DEA7",
+  "hex": "#CDFEDD",
   "group": "green",
   "groups": [
    "green"
@@ -4117,7 +4117,7 @@
   "colorMatch": "exact",
   "cardName": "нежно-голубой",
   "cardCode": "556/4",
-  "hex": "#7DA3CF",
+  "hex": "#98C4FF",
   "group": "blue",
   "groups": [
    "blue"
@@ -4155,7 +4155,7 @@
   "colorMatch": "exact",
   "cardName": "нежно-розовый",
   "cardCode": "587/6",
-  "hex": "#D291A6",
+  "hex": "#EAAED7",
   "group": "pink",
   "groups": [
    "pink"
@@ -4233,7 +4233,7 @@
   "colorMatch": "exact",
   "cardName": "нефритовый",
   "cardCode": "579/7",
-  "hex": "#151E1D",
+  "hex": "#1B2625",
   "group": "black",
   "groups": [
    "black"
@@ -4271,10 +4271,10 @@
   "colorMatch": "exact",
   "cardName": "океан",
   "cardCode": "518/5",
-  "hex": "#2D889F",
-  "group": "turquoise",
+  "hex": "#3DA7CC",
+  "group": "blue",
   "groups": [
-   "turquoise"
+   "blue"
   ],
   "composition": "Шерсть 30%, ПАН 70%",
   "compositionSource": "Шерсть-30%, ПАН-70%",
@@ -4311,10 +4311,10 @@
   "colorMatch": "exact",
   "cardName": "океан",
   "cardCode": "518/5",
-  "hex": "#2D889F",
-  "group": "turquoise",
+  "hex": "#3DA7CC",
+  "group": "blue",
   "groups": [
-   "turquoise"
+   "blue"
   ],
   "composition": "ПАН 100% (акрил)",
   "compositionSource": "ПАН-100%",
@@ -4553,7 +4553,7 @@
   "colorMatch": "exact",
   "cardName": "перванш",
   "cardCode": "519/0",
-  "hex": "#446C94",
+  "hex": "#5A89BE",
   "group": "blue",
   "groups": [
    "blue"
@@ -4629,10 +4629,9 @@
   "colorMatch": "exact",
   "cardName": "песочный",
   "cardCode": "504/0",
-  "hex": "#8D7137",
-  "group": "yellow",
+  "hex": "#AE9256",
+  "group": "sand",
   "groups": [
-   "yellow",
    "sand"
   ],
   "composition": "Шерсть 30%, ПАН 70%",
@@ -4750,10 +4749,10 @@
   "colorMatch": "exact",
   "cardName": "подсолнух",
   "cardCode": "549/3",
-  "hex": "#C88604",
-  "group": "orange",
+  "hex": "#E4A20A",
+  "group": "yellow",
   "groups": [
-   "orange"
+   "yellow"
   ],
   "composition": "ПАН 100% (акрил)",
   "compositionSource": "ПАН-100%",
@@ -4788,7 +4787,7 @@
   "colorMatch": "exact",
   "cardName": "портвейн",
   "cardCode": "446/2",
-  "hex": "#4F1B1C",
+  "hex": "#612327",
   "group": "red",
   "groups": [
    "red"
@@ -4828,7 +4827,7 @@
   "colorMatch": "exact",
   "cardName": "пруд",
   "cardCode": "433/7",
-  "hex": "#477453",
+  "hex": "#5E9372",
   "group": "green",
   "groups": [
    "green"
@@ -4946,10 +4945,9 @@
   "colorMatch": "exact",
   "cardName": "розовый лепесток",
   "cardCode": "510/2",
-  "hex": "#C15860",
-  "group": "red",
+  "hex": "#DD6E7C",
+  "group": "pink",
   "groups": [
-   "red",
    "pink"
   ],
   "composition": "ПАН 100% (акрил)",
@@ -4985,7 +4983,7 @@
   "colorMatch": "exact",
   "cardName": "розовый миндаль",
   "cardCode": "546/0",
-  "hex": "#B65D81",
+  "hex": "#D67FB0",
   "group": "pink",
   "groups": [
    "pink"
@@ -5025,7 +5023,7 @@
   "colorMatch": "exact",
   "cardName": "розовый миндаль",
   "cardCode": "546/0",
-  "hex": "#B65D81",
+  "hex": "#D67FB0",
   "group": "pink",
   "groups": [
    "pink"
@@ -5063,10 +5061,10 @@
   "colorMatch": "exact",
   "cardName": "рыжий кот",
   "cardCode": "549/0",
-  "hex": "#81350B",
-  "group": "brown",
+  "hex": "#A14A15",
+  "group": "orange",
   "groups": [
-   "brown"
+   "orange"
   ],
   "composition": "Шерсть 30%, ПАН 70%",
   "compositionSource": "Шерсть-30%, ПАН-70%",
@@ -5103,10 +5101,10 @@
   "colorMatch": "exact",
   "cardName": "рыжий кот",
   "cardCode": "549/0",
-  "hex": "#81350B",
-  "group": "brown",
+  "hex": "#A14A15",
+  "group": "orange",
   "groups": [
-   "brown"
+   "orange"
   ],
   "composition": "ПАН 100% (акрил)",
   "compositionSource": "ПАН-100%",
@@ -5181,7 +5179,7 @@
   "colorMatch": "exact",
   "cardName": "св.бордовый",
   "cardCode": "544/1",
-  "hex": "#2F171B",
+  "hex": "#402025",
   "group": "red",
   "groups": [
    "red"
@@ -5303,7 +5301,7 @@
   "colorMatch": "exact",
   "cardName": "св.серый",
   "cardCode": "565/9",
-  "hex": "#7A7A7B",
+  "hex": "#9599A5",
   "group": "grey",
   "groups": [
    "grey"
@@ -5343,7 +5341,7 @@
   "colorMatch": "exact",
   "cardName": "св.бордовый",
   "cardCode": "544/1",
-  "hex": "#2F171B",
+  "hex": "#402025",
   "group": "red",
   "groups": [
    "red"
@@ -5421,7 +5419,7 @@
   "colorMatch": "exact",
   "cardName": "св.серый",
   "cardCode": "565/9",
-  "hex": "#7A7A7B",
+  "hex": "#9599A5",
   "group": "grey",
   "groups": [
    "grey"
@@ -5499,7 +5497,7 @@
   "colorMatch": "exact",
   "cardName": "серый",
   "cardCode": "564/8",
-  "hex": "#6D6B67",
+  "hex": "#8D8E92",
   "group": "grey",
   "groups": [
    "grey"
@@ -5539,7 +5537,7 @@
   "colorMatch": "exact",
   "cardName": "серый",
   "cardCode": "564/8",
-  "hex": "#6D6B67",
+  "hex": "#8D8E92",
   "group": "grey",
   "groups": [
    "grey"
@@ -5577,7 +5575,7 @@
   "colorMatch": "exact",
   "cardName": "синий дождь",
   "cardCode": "520/7",
-  "hex": "#285495",
+  "hex": "#376BB9",
   "group": "blue",
   "groups": [
    "blue"
@@ -5617,7 +5615,7 @@
   "colorMatch": "exact",
   "cardName": "синий дождь",
   "cardCode": "520/7",
-  "hex": "#285495",
+  "hex": "#376BB9",
   "group": "blue",
   "groups": [
    "blue"
@@ -5737,10 +5735,9 @@
   "colorMatch": "exact",
   "cardName": "сиреневый туман",
   "cardCode": "539/1",
-  "hex": "#805E83",
-  "group": "pink",
+  "hex": "#9F7EAF",
+  "group": "violet",
   "groups": [
-   "pink",
    "violet"
   ],
   "composition": "ПАН 100% (акрил)",
@@ -5814,7 +5811,7 @@
   "colorMatch": "exact",
   "cardName": "сливовый",
   "cardCode": "599/8",
-  "hex": "#2D1821",
+  "hex": "#39202A",
   "group": "red",
   "groups": [
    "red"
@@ -5854,10 +5851,10 @@
   "colorMatch": "exact",
   "cardName": "снежок",
   "cardCode": "301/С",
-  "hex": "#DDD3BA",
-  "group": "cream",
+  "hex": "#F5F2F2",
+  "group": "white",
   "groups": [
-   "cream"
+   "white"
   ],
   "composition": "Шерсть 30%, ПАН 70%",
   "compositionSource": "Шерсть-30%, ПАН-70%",
@@ -5894,7 +5891,7 @@
   "colorMatch": "exact",
   "cardName": "супербелый",
   "cardCode": "501/5",
-  "hex": "#E1DAC3",
+  "hex": "#F8F8F8",
   "group": "white",
   "groups": [
    "white"
@@ -5932,7 +5929,7 @@
   "colorMatch": "exact",
   "cardName": "суровый",
   "cardCode": "501/1",
-  "hex": "#E1DAC3",
+  "hex": "#F8F8F8",
   "group": "natural",
   "groups": [
    "natural"
@@ -5972,7 +5969,7 @@
   "colorMatch": "exact",
   "cardName": "суровый",
   "cardCode": "501/1",
-  "hex": "#E1DAC3",
+  "hex": "#F8F8F8",
   "group": "natural",
   "groups": [
    "natural"
@@ -6090,7 +6087,7 @@
   "colorMatch": "exact",
   "cardName": "т.рашель",
   "cardCode": "538/4",
-  "hex": "#7F4054",
+  "hex": "#9F5A75",
   "group": "pink",
   "groups": [
    "pink"
@@ -6130,7 +6127,7 @@
   "colorMatch": "exact",
   "cardName": "т.асфальт",
   "cardCode": "753/1",
-  "hex": "#262727",
+  "hex": "#363739",
   "group": "melange",
   "groups": [
    "melange",
@@ -6171,7 +6168,7 @@
   "colorMatch": "exact",
   "cardName": "т.бирюза",
   "cardCode": "518/3",
-  "hex": "#053D6E",
+  "hex": "#0A4F8C",
   "group": "blue",
   "groups": [
    "blue",
@@ -6210,7 +6207,7 @@
   "colorMatch": "exact",
   "cardName": "т.оливковый",
   "cardCode": "563/7",
-  "hex": "#080805",
+  "hex": "#0F100B",
   "group": "black",
   "groups": [
    "black",
@@ -6367,7 +6364,7 @@
   "colorMatch": "exact",
   "cardName": "терракот",
   "cardCode": "573/0",
-  "hex": "#4B1B1A",
+  "hex": "#632525",
   "group": "red",
   "groups": [
    "red",
@@ -6484,7 +6481,7 @@
   "colorMatch": "exact",
   "cardName": "турецкий",
   "cardCode": "543/6",
-  "hex": "#312F54",
+  "hex": "#4A4878",
   "group": "blue",
   "groups": [
    "blue"
@@ -6524,7 +6521,7 @@
   "colorMatch": "exact",
   "cardName": "турецкий",
   "cardCode": "543/6",
-  "hex": "#312F54",
+  "hex": "#4A4878",
   "group": "blue",
   "groups": [
    "blue"
@@ -6602,7 +6599,7 @@
   "colorMatch": "exact",
   "cardName": "фарфоровый",
   "cardCode": "600/9",
-  "hex": "#CDBD9A",
+  "hex": "#EBE3D7",
   "group": "cream",
   "groups": [
    "cream"
@@ -6640,7 +6637,7 @@
   "colorMatch": "exact",
   "cardName": "фестивальная фуксия",
   "cardCode": "345/7",
-  "hex": "#4E1E2C",
+  "hex": "#642C3F",
   "group": "red",
   "groups": [
    "red"
@@ -6678,7 +6675,7 @@
   "colorMatch": "exact",
   "cardName": "фламинго",
   "cardCode": "603/7",
-  "hex": "#C43265",
+  "hex": "#E6478A",
   "group": "pink",
   "groups": [
    "pink"
@@ -6716,7 +6713,7 @@
   "colorMatch": "exact",
   "cardName": "флотский",
   "cardCode": "570/0",
-  "hex": "#0F0F13",
+  "hex": "#16171C",
   "group": "black",
   "groups": [
    "black"
@@ -6834,7 +6831,7 @@
   "colorMatch": "exact",
   "cardName": "цикламен розовый",
   "cardCode": "538/1",
-  "hex": "#902954",
+  "hex": "#B03D73",
   "group": "pink",
   "groups": [
    "pink"
@@ -6912,7 +6909,7 @@
   "colorMatch": "abbr",
   "cardName": "черный жемчуг",
   "cardCode": "559/7",
-  "hex": "#393D3A",
+  "hex": "#4A4F4E",
   "group": "grey",
   "groups": [
    "grey",
@@ -6955,7 +6952,7 @@
   "colorMatch": "exact",
   "cardName": "черный",
   "cardCode": "534/0",
-  "hex": "#181819",
+  "hex": "#1E1E20",
   "group": "black",
   "groups": [
    "black"
@@ -6995,7 +6992,7 @@
   "colorMatch": "exact",
   "cardName": "черный",
   "cardCode": "534/0",
-  "hex": "#181819",
+  "hex": "#1E1E20",
   "group": "black",
   "groups": [
    "black"
@@ -7033,7 +7030,7 @@
   "colorMatch": "exact",
   "cardName": "шампанское",
   "cardCode": "547/2",
-  "hex": "#D3C63F",
+  "hex": "#ECE664",
   "group": "yellow",
   "groups": [
    "yellow"
@@ -7071,7 +7068,7 @@
   "colorMatch": "exact",
   "cardName": "шелковица",
   "cardCode": "446/0",
-  "hex": "#1A1823",
+  "hex": "#242230",
   "group": "black",
   "groups": [
    "black"
@@ -7111,7 +7108,7 @@
   "colorMatch": "exact",
   "cardName": "шоколад",
   "cardCode": "533/2",
-  "hex": "#261E17",
+  "hex": "#302720",
   "group": "brown",
   "groups": [
    "brown"
@@ -7151,7 +7148,7 @@
   "colorMatch": "exact",
   "cardName": "шоколад",
   "cardCode": "533/2",
-  "hex": "#261E17",
+  "hex": "#302720",
   "group": "brown",
   "groups": [
    "brown"
@@ -7229,7 +7226,7 @@
   "colorMatch": "exact",
   "cardName": "эдем",
   "cardCode": "553/3",
-  "hex": "#06510B",
+  "hex": "#0B6A11",
   "group": "green",
   "groups": [
    "green"
@@ -7345,7 +7342,7 @@
   "colorMatch": "exact",
   "cardName": "яркое золото",
   "cardCode": "508/5",
-  "hex": "#6F4509",
+  "hex": "#8C5D15",
   "group": "brown",
   "groups": [
    "brown",
@@ -7386,10 +7383,10 @@
   "colorMatch": "exact",
   "cardName": "ясень",
   "cardCode": "592/1",
-  "hex": "#7D6D52",
-  "group": "brown",
+  "hex": "#97886D",
+  "group": "sand",
   "groups": [
-   "brown"
+   "sand"
   ],
   "composition": "Шерсть 30%, ПАН 70%",
   "compositionSource": "Шерсть-30%, ПАН-70%",
@@ -7426,7 +7423,7 @@
   "colorMatch": "exact",
   "cardName": "ангора",
   "cardCode": "567/8",
-  "hex": "#6C696D",
+  "hex": "#898894",
   "group": "grey",
   "groups": [
    "grey"
@@ -7574,7 +7571,7 @@
   "colorMatch": "abbr",
   "cardName": "горький шоколад",
   "cardCode": "340/5",
-  "hex": "#26221C",
+  "hex": "#312C27",
   "group": "black",
   "groups": [
    "black",
@@ -7731,7 +7728,7 @@
   "colorMatch": "exact",
   "cardName": "ламинария",
   "cardCode": "369/2",
-  "hex": "#0C0F08",
+  "hex": "#151911",
   "group": "black",
   "groups": [
    "black"
@@ -7807,7 +7804,7 @@
   "colorMatch": "exact",
   "cardName": "св.лаванда",
   "cardCode": "413/5",
-  "hex": "#8892B0",
+  "hex": "#A6B4E7",
   "group": "blue",
   "groups": [
    "blue"
@@ -7881,10 +7878,10 @@
   "colorMatch": "exact",
   "cardName": "снежок",
   "cardCode": "301/С",
-  "hex": "#DDD3BA",
-  "group": "cream",
+  "hex": "#F5F2F2",
+  "group": "white",
   "groups": [
-   "cream"
+   "white"
   ],
   "composition": "Шерсть 30%, ПАН 70%",
   "compositionSource": "Шерсть-30%, ПАН-70%",
@@ -7919,7 +7916,7 @@
   "colorMatch": "exact",
   "cardName": "шелковица",
   "cardCode": "446/0",
-  "hex": "#1A1823",
+  "hex": "#242230",
   "group": "black",
   "groups": [
    "black"
@@ -7957,7 +7954,7 @@
   "colorMatch": "exact",
   "cardName": "кедр",
   "cardCode": "531/2",
-  "hex": "#151E23",
+  "hex": "#1C282E",
   "group": "black",
   "groups": [
    "black"
@@ -8035,7 +8032,7 @@
   "colorMatch": "exact",
   "cardName": "м.синий",
   "cardCode": "571/2",
-  "hex": "#0C0C13",
+  "hex": "#11111A",
   "group": "black",
   "groups": [
    "black",
@@ -8108,7 +8105,7 @@
   "colorMatch": "exact",
   "cardName": "перванш",
   "cardCode": "519/0",
-  "hex": "#446C94",
+  "hex": "#5A89BE",
   "group": "blue",
   "groups": [
    "blue"
@@ -8144,10 +8141,10 @@
   "colorMatch": "exact",
   "cardName": "рыжий кот",
   "cardCode": "549/0",
-  "hex": "#81350B",
-  "group": "brown",
+  "hex": "#A14A15",
+  "group": "orange",
   "groups": [
-   "brown"
+   "orange"
   ],
   "composition": "ПАН 100% (акрил)",
   "compositionSource": "ПАН-100%",
@@ -8256,7 +8253,7 @@
   "colorMatch": "exact",
   "cardName": "супербелый",
   "cardCode": "501/5",
-  "hex": "#E1DAC3",
+  "hex": "#F8F8F8",
   "group": "white",
   "groups": [
    "white"

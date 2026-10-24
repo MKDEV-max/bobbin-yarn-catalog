@@ -1,16 +1,27 @@
 import { Check } from 'lucide-react';
-import type { Color } from '../data/catalog';
-import { asset } from './ProductCard';
+import { isLight, type Color } from '../data/catalog';
 
-/** Образец цвета: фото мотка с карты расцветок + полоса приблизительного цвета */
+/*
+ * Цветовой образец — однотонный квадрат (CSS background-color по HEX из данных карты расцветок).
+ * Не фотография мотка и не градиент. Светлым оттенкам добавляется тонкая рамка.
+ */
+
+/** Однотонный квадрат цвета. hex = null — цвет неизвестен (пунктирная рамка) */
+export function ColorChip({ hex, size = 'md', className = '' }: { hex: string | null; size?: 'sm' | 'md' | 'lg' | 'fill'; className?: string }) {
+  return (
+    <span className={`color-chip color-chip-${size}${hex && isLight(hex) ? ' is-light' : ''}${hex ? '' : ' is-unknown'} ${className}`}
+      style={hex ? { backgroundColor: hex } : undefined} aria-hidden="true" />
+  );
+}
+
+/** Образец в палитре: квадрат цвета + название и артикул */
 export function ColorSwatch({ c, selected, onToggle, count, compact }: { c: Color; selected?: boolean; onToggle?: () => void; count?: number; compact?: boolean }) {
   const body = (
     <>
-      <span className="sw-img">
-        <img src={asset(c.swatch)} width={220} height={99} alt="" loading="lazy" decoding="async" />
+      <span className="sw-color">
+        <ColorChip hex={c.hex} size="fill" />
         {selected && <span className="sw-check" aria-hidden="true"><Check /></span>}
       </span>
-      <span className="sw-bar" style={{ background: c.hex }} aria-hidden="true" />
       {!compact && (
         <span className="sw-text">
           <b>{c.name}</b>

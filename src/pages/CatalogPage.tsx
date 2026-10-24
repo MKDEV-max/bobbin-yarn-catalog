@@ -2,7 +2,9 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Search, SlidersHorizontal, X } from 'lucide-react';
 import { Seo } from '../components/Seo';
+import { PageHead } from './PageHead';
 import { ProductCard } from '../components/ProductCard';
+import { ColorChip } from '../components/ColorSwatch';
 import { COLORS, META, PRODUCTS, colorById, formatDate, hueOf, labels, productTitle, searchText, type Product } from '../data/catalog';
 import { COLOR_GROUPS, COMPOSITIONS, PURPOSES } from '../data/taxonomy';
 
@@ -102,7 +104,7 @@ export function CatalogPage() {
             const sel = get('group').includes(g);
             return (
               <button key={g} type="button" className="chip" aria-pressed={sel} onClick={() => toggle('group', g)}>
-                {g !== UNKNOWN && <span className="chip-dot" style={{ background: COLORS.find((c) => c.group === g)?.hex }} aria-hidden="true" />}
+                {g !== UNKNOWN && <ColorChip hex={COLORS.find((c) => c.group === g)?.hex ?? null} size="sm" />}
                 {g === UNKNOWN ? 'Без образца' : labels.group(g)}
                 <span className="chip-n">{sel ? '✓' : PRODUCTS.filter((p) => groupsOf(p).includes(g)).length}</span>
               </button>
@@ -120,7 +122,7 @@ export function CatalogPage() {
             <li key={c.id}>
               <label className="check">
                 <input type="checkbox" checked={get('color').includes(c.id)} onChange={() => toggle('color', c.id)} />
-                <span className="shade-dot" style={{ background: c.hex }} aria-hidden="true" />
+                <ColorChip hex={c.hex} size="sm" />
                 <span>{c.name} <span className="muted">{c.code}</span></span>
               </label>
             </li>
@@ -167,13 +169,7 @@ export function CatalogPage() {
   return (
     <>
       <Seo title={h1} description={`${h1}: ${filtered.length} позиций с образцами цвета, составом и остатками. Фильтры по оттенку, составу и толщине, заявка на опт.`} />
-      <div className="page-head">
-        <div className="container">
-          <nav className="breadcrumbs" aria-label="Хлебные крошки"><ol><li><Link to="/">Главная</Link></li><li aria-current="page">Каталог</li></ol></nav>
-          <h1>{h1}</h1>
-          <p className="lead">Пряжа для машинного вязания: полушерсть и акрил. Цвета — по карте расцветок, остатки — по данным склада на {formatDate(META.stockDate)}.</p>
-        </div>
-      </div>
+      <PageHead title={h1} crumb="Каталог" lead={<>Пряжа для машинного вязания: полушерсть и акрил. Цвета — по карте расцветок, остатки — по данным склада на {formatDate(META.stockDate)}.</>} />
 
       <div className="container catalog">
         <aside className="catalog-side" aria-label="Фильтры каталога">{filters}</aside>

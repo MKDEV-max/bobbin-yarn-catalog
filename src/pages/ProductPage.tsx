@@ -2,7 +2,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Check, ClipboardPlus, Heart, Palette, Plus } from 'lucide-react';
 import { Seo } from '../components/Seo';
 import { Bobbin } from '../components/Bobbin';
-import { ProductCard, asset, tint } from '../components/ProductCard';
+import { ProductCard, tint } from '../components/ProductCard';
+import { ColorChip } from '../components/ColorSwatch';
 import { site } from '../config/site';
 import { PRODUCTS, colorById, formatDate, formatKg, hueOf, labels, productById, productSubtitle, productTitle, stockStatus } from '../data/catalog';
 import { useStore, useToast } from '../state/store';
@@ -55,8 +56,8 @@ export function ProductPage() {
             </div>
             {color ? (
               <figure className="gallery-swatch">
-                <img src={asset(color.swatch)} width={220} height={99} alt={`Моток «${color.name}» на карте расцветок`} />
-                <figcaption><b>Образец с карты расцветок</b><span>«{color.name}», артикул {color.code}</span><span className="muted">≈ {color.hex} — приблизительно</span></figcaption>
+                <ColorChip hex={color.hex} size="lg" />
+                <figcaption><b>Цвет по карте расцветок</b><span>«{color.name}», артикул {color.code}</span><span className="muted">{color.hex} — приблизительно</span></figcaption>
               </figure>
             ) : <p className="alert alert-warm">Образец этого оттенка на карте расцветок не найден. Уточните цвет у менеджера или запросите образец.</p>}
           </div>

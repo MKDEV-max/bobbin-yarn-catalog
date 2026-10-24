@@ -5,3 +5,4 @@ dist/
 .DS_Store
 *.tsbuildinfo
 .gh-pages/
+data-source/swatch-check/

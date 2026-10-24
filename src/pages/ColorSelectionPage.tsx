@@ -1,10 +1,11 @@
 import { useMemo, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { ClipboardPlus, Columns3, Search, X } from 'lucide-react';
 import { Seo } from '../components/Seo';
-import { ColorSwatch } from '../components/ColorSwatch';
-import { ProductCard, asset } from '../components/ProductCard';
-import { COLORS, META, PRODUCTS, colorById, hueOf, labels } from '../data/catalog';
+import { PageHead } from './PageHead';
+import { ColorChip, ColorSwatch } from '../components/ColorSwatch';
+import { ProductCard } from '../components/ProductCard';
+import { COLORS, PRODUCTS, colorById, hueOf, labels } from '../data/catalog';
 import { COLOR_GROUPS } from '../data/taxonomy';
 import { useStore, useToast } from '../state/store';
 
@@ -31,18 +32,12 @@ export function ColorSelectionPage() {
 
   return (
     <>
-      <Seo title="Подбор пряжи по цвету — палитра оттенков с образцами" description={`Палитра из ${COLORS.length} оттенков бобинной пряжи с фото образцов и артикулами. Выберите несколько цветов, сравните и добавьте подходящие позиции в заявку.`} />
-      <div className="page-head">
-        <div className="container">
-          <nav className="breadcrumbs" aria-label="Хлебные крошки"><ol><li><Link to="/">Главная</Link></li><li aria-current="page">Подбор по цвету</li></ol></nav>
-          <h1>Подбор пряжи по цвету</h1>
-          <p className="lead">{COLORS.length} оттенков с карты расцветок{META.cardTitle ? '' : ''}: фото мотка, название и артикул. Выберите один или несколько цветов — ниже появятся подходящие позиции.</p>
-        </div>
-      </div>
+      <Seo title="Подбор пряжи по цвету — палитра оттенков" description={`Палитра из ${COLORS.length} оттенков бобинной пряжи по карте расцветок: цвет, название и артикул. Выберите цвета, сравните и добавьте позиции в заявку.`} />
+      <PageHead title="Подбор пряжи по цвету" crumb="Подбор по цвету" lead={<>{COLORS.length} оттенков с карты расцветок: цвет, название и артикул. Выберите один или несколько цветов — ниже появятся подходящие позиции.</>} />
 
       <section className="section" style={{ paddingTop: 'var(--space-6)' }}>
         <div className="container">
-          <p className="alert alert-info" style={{ marginBottom: 'var(--space-5)' }}>Полоса под фото — приблизительный цвет, снятый с фото карты. Экран и освещение искажают оттенок: ориентируйтесь на фото мотка, а для точного подбора запросите образец.</p>
+          <p className="alert alert-info" style={{ marginBottom: 'var(--space-5)' }}>Цвет каждого квадрата определён по карте расцветок из файла «карта цветов.xlsx» и передан приблизительно: экран и освещение искажают оттенок. Для точного подбора запросите образец пряжи.</p>
           <div className="palette-tools">
             <div className="toolbar-search">
               <label className="sr-only" htmlFor="pal-q">Найти оттенок по названию или артикулу</label>
@@ -53,7 +48,7 @@ export function ColorSelectionPage() {
               <button type="button" className="chip" aria-pressed={!group} onClick={() => setGroup('')}>Все <span className="chip-n">{COLORS.length}</span></button>
               {groups.map((g) => (
                 <button key={g.id} type="button" className="chip" aria-pressed={group === g.id} onClick={() => setGroup(group === g.id ? '' : g.id)}>
-                  <span className="chip-dot" style={{ background: COLORS.find((c) => c.group === g.id)?.hex }} aria-hidden="true" />{g.label}
+                  <ColorChip hex={COLORS.find((c) => c.group === g.id)?.hex ?? null} size="sm" />{g.label}
                 </button>
               ))}
             </div>
@@ -86,7 +81,7 @@ export function ColorSelectionPage() {
             <ul className="picked-row">
               {pickedColors.map((c) => (
                 <li key={c.id} className="picked-chip">
-                  <img src={asset(c.swatch)} width={220} height={99} alt="" />
+                  <ColorChip hex={c.hex} size="md" />
                   <span><b>{c.name}</b><small>{c.code} · {counts.get(c.id) ?? 0} поз.</small></span>
                   <button className="icon-btn" type="button" onClick={() => toggle(c.id)} aria-label={`Убрать оттенок «${c.name}»`}><X aria-hidden="true" /></button>
                 </li>
@@ -97,8 +92,7 @@ export function ColorSelectionPage() {
               <div className="compare" role="region" aria-label="Сравнение оттенков">
                 {pickedColors.map((c) => (
                   <figure key={c.id} className="compare-item">
-                    <img src={asset(c.swatch)} width={220} height={99} alt={`Образец «${c.name}»`} />
-                    <span className="compare-bar" style={{ background: c.hex }} />
+                    <ColorChip hex={c.hex} size="fill" className="compare-color" />
                     <figcaption>
                       <b>{c.name}</b>
                       <span>Артикул {c.code}</span>

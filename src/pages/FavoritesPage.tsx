@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ClipboardPlus } from 'lucide-react';
 import { Seo } from '../components/Seo';
+import { PageHead } from './PageHead';
 import { ProductCard } from '../components/ProductCard';
 import { productById } from '../data/catalog';
 import { useStore, useToast } from '../state/store';
@@ -12,13 +13,7 @@ export function FavoritesPage() {
   return (
     <>
       <Seo title="Избранное" description="Сохранённые позиции бобинной пряжи." noindex />
-      <div className="page-head">
-        <div className="container">
-          <nav className="breadcrumbs" aria-label="Хлебные крошки"><ol><li><Link to="/">Главная</Link></li><li aria-current="page">Избранное</li></ol></nav>
-          <h1>Избранное</h1>
-          <p className="lead">Позиции сохраняются в этом браузере.</p>
-        </div>
-      </div>
+      <PageHead title="Избранное" crumb="Избранное" lead={<>Позиции сохраняются в этом браузере.</>} />
       <section className="section" style={{ paddingTop: 'var(--space-6)' }}>
         <div className="container">
           {items.length ? (

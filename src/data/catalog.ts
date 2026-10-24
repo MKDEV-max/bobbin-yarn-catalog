@@ -15,12 +15,11 @@ export type Color = {
   id: string;
   name: string;            // название с карты расцветок, без изменений
   code: string;            // артикул с карты
-  hex: string;             // приблизительный цвет, замер с фото карты
+  hex: string;             // цвет образца: замер по фото карты расцветок из Excel (приблизительный)
   hexApproximate: boolean;
   type: YarnType;
   group: string | null;
   groups: string[];
-  swatch: string;          // путь к образцу (вырезка с фото карты)
   inStockAs: string[];     // названия этого цвета в таблице остатков
   note?: string;
 };
@@ -83,6 +82,13 @@ export function stockStatus(p: Product): { label: string; tone: 'ok' | 'check' }
 }
 export const formatDate = (iso: string | null) => (iso ? iso.split('-').reverse().join('.') : '');
 export const formatKg = (kg: number) => `${kg.toLocaleString('ru-RU', { maximumFractionDigits: 1 })} кг`;
+
+/** Очень светлый цвет — образцу нужна тонкая рамка, иначе он сливается с белым фоном */
+export function isLight(hex: string | null) {
+  if (!hex) return false;
+  const [r, g, b] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255).map((v) => (v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4));
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.72;
+}
 
 export function hueOf(hex: string | null) {
   if (!hex) return 999;

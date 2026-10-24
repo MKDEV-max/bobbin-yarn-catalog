@@ -6,10 +6,12 @@
  *
  * Исходный Excel не изменяется и в репозиторий не попадает (.gitignore).
  * На выходе:
- *   src/data/generated/colors.json    — палитра: названия и артикулы с карты, приблизительный HEX, образец
+ *   src/data/generated/colors.json    — палитра: названия и артикулы с карты, HEX (замер по фото карты из Excel)
  *   src/data/generated/products.json  — позиции из таблиц остатков (состав, текс, остаток на дату)
  *   src/data/generated/meta.json      — дата остатков, источники, расшифровка «Ассорти»
- *   public/swatches/*.webp            — вырезанные с карты образцы мотков
+ *   data-source/swatch-check/*.webp   — вырезки мотков с карты: только для сверки HEX, на сайт не попадают
+ *
+ * На сайте цвет показывается однотонным квадратом (CSS background-color) по полю hex.
  *
  * Правила (см. README): ничего не угадываем. Состав — только из заголовка столбца таблицы.
  * Сопоставление «название на складе ↔ образец на карте» — только точное совпадение после
@@ -25,7 +27,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.resolve(process.argv[2] || path.join(ROOT, '..', 'карта цветов.xlsx'));
 const OUT_DATA = path.join(ROOT, 'src', 'data', 'generated');
-const OUT_SW = path.join(ROOT, 'public', 'swatches');
+const OUT_SW = path.join(ROOT, 'data-source', 'swatch-check');
 const CARD = JSON.parse(fs.readFileSync(path.join(ROOT, 'data-source', 'color-card.json'), 'utf8'));
 
 if (!fs.existsSync(SRC)) { console.error('Не найден файл:', SRC); process.exit(1); }
@@ -184,7 +186,13 @@ for (const block of CARD.images) {
         if (isYarn(p)) sample.push(p);
       }
     }
-    const raw = [0, 1, 2].map((k) => { const a = sample.map((p) => p[k]).sort((m, n) => m - n); return a[a.length >> 1] ?? 0; });
+    // Цвет нити — освещённая поверхность волокна, а не тени между нитями: берём пиксели
+    // между 55-м и 85-м процентилем яркости и усредняем. Медиана по всем пикселям
+    // захватывала тени, и белые оттенки выходили бежево-серыми.
+    const lum = (p) => 0.2126 * p[0] + 0.7152 * p[1] + 0.0722 * p[2];
+    const byLum = [...sample].sort((m, n) => lum(m) - lum(n));
+    const lit = byLum.slice(Math.floor(byLum.length * 0.55), Math.max(Math.floor(byLum.length * 0.55) + 1, Math.floor(byLum.length * 0.85)));
+    const raw = [0, 1, 2].map((k) => (lit.length ? lit.reduce((s, p) => s + p[k], 0) / lit.length : 0));
     // Баланс белого по фону карты: светло-серый фон фото приводим к почти белому (242),
     // иначе белые и светлые оттенки выходят серыми. HEX всё равно приблизительный.
     const med = raw.map((v, k) => Math.min(255, v * 242 / Math.max(1, bg[k])));
@@ -194,9 +202,28 @@ for (const block of CARD.images) {
     const pad = Math.round(step * 0.08);
     await sharp(buf).extract({ left: Math.max(0, x0), top: Math.max(0, top - pad), width: Math.min(W - x0, w + 1), height: Math.min(H - Math.max(0, top - pad), Math.round(step + 2 * pad)) })
       .resize({ width: 220 }).webp({ quality: 78 }).toFile(path.join(OUT_SW, slug + '.webp'));
-    colors.push({ id: slug, name, code, hex: toHex(med), hexRaw: toHex(raw), hexApproximate: true, type: block.type, cardImage: block.image, swatch: `swatches/${slug}.webp`, samples: sample.length });
+    colors.push({ id: slug, name, code, hex: '', hexRaw: toHex(raw), hexApproximate: true, type: block.type, cardImage: block.image, samples: sample.length, _rgb: med });
   }
 }
+
+// ---------- Баланс белого по белой пряже ----------
+// Фото карты сделано при тёплом свете: даже «супербелый» на фото выходит бежевым.
+// Белая точка — замер эталонно белой пряжи с той же карты (WHITE_REF); на неё делятся
+// все цвета (метод фон Криса), поэтому различия между близкими оттенками сохраняются.
+const WHITE_REF = 'супербелый', WHITE_TARGET = 248;
+const ref = colors.find((c) => norm(c.name) === WHITE_REF);
+const gain = ref ? ref._rgb.map((v) => WHITE_TARGET / Math.max(1, v)) : [1, 1, 1];
+// Жёлтый оттенок света заметен на светлых мотках и почти не виден на тёмных: полная поправка
+// цветности — для светлых, ослабленная — для тёмных (иначе серые уходят в синеву).
+// Яркость (общий множитель) поправляется для всех одинаково.
+const uni = ref ? WHITE_TARGET / (0.2126 * ref._rgb[0] + 0.7152 * ref._rgb[1] + 0.0722 * ref._rgb[2]) : 1;
+for (const c of colors) {
+  const l = (0.2126 * c._rgb[0] + 0.7152 * c._rgb[1] + 0.0722 * c._rgb[2]) / 255;
+  const s = 0.25 + 0.75 * Math.min(1, Math.max(0, (l - 0.35) / 0.45));
+  c.hex = toHex(c._rgb.map((v, k) => Math.min(255, v * uni * (gain[k] / uni) ** s)));
+  delete c._rgb;
+}
+console.log(`Белая точка: «${WHITE_REF}» ${ref ? toHex(ref.hexRaw ? [0, 1, 2].map((k) => WHITE_TARGET / gain[k]) : [0, 0, 0]) : 'не найден'}, коэффициенты ${gain.map((g) => g.toFixed(3)).join(' / ')}`);
 
 // ---------- Группы оттенков (для навигации) ----------
 function groupOf(c) {
