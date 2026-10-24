@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /bobbin-yarn-catalog/request/
+Disallow: /bobbin-yarn-catalog/favorites/
+
+Sitemap: https://mkdev-max.github.io/bobbin-yarn-catalog/sitemap.xml
