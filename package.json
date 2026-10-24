@@ -1,0 +1,31 @@
+{
+  "name": "bobbin-yarn-catalog",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Каталог бобинной пряжи с палитрой по карте расцветок",
+  "scripts": {
+    "import-data": "node scripts/import-xlsx.mjs",
+    "dev": "vite",
+    "build": "tsc -b && vite build && node scripts/prerender.mjs",
+    "preview": "vite preview",
+    "deploy": "npm run build && node scripts/publish-pages.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^1.61.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "fast-xml-parser": "^5.11.2",
+    "fflate": "^0.8.3",
+    "sharp": "^0.35.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}

@@ -1,0 +1,8358 @@
+[
+ {
+  "id": "avantyurin-sherst-30-pan-70",
+  "colorName": "авантюрин",
+  "colorId": "avantyurin",
+  "colorMatch": "exact",
+  "cardName": "авантюрин",
+  "cardCode": "516/2",
+  "hex": "#7A2E24",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 226.18,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 7"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "avrora-krasnaya-pan-100",
+  "colorName": "аврора красная",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 10.6,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 8"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "alyuminium-sherst-30-pan-70",
+  "colorName": "алюминиум",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 9.6,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 9"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "alyuminium-pan-100",
+  "colorName": "алюминиум",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 36.09,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 9"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "andromeda-pan-100",
+  "colorName": "Андромеда",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 304.75,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 10"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "antratsit-sherst-30-pan-70",
+  "colorName": "Антрацит",
+  "colorId": "antratsit",
+  "colorMatch": "exact",
+  "cardName": "антрацит",
+  "cardCode": "816/М",
+  "hex": "#1A1B1C",
+  "group": "melange",
+  "groups": [
+   "melange",
+   "grey"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "melange",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 1426.34,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 11"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "arktika-pan-100",
+  "colorName": "Арктика",
+  "colorId": "arktika",
+  "colorMatch": "exact",
+  "cardName": "арктика",
+  "cardCode": "530/3",
+  "hex": "#061E57",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 1473.55,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 12"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "assorti-sherst-30-pan-70",
+  "colorName": "Ассорти",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "multi",
+  "groups": [
+   "multi"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 70.3,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 13"
+  },
+  "assorti": [
+   "Т.курага",
+   "Антрацит",
+   "Р.пион+Р.пион",
+   "Кленовый",
+   "Св.маренго",
+   "Суровый",
+   "Бургундский",
+   "Т.асфальт",
+   "Инжир",
+   "Шоколад+курага",
+   "Горький шоколад",
+   "Веста",
+   "Пламенный",
+   "Ламантин",
+   "Голубой сапфир",
+   "Дипломат",
+   "Меланж графитовый",
+   "Яркофлавиновый",
+   "Черный"
+  ],
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "assorti-pan-100",
+  "colorName": "Ассорти",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "multi",
+  "groups": [
+   "multi"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 128.84,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 13"
+  },
+  "assorti": [
+   "Т.оливковый",
+   "Яркое золото",
+   "Имбирь",
+   "Т. антрацит",
+   "Цикламен розовый",
+   "Т.синий",
+   "Слива",
+   "Коралл",
+   "Рыжий кот",
+   "Морошка",
+   "Изысканный кофейный",
+   "Пепельно-оливковый"
+  ],
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "asfalt-pan-100",
+  "colorName": "Асфальт",
+  "colorId": "asfalt",
+  "colorMatch": "exact",
+  "cardName": "асфальт",
+  "cardCode": "569/М",
+  "hex": "#2F2F2E",
+  "group": "melange",
+  "groups": [
+   "melange",
+   "grey"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "melange",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 156.07,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 14"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "barhatnik-pan-100",
+  "colorName": "бархатник",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 14.61,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 15"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "biser-sherst-30-pan-70",
+  "colorName": "Бисер",
+  "colorId": "biser",
+  "colorMatch": "exact",
+  "cardName": "бисер",
+  "cardCode": "419/4",
+  "hex": "#828587",
+  "group": "grey",
+  "groups": [
+   "grey"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 200.02,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 16"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "bolotnyy-pan-100",
+  "colorName": "Болотный",
+  "colorId": "bolotnyy",
+  "colorMatch": "exact",
+  "cardName": "болотный",
+  "cardCode": "532/3",
+  "hex": "#0A0B05",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 11.7,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 17"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "bonsay-sherst-30-pan-70",
+  "colorName": "Бонсай",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 130.66,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 18"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "brusnika-pan-100",
+  "colorName": "Брусника",
+  "colorId": "brusnika",
+  "colorMatch": "exact",
+  "cardName": "брусника",
+  "cardCode": "595/9",
+  "hex": "#642B38",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 283.03,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 19"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "brusnichnyy-sherst-30-pan-70",
+  "colorName": "Брусничный",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 85.8,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 20"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "valentinka-pan-100",
+  "colorName": "Валентинка",
+  "colorId": "valentinka",
+  "colorMatch": "exact",
+  "cardName": "валентинка",
+  "cardCode": "513/5",
+  "hex": "#A70E1F",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 293.26,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 21"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "vasilek-sherst-30-pan-70",
+  "colorName": "Василек",
+  "colorId": "vasilek",
+  "colorMatch": "exact",
+  "cardName": "василек",
+  "cardCode": "520/0",
+  "hex": "#17296B",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 124.3,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 22"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "vasilek-pan-100",
+  "colorName": "Василек",
+  "colorId": "vasilek",
+  "colorMatch": "exact",
+  "cardName": "василек",
+  "cardCode": "520/0",
+  "hex": "#17296B",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 336.55,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 22"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "veresk-sherst-30-pan-70",
+  "colorName": "Вереск",
+  "colorId": "veresk",
+  "colorMatch": "exact",
+  "cardName": "вереск",
+  "cardCode": "448/6",
+  "hex": "#6D505B",
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 117.93,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 23"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "vesta-sherst-30-pan-70",
+  "colorName": "Веста",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 7,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 24"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "vizantiyskiy-sherst-30-pan-70",
+  "colorName": "византийский",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 286.35,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 25"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "vinnaya-yagoda-sherst-30-pan-70",
+  "colorName": "Винная ягода",
+  "colorId": "vinnaya-yagoda",
+  "colorMatch": "exact",
+  "cardName": "винная ягода",
+  "cardCode": "446/6",
+  "hex": "#56191C",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 36.13,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 26"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "viola-pan-100",
+  "colorName": "Виола",
+  "colorId": "viola",
+  "colorMatch": "exact",
+  "cardName": "виола",
+  "cardCode": "543/7",
+  "hex": "#271154",
+  "group": "violet",
+  "groups": [
+   "violet"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 285.3,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 27"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "vishnevyy-sherst-30-pan-70",
+  "colorName": "Вишневый",
+  "colorId": "vishnevyy",
+  "colorMatch": "exact",
+  "cardName": "вишневый",
+  "cardCode": "541/0",
+  "hex": "#420509",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 5.2,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 28"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "vishnevyy-liker-sherst-30-pan-70",
+  "colorName": "вишневый ликер",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 576.27,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 29"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "gabardin-sherst-30-pan-70",
+  "colorName": "Габардин",
+  "colorId": "gabardin",
+  "colorMatch": "exact",
+  "cardName": "габардин",
+  "cardCode": "517/1",
+  "hex": "#202C3E",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 48.52,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 30"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "gabardin-pan-100",
+  "colorName": "Габардин",
+  "colorId": "gabardin",
+  "colorMatch": "exact",
+  "cardName": "габардин",
+  "cardCode": "517/1",
+  "hex": "#202C3E",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 287.02,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 30"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "georgin-pan-100",
+  "colorName": "Георгин",
+  "colorId": "georgin",
+  "colorMatch": "exact",
+  "cardName": "георгин",
+  "cardCode": "542/5",
+  "hex": "#4F151C",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 283.74,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 31"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "geran-sherst-30-pan-70",
+  "colorName": "Герань",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 21,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 32"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "germes-sherst-30-pan-70",
+  "colorName": "Гермес",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 836.81,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 33"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "gzhel-sherst-30-pan-70",
+  "colorName": "Гжель",
+  "colorId": "gzhel",
+  "colorMatch": "exact",
+  "cardName": "гжель",
+  "cardCode": "450/3",
+  "hex": "#1A2F64",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 247.71,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 34"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "golubaya-biryuza-pan-100",
+  "colorName": "голубая бирюза",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 304.19,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 35"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "gornyy-sherst-30-pan-70",
+  "colorName": "Горный",
+  "colorId": "gornyy",
+  "colorMatch": "exact",
+  "cardName": "горный",
+  "cardCode": "320/6",
+  "hex": "#A19276",
+  "group": "sand",
+  "groups": [
+   "sand"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 153.46,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 36"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "gork-shokolad-sherst-30-pan-70",
+  "colorName": "Горьк.шоколад",
+  "colorId": "gorkiy-shokolad",
+  "colorMatch": "abbr",
+  "cardName": "горький шоколад",
+  "cardCode": "340/5",
+  "hex": "#26221C",
+  "group": "black",
+  "groups": [
+   "black",
+   "brown"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 3,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 37"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец сопоставлен с картой по сокращённому названию: «Горьк.шоколад» → «горький шоколад»."
+  ]
+ },
+ {
+  "id": "delik-rozovyy-sherst-30-pan-70",
+  "colorName": "Делик. розовый",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 17,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 38"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "dzhins-goluboy-sherst-30-pan-70",
+  "colorName": "Джинс.голубой",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 4.21,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 39"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "dzhinsovyy-sherst-30-pan-70",
+  "colorName": "Джинсовый",
+  "colorId": "dzhinsovyy",
+  "colorMatch": "exact",
+  "cardName": "джинсовый",
+  "cardCode": "877/М",
+  "hex": "#252A35",
+  "group": "melange",
+  "groups": [
+   "melange"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "melange",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 371.77,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 40"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "dzhinsovyy-pan-100",
+  "colorName": "Джинсовый",
+  "colorId": "dzhinsovyy",
+  "colorMatch": "exact",
+  "cardName": "джинсовый",
+  "cardCode": "877/М",
+  "hex": "#252A35",
+  "group": "melange",
+  "groups": [
+   "melange"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "melange",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 372.5,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 40"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "diplomat-sherst-30-pan-70",
+  "colorName": "Дипломат",
+  "colorId": "diplomat",
+  "colorMatch": "exact",
+  "cardName": "дипломат",
+  "cardCode": "594/2",
+  "hex": "#2A2B2A",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 468.84,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 41"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "diplomat-pan-100",
+  "colorName": "Дипломат",
+  "colorId": "diplomat",
+  "colorMatch": "exact",
+  "cardName": "дипломат",
+  "cardCode": "594/2",
+  "hex": "#2A2B2A",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 602.9,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 41"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "drazhe-sherst-30-pan-70",
+  "colorName": "Драже",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 240.4,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 42"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "dymka-sherst-30-pan-70",
+  "colorName": "Дымка",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 14.82,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 43"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "dynya-sherst-30-pan-70",
+  "colorName": "Дыня",
+  "colorId": "dynya",
+  "colorMatch": "exact",
+  "cardName": "дыня",
+  "cardCode": "361/7",
+  "hex": "#CAA808",
+  "group": "yellow",
+  "groups": [
+   "yellow"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 765.83,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 44"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "ezhevika-sherst-30-pan-70",
+  "colorName": "Ежевика",
+  "colorId": "ezhevika",
+  "colorMatch": "exact",
+  "cardName": "ежевика",
+  "cardCode": "544/4",
+  "hex": "#2B1A25",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 924.5,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 45"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "ezhevika-pan-100",
+  "colorName": "Ежевика",
+  "colorId": "ezhevika",
+  "colorMatch": "exact",
+  "cardName": "ежевика",
+  "cardCode": "544/4",
+  "hex": "#2B1A25",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 11.97,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 45"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "zhako-sherst-30-pan-70",
+  "colorName": "жако",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 6,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 46"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "zhemchuzh-iney-sherst-30-pan-70",
+  "colorName": "Жемчуж.иней",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 14.2,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 47"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "izolda-pan-100",
+  "colorName": "изольда",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 45.9,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 48"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "izumr-gorod-sherst-30-pan-70",
+  "colorName": "Изумр. город",
+  "colorId": "izumrudnyy-gorod",
+  "colorMatch": "abbr",
+  "cardName": "изумрудный город",
+  "cardCode": "529/2",
+  "hex": "#05535A",
+  "group": "turquoise",
+  "groups": [
+   "turquoise"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 21,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 49"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец сопоставлен с картой по сокращённому названию: «Изумр. город» → «изумрудный город»."
+  ]
+ },
+ {
+  "id": "izyskannyy-kofeynyy-pan-100",
+  "colorName": "изысканный кофейный",
+  "colorId": "izyskannyy-kofeynyy",
+  "colorMatch": "exact",
+  "cardName": "изысканный кофейный",
+  "cardCode": "348/3",
+  "hex": "#2B2727",
+  "group": "black",
+  "groups": [
+   "black",
+   "brown"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 27.6,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 50"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "imperatorskiy-sherst-30-pan-70",
+  "colorName": "Императорский",
+  "colorId": "imperatorskiy",
+  "colorMatch": "exact",
+  "cardName": "императорский",
+  "cardCode": "522/9",
+  "hex": "#1F171E",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 363.96,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 51"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "ispanskiy-sherst-30-pan-70",
+  "colorName": "испанский",
+  "colorId": "ispanskiy",
+  "colorMatch": "exact",
+  "cardName": "испанский",
+  "cardCode": "558/4",
+  "hex": "#0B2E2B",
+  "group": "turquoise",
+  "groups": [
+   "turquoise"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 43.56,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 52"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "ispanskiy-pan-100",
+  "colorName": "испанский",
+  "colorId": "ispanskiy",
+  "colorMatch": "exact",
+  "cardName": "испанский",
+  "cardCode": "558/4",
+  "hex": "#0B2E2B",
+  "group": "turquoise",
+  "groups": [
+   "turquoise"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 291.05,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 52"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "kameliya-pan-100",
+  "colorName": "Камелия",
+  "colorId": "kameliya",
+  "colorMatch": "exact",
+  "cardName": "камелия",
+  "cardCode": "537/7",
+  "hex": "#911857",
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 290.79,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 53"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "kapuchino-pan-100",
+  "colorName": "капучино",
+  "colorId": "kapuchino",
+  "colorMatch": "exact",
+  "cardName": "капучино",
+  "cardCode": "592/6",
+  "hex": "#624728",
+  "group": "brown",
+  "groups": [
+   "brown"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 313.02,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 54"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "karri-sherst-30-pan-70",
+  "colorName": "карри",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 256,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 56"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "kedr-sherst-30-pan-70",
+  "colorName": "Кедр",
+  "colorId": "kedr",
+  "colorMatch": "exact",
+  "cardName": "кедр",
+  "cardCode": "531/2",
+  "hex": "#151E23",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 243.92,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 57"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "keramicheskiy-pan-100",
+  "colorName": "Керамический",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 148.19,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 58"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "kivi-pan-100",
+  "colorName": "Киви",
+  "colorId": "kivi",
+  "colorMatch": "exact",
+  "cardName": "киви",
+  "cardCode": "457/1",
+  "hex": "#3E5739",
+  "group": "green",
+  "groups": [
+   "green"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 295.33,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 59"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "kirpichnyy-pan-100",
+  "colorName": "Кирпичный",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 292.19,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 60"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "klever-pan-100",
+  "colorName": "Клевер",
+  "colorId": "klever",
+  "colorMatch": "exact",
+  "cardName": "клевер",
+  "cardCode": "595/1",
+  "hex": "#9E6268",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 279.97,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 61"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "klevernaya-dymka-pan-100",
+  "colorName": "клеверная дымка",
+  "colorId": "klevernaya-dymka",
+  "colorMatch": "exact",
+  "cardName": "клеверная дымка",
+  "cardCode": "595/3",
+  "hex": "#7E5B5E",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 292.23,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 62"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "klenovyy-sherst-30-pan-70",
+  "colorName": "Кленовый",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 11.4,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 63"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "klenovyy-zhako-sherst-30-pan-70",
+  "colorName": "кленовый+жако",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "multi",
+  "groups": [
+   "multi"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 10,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 64"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "kokos-moloko-pan-100",
+  "colorName": "Кокос.молоко",
+  "colorId": "kokosovoe-moloko",
+  "colorMatch": "abbr",
+  "cardName": "кокосовое молоко",
+  "cardCode": "565/5",
+  "hex": "#A59C85",
+  "group": "sand",
+  "groups": [
+   "sand"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 1517.74,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 65"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец сопоставлен с картой по сокращённому названию: «Кокос.молоко» → «кокосовое молоко»."
+  ]
+ },
+ {
+  "id": "konoplya-sherst-30-pan-70",
+  "colorName": "Конопля",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 1603.67,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 66"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "konyak-sherst-30-pan-70",
+  "colorName": "коньяк",
+  "colorId": "konyak",
+  "colorMatch": "exact",
+  "cardName": "коньяк",
+  "cardCode": "318/3",
+  "hex": "#483025",
+  "group": "brown",
+  "groups": [
+   "brown"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 7,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 67"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "koriandr-sherst-30-pan-70",
+  "colorName": "Кориандр",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 798.21,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 68"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "koritsa-sherst-30-pan-70",
+  "colorName": "корица",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 9.2,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 69"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "korichnevaya-pechat-pan-100",
+  "colorName": "коричневая печать",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "brown",
+  "groups": [
+   "brown"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 5.3,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 70"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "korolevskiy-goluboy-sherst-30-pan-70",
+  "colorName": "королевский голубой",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 16.2,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 71"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "korolevskiy-goluboy-pan-100",
+  "colorName": "королевский голубой",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 9.7,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 71"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "korolevskiy-siniy-pan-100",
+  "colorName": "королевский синий",
+  "colorId": "korolevskiy-siniy",
+  "colorMatch": "exact",
+  "cardName": "королевский синий",
+  "cardCode": "607/5",
+  "hex": "#263552",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 286.63,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 72"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "kosmos-pan-100",
+  "colorName": "Космос",
+  "colorId": "kosmos",
+  "colorMatch": "exact",
+  "cardName": "космос",
+  "cardCode": "596/6",
+  "hex": "#3D459C",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 595.02,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 73"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "kofeynyy-sherst-30-pan-70",
+  "colorName": "Кофейный",
+  "colorId": "kofeynyy",
+  "colorMatch": "exact",
+  "cardName": "кофейный",
+  "cardCode": "743/1",
+  "hex": "#5A5750",
+  "group": "melange",
+  "groups": [
+   "melange",
+   "brown"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "melange",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 589.12,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 74"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "kofeynyy-pan-100",
+  "colorName": "Кофейный",
+  "colorId": "kofeynyy",
+  "colorMatch": "exact",
+  "cardName": "кофейный",
+  "cardCode": "743/1",
+  "hex": "#5A5750",
+  "group": "melange",
+  "groups": [
+   "melange",
+   "brown"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "melange",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 480.25,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 74"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "krasnyy-mak-pan-100",
+  "colorName": "Красный мак",
+  "colorId": "krasnyy-mak",
+  "colorMatch": "exact",
+  "cardName": "красный мак",
+  "cardCode": "513/2",
+  "hex": "#970B0D",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 383.42,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 75"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "krasnyy-rubin-sherst-30-pan-70",
+  "colorName": "красный рубин",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 761.01,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 76"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "laguna-sherst-30-pan-70",
+  "colorName": "Лагуна",
+  "colorId": "laguna",
+  "colorMatch": "exact",
+  "cardName": "лагуна",
+  "cardCode": "729/7",
+  "hex": "#0C343F",
+  "group": "turquoise",
+  "groups": [
+   "turquoise"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 96.62,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 77"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "lazurit-sherst-30-pan-70",
+  "colorName": "Лазурит",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 49.05,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 78"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "laminariya-sherst-30-pan-70",
+  "colorName": "Ламинария",
+  "colorId": "laminariya",
+  "colorMatch": "exact",
+  "cardName": "ламинария",
+  "cardCode": "369/2",
+  "hex": "#0C0F08",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 921.9,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 79"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "led-pan-100",
+  "colorName": "Лед",
+  "colorId": "led",
+  "colorMatch": "exact",
+  "cardName": "лед",
+  "cardCode": "560/1",
+  "hex": "#6FB2AA",
+  "group": "turquoise",
+  "groups": [
+   "turquoise"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 593.88,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 80"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "lotos-sherst-30-pan-70",
+  "colorName": "Лотос",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 33.4,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 81"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "ldinka-sherst-30-pan-70",
+  "colorName": "Льдинка",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 657.85,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 82"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "ldinka-pan-100",
+  "colorName": "Льдинка",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 291.84,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 82"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "m-siniy-pan-100",
+  "colorName": "М. синий",
+  "colorId": "m-siniy",
+  "colorMatch": "exact",
+  "cardName": "м.синий",
+  "cardCode": "571/2",
+  "hex": "#0C0C13",
+  "group": "black",
+  "groups": [
+   "black",
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 507.27,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 83"
+  },
+  "assorti": null,
+  "notes": [
+   "В таблице остатков есть строка с близким написанием: «М.синий». Уточните, один ли это цвет."
+  ]
+ },
+ {
+  "id": "m-marengo-sherst-30-pan-70",
+  "colorName": "м.маренго",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "grey",
+  "groups": [
+   "grey"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 7573.28,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 85"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "m-siniy-pan-100-2",
+  "colorName": "М.синий",
+  "colorId": "m-siniy",
+  "colorMatch": "exact",
+  "cardName": "м.синий",
+  "cardCode": "571/2",
+  "hex": "#0C0C13",
+  "group": "black",
+  "groups": [
+   "black",
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 86.08,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 86"
+  },
+  "assorti": null,
+  "notes": [
+   "В таблице остатков есть строка с близким написанием: «М. синий». Уточните, один ли это цвет."
+  ]
+ },
+ {
+  "id": "madera-sherst-30-pan-70",
+  "colorName": "Мадера",
+  "colorId": "madera",
+  "colorMatch": "exact",
+  "cardName": "мадера",
+  "cardCode": "345/0",
+  "hex": "#43192A",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 96.23,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 87"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "marmelad-pan-100",
+  "colorName": "мармелад",
+  "colorId": "marmelad",
+  "colorMatch": "exact",
+  "cardName": "мармелад",
+  "cardCode": "603/5",
+  "hex": "#B63E5F",
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 496.81,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 88"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "matros-siniy-sherst-30-pan-70",
+  "colorName": "Матрос.синий",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 5723.58,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 89"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "mattiola-pan-100",
+  "colorName": "маттиола",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 865.28,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 90"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "melanzh-ezhevika-sherst-30-pan-70",
+  "colorName": "меланж ежевика",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "melange",
+  "groups": [
+   "melange"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "melange",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 1011.18,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 91"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "melanzh-rozovyy-sherst-30-pan-70",
+  "colorName": "меланж.розовый",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "melange",
+  "groups": [
+   "melange"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "melange",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 282.02,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 92"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "metall-pan-100",
+  "colorName": "Металл",
+  "colorId": "metall",
+  "colorMatch": "exact",
+  "cardName": "металл",
+  "cardCode": "567/4",
+  "hex": "#545551",
+  "group": "grey",
+  "groups": [
+   "grey"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 282.91,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 93"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "mindal-pan-100",
+  "colorName": "Миндаль",
+  "colorId": "mindal",
+  "colorMatch": "exact",
+  "cardName": "миндаль",
+  "cardCode": "536/3",
+  "hex": "#BC698C",
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 524.7,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 94"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "mokr-asfalt-pan-100",
+  "colorName": "Мокр. асфальт",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "grey",
+  "groups": [
+   "grey"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 11.3,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 95"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "moroshka-pan-100",
+  "colorName": "морошка",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 131.1,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 96"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "morskaya-volna-sherst-30-pan-70",
+  "colorName": "Морская волна",
+  "colorId": "morskaya-volna",
+  "colorMatch": "exact",
+  "cardName": "морская волна",
+  "cardCode": "530/0",
+  "hex": "#10222F",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 110.92,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 97"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "morskaya-volna-pan-100",
+  "colorName": "Морская волна",
+  "colorId": "morskaya-volna",
+  "colorMatch": "exact",
+  "cardName": "морская волна",
+  "cardCode": "530/0",
+  "hex": "#10222F",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 1194.04,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 97"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "morskoy-port-sherst-30-pan-70",
+  "colorName": "Морской порт",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 57.3,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 98"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "myatn-svezhest-pan-100",
+  "colorName": "Мятн.свежесть",
+  "colorId": "myatnaya-svezhest",
+  "colorMatch": "abbr",
+  "cardName": "мятная свежесть",
+  "cardCode": "547/6",
+  "hex": "#B8DEA7",
+  "group": "green",
+  "groups": [
+   "green"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 18.99,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 99"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец сопоставлен с картой по сокращённому названию: «Мятн.свежесть» → «мятная свежесть»."
+  ]
+ },
+ {
+  "id": "nezhno-goluboy-pan-100",
+  "colorName": "Нежно-голубой",
+  "colorId": "nezhno-goluboy",
+  "colorMatch": "exact",
+  "cardName": "нежно-голубой",
+  "cardCode": "556/4",
+  "hex": "#7DA3CF",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 291.93,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 101"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "nezhno-rozovyy-pan-100",
+  "colorName": "Нежно-розовый",
+  "colorId": "nezhno-rozovyy",
+  "colorMatch": "exact",
+  "cardName": "нежно-розовый",
+  "cardCode": "587/6",
+  "hex": "#D291A6",
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 280.04,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 102"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "neonovyy-sherst-30-pan-70",
+  "colorName": "Неоновый",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 183.25,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 103"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "nefritovyy-pan-100",
+  "colorName": "нефритовый",
+  "colorId": "nefritovyy",
+  "colorMatch": "exact",
+  "cardName": "нефритовый",
+  "cardCode": "579/7",
+  "hex": "#151E1D",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 283.11,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 104"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "okean-sherst-30-pan-70",
+  "colorName": "Океан",
+  "colorId": "okean",
+  "colorMatch": "exact",
+  "cardName": "океан",
+  "cardCode": "518/5",
+  "hex": "#2D889F",
+  "group": "turquoise",
+  "groups": [
+   "turquoise"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 2,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 105"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "okean-pan-100",
+  "colorName": "Океан",
+  "colorId": "okean",
+  "colorMatch": "exact",
+  "cardName": "океан",
+  "cardCode": "518/5",
+  "hex": "#2D889F",
+  "group": "turquoise",
+  "groups": [
+   "turquoise"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 459,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 105"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "okeanskaya-sin-sherst-30-pan-70",
+  "colorName": "океанская синь",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 6.4,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 106"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "okeanskaya-sin-pan-100",
+  "colorName": "океанская синь",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 15,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 106"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "otbelennyy-pan-100",
+  "colorName": "Отбеленный",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "white",
+  "groups": [
+   "white"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 2680.32,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 109"
+  },
+  "assorti": null,
+  "notes": [
+   "В таблице остатков есть строка с близким написанием: «отбелённый». Уточните, один ли это цвет.",
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "otbelennyy-pan-100-2",
+  "colorName": "отбелённый",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "white",
+  "groups": [
+   "white"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 281.74,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 110"
+  },
+  "assorti": null,
+  "notes": [
+   "В таблице остатков есть строка с близким написанием: «Отбеленный». Уточните, один ли это цвет.",
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "ofitserskiy-sherst-30-pan-70",
+  "colorName": "Офицерский",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 169.11,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 111"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "pervansh-pan-100",
+  "colorName": "Перванш",
+  "colorId": "pervansh",
+  "colorMatch": "exact",
+  "cardName": "перванш",
+  "cardCode": "519/0",
+  "hex": "#446C94",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 339.56,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 112"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "perlamutrovyy-pan-100",
+  "colorName": "Перламутровый",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 281.28,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 113"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "pesochnyy-sherst-30-pan-70",
+  "colorName": "Песочный",
+  "colorId": "pesochnyy",
+  "colorMatch": "exact",
+  "cardName": "песочный",
+  "cardCode": "504/0",
+  "hex": "#8D7137",
+  "group": "yellow",
+  "groups": [
+   "yellow",
+   "sand"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 132.98,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 114"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "pion-sherst-30-pan-70",
+  "colorName": "Пион",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 157.14,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 115"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "podosinovik-sherst-30-pan-70",
+  "colorName": "Подосиновик",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 145.53,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 116"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "podsolnuh-pan-100",
+  "colorName": "подсолнух",
+  "colorId": "podsolnuh",
+  "colorMatch": "exact",
+  "cardName": "подсолнух",
+  "cardCode": "549/3",
+  "hex": "#C88604",
+  "group": "orange",
+  "groups": [
+   "orange"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 639.76,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 117"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "portveyn-sherst-30-pan-70",
+  "colorName": "Портвейн",
+  "colorId": "portveyn",
+  "colorMatch": "exact",
+  "cardName": "портвейн",
+  "cardCode": "446/2",
+  "hex": "#4F1B1C",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 414.42,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 118"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "prud-pan-100",
+  "colorName": "пруд",
+  "colorId": "prud",
+  "colorMatch": "exact",
+  "cardName": "пруд",
+  "cardCode": "433/7",
+  "hex": "#477453",
+  "group": "green",
+  "groups": [
+   "green"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 34.26,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 119"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "rapsodiya-sherst-30-pan-70",
+  "colorName": "Рапсодия",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 15.3,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 120"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "roza-gold-sherst-30-pan-70",
+  "colorName": "Роза голд",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 380.41,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 121"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "rozovyy-lepestok-pan-100",
+  "colorName": "розовый лепесток",
+  "colorId": "rozovyy-lepestok",
+  "colorMatch": "exact",
+  "cardName": "розовый лепесток",
+  "cardCode": "510/2",
+  "hex": "#C15860",
+  "group": "red",
+  "groups": [
+   "red",
+   "pink"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 10.83,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 122"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "rozovyy-mindal-sherst-30-pan-70",
+  "colorName": "розовый миндаль",
+  "colorId": "rozovyy-mindal",
+  "colorMatch": "exact",
+  "cardName": "розовый миндаль",
+  "cardCode": "546/0",
+  "hex": "#B65D81",
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 172.81,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 123"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "rozovyy-mindal-pan-100",
+  "colorName": "розовый миндаль",
+  "colorId": "rozovyy-mindal",
+  "colorMatch": "exact",
+  "cardName": "розовый миндаль",
+  "cardCode": "546/0",
+  "hex": "#B65D81",
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 295.03,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 123"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "ryzhiy-kot-sherst-30-pan-70",
+  "colorName": "рыжий кот",
+  "colorId": "ryzhiy-kot",
+  "colorMatch": "exact",
+  "cardName": "рыжий кот",
+  "cardCode": "549/0",
+  "hex": "#81350B",
+  "group": "brown",
+  "groups": [
+   "brown"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 308.95,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 124"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "ryzhiy-kot-pan-100",
+  "colorName": "рыжий кот",
+  "colorId": "ryzhiy-kot",
+  "colorMatch": "exact",
+  "cardName": "рыжий кот",
+  "cardCode": "549/0",
+  "hex": "#81350B",
+  "group": "brown",
+  "groups": [
+   "brown"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 110.6,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 124"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "samshit-sherst-30-pan-70",
+  "colorName": "Самшит",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 262.19,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 125"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "sv-bordovyy-sherst-30-pan-70",
+  "colorName": "Св. бордовый",
+  "colorId": "sv-bordovyy",
+  "colorMatch": "exact",
+  "cardName": "св.бордовый",
+  "cardCode": "544/1",
+  "hex": "#2F171B",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 818.01,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 126"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "sv-marengo-sherst-30-pan-70",
+  "colorName": "Св. маренго",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "grey",
+  "groups": [
+   "grey"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 7164.58,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 127"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "sv-nektar-sherst-30-pan-70",
+  "colorName": "Св. нектар",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 0.1,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 128"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "sv-seryy-sherst-30-pan-70",
+  "colorName": "Св. серый",
+  "colorId": "sv-seryy",
+  "colorMatch": "exact",
+  "cardName": "св.серый",
+  "cardCode": "565/9",
+  "hex": "#7A7A7B",
+  "group": "grey",
+  "groups": [
+   "grey"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 9,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 129"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "sv-bordovyy-pan-100",
+  "colorName": "Св.бордовый",
+  "colorId": "sv-bordovyy",
+  "colorMatch": "exact",
+  "cardName": "св.бордовый",
+  "cardCode": "544/1",
+  "hex": "#2F171B",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 740.26,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 130"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "sv-marengo-pan-100",
+  "colorName": "св.маренго",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "grey",
+  "groups": [
+   "grey"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 296.9,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 131"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "sv-seryy-pan-100",
+  "colorName": "св.серый",
+  "colorId": "sv-seryy",
+  "colorMatch": "exact",
+  "cardName": "св.серый",
+  "cardCode": "565/9",
+  "hex": "#7A7A7B",
+  "group": "grey",
+  "groups": [
+   "grey"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 286.81,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 133"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "svetlaya-sliva-sherst-30-pan-70",
+  "colorName": "Светлая слива",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 2,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 134"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "seryy-sherst-30-pan-70",
+  "colorName": "Серый",
+  "colorId": "seryy",
+  "colorMatch": "exact",
+  "cardName": "серый",
+  "cardCode": "564/8",
+  "hex": "#6D6B67",
+  "group": "grey",
+  "groups": [
+   "grey"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 9.7,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 135"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "seryy-pan-100",
+  "colorName": "Серый",
+  "colorId": "seryy",
+  "colorMatch": "exact",
+  "cardName": "серый",
+  "cardCode": "564/8",
+  "hex": "#6D6B67",
+  "group": "grey",
+  "groups": [
+   "grey"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 286.81,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 135"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "siniy-dozhd-sherst-30-pan-70",
+  "colorName": "Синий дождь",
+  "colorId": "siniy-dozhd",
+  "colorMatch": "exact",
+  "cardName": "синий дождь",
+  "cardCode": "520/7",
+  "hex": "#285495",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 542.12,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 136"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "siniy-dozhd-pan-100",
+  "colorName": "Синий дождь",
+  "colorId": "siniy-dozhd",
+  "colorMatch": "exact",
+  "cardName": "синий дождь",
+  "cardCode": "520/7",
+  "hex": "#285495",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 278.5,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 136"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "sirena-sherst-30-pan-70",
+  "colorName": "сирена",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "violet",
+  "groups": [
+   "violet"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 98.29,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 137"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "sirenevyy-pan-100",
+  "colorName": "Сиреневый",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "violet",
+  "groups": [
+   "violet"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 284.21,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 138"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "sirenevyy-tuman-pan-100",
+  "colorName": "сиреневый туман",
+  "colorId": "sirenevyy-tuman",
+  "colorMatch": "exact",
+  "cardName": "сиреневый туман",
+  "cardCode": "539/1",
+  "hex": "#805E83",
+  "group": "pink",
+  "groups": [
+   "pink",
+   "violet"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 282.66,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 139"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "sliva-pan-100",
+  "colorName": "слива",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 84.8,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 140"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "slivovyy-sherst-30-pan-70",
+  "colorName": "Сливовый",
+  "colorId": "slivovyy",
+  "colorMatch": "exact",
+  "cardName": "сливовый",
+  "cardCode": "599/8",
+  "hex": "#2D1821",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 874.24,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 141"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "snezhok-sherst-30-pan-70",
+  "colorName": "Снежок",
+  "colorId": "snezhok",
+  "colorMatch": "exact",
+  "cardName": "снежок",
+  "cardCode": "301/С",
+  "hex": "#DDD3BA",
+  "group": "cream",
+  "groups": [
+   "cream"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 19,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 142"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "superbelyy-pan-100",
+  "colorName": "Супербелый",
+  "colorId": "superbelyy",
+  "colorMatch": "exact",
+  "cardName": "супербелый",
+  "cardCode": "501/5",
+  "hex": "#E1DAC3",
+  "group": "white",
+  "groups": [
+   "white"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 1596.38,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 143"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "surovyy-sherst-30-pan-70",
+  "colorName": "Суровый",
+  "colorId": "surovyy",
+  "colorMatch": "exact",
+  "cardName": "суровый",
+  "cardCode": "501/1",
+  "hex": "#E1DAC3",
+  "group": "natural",
+  "groups": [
+   "natural"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 110.21,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 145"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "surovyy-pan-100",
+  "colorName": "Суровый",
+  "colorId": "surovyy",
+  "colorMatch": "exact",
+  "cardName": "суровый",
+  "cardCode": "501/1",
+  "hex": "#E1DAC3",
+  "group": "natural",
+  "groups": [
+   "natural"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 1506.21,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 145"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "t-kuraga-sherst-30-pan-70",
+  "colorName": "Т. курага",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 335.17,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 146"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "t-makiyazh-sherst-30-pan-70",
+  "colorName": "Т. макияж",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 13.08,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 147"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "t-rashel-sherst-30-pan-70",
+  "colorName": "Т. рашель",
+  "colorId": "t-rashel",
+  "colorMatch": "exact",
+  "cardName": "т.рашель",
+  "cardCode": "538/4",
+  "hex": "#7F4054",
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 121.61,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 148"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "t-asfalt-sherst-30-pan-70",
+  "colorName": "Т.асфальт",
+  "colorId": "t-asfalt",
+  "colorMatch": "exact",
+  "cardName": "т.асфальт",
+  "cardCode": "753/1",
+  "hex": "#262727",
+  "group": "melange",
+  "groups": [
+   "melange",
+   "grey"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "melange",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 8,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 149"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "t-biryuza-pan-100",
+  "colorName": "т.бирюза",
+  "colorId": "t-biryuza",
+  "colorMatch": "exact",
+  "cardName": "т.бирюза",
+  "cardCode": "518/3",
+  "hex": "#053D6E",
+  "group": "blue",
+  "groups": [
+   "blue",
+   "turquoise"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 304.71,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 150"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "t-olivkovyy-sherst-30-pan-70",
+  "colorName": "Т.оливковый",
+  "colorId": "t-olivkovyy",
+  "colorMatch": "exact",
+  "cardName": "т.оливковый",
+  "cardCode": "563/7",
+  "hex": "#080805",
+  "group": "black",
+  "groups": [
+   "black",
+   "green"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 6016.16,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 152"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "t-proleska-pan-100",
+  "colorName": "т.пролеска",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 301.59,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 153"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "tayfun-pan-100",
+  "colorName": "Тайфун",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 13,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 155"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "temnaya-biryuza-pan-100",
+  "colorName": "Темная бирюза",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "turquoise",
+  "groups": [
+   "turquoise"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 1764.86,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 156"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "terrakot-pan-100",
+  "colorName": "Терракот",
+  "colorId": "terrakot",
+  "colorMatch": "exact",
+  "cardName": "терракот",
+  "cardCode": "573/0",
+  "hex": "#4B1B1A",
+  "group": "red",
+  "groups": [
+   "red",
+   "orange"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 1185.29,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 157"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "toskano-sherst-30-pan-70",
+  "colorName": "Тоскано",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 5.88,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 158"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "triumf-pan-100",
+  "colorName": "триумф",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 12.9,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 159"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "turetskiy-sherst-30-pan-70",
+  "colorName": "Турецкий",
+  "colorId": "turetskiy",
+  "colorMatch": "exact",
+  "cardName": "турецкий",
+  "cardCode": "543/6",
+  "hex": "#312F54",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 9,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 160"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "turetskiy-pan-100",
+  "colorName": "Турецкий",
+  "colorId": "turetskiy",
+  "colorMatch": "exact",
+  "cardName": "турецкий",
+  "cardCode": "543/6",
+  "hex": "#312F54",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 804.6,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 160"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "favorit-sezona-sherst-30-pan-70",
+  "colorName": "Фаворит сезона",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 798.64,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 161"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "farforovyy-pan-100",
+  "colorName": "фарфоровый",
+  "colorId": "farforovyy",
+  "colorMatch": "exact",
+  "cardName": "фарфоровый",
+  "cardCode": "600/9",
+  "hex": "#CDBD9A",
+  "group": "cream",
+  "groups": [
+   "cream"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 479.9,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 162"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "festivalnaya-fuksiya-pan-100",
+  "colorName": "фестивальная фуксия",
+  "colorId": "festivalnaya-fuksiya",
+  "colorMatch": "exact",
+  "cardName": "фестивальная фуксия",
+  "cardCode": "345/7",
+  "hex": "#4E1E2C",
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 886.39,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 163"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "flamingo-pan-100",
+  "colorName": "Фламинго",
+  "colorId": "flamingo",
+  "colorMatch": "exact",
+  "cardName": "фламинго",
+  "cardCode": "603/7",
+  "hex": "#C43265",
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 818.49,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 164"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "flotskiy-sherst-30-pan-70",
+  "colorName": "Флотский",
+  "colorId": "flotskiy",
+  "colorMatch": "exact",
+  "cardName": "флотский",
+  "cardCode": "570/0",
+  "hex": "#0F0F13",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 4201.6,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 165"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "fuksiya-pan-100",
+  "colorName": "Фуксия",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 275.65,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 166"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "tsian-sherst-30-pan-70",
+  "colorName": "циан",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 8.9,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 167"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "tsiklamen-rozovyy-pan-100",
+  "colorName": "Цикламен розовый",
+  "colorId": "tsiklamen-rozovyy",
+  "colorMatch": "exact",
+  "cardName": "цикламен розовый",
+  "cardCode": "538/1",
+  "hex": "#902954",
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 290.86,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 168"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "charli-sherst-30-pan-70",
+  "colorName": "Чарли",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 79.37,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 169"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "chern-zhemchug-sherst-30-pan-70",
+  "colorName": "Черн. жемчуг",
+  "colorId": "chernyy-zhemchug",
+  "colorMatch": "abbr",
+  "cardName": "черный жемчуг",
+  "cardCode": "559/7",
+  "hex": "#393D3A",
+  "group": "grey",
+  "groups": [
+   "grey",
+   "black"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 796.1,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 170"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец сопоставлен с картой по сокращённому названию: «Черн. жемчуг» → «черный жемчуг»."
+  ]
+ },
+ {
+  "id": "chernyy-sherst-30-pan-70",
+  "colorName": "Черный",
+  "colorId": "chernyy",
+  "colorMatch": "exact",
+  "cardName": "черный",
+  "cardCode": "534/0",
+  "hex": "#181819",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 10389.46,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 171"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "chernyy-pan-100",
+  "colorName": "Черный",
+  "colorId": "chernyy",
+  "colorMatch": "exact",
+  "cardName": "черный",
+  "cardCode": "534/0",
+  "hex": "#181819",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 3056.55,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 171"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "shampanskoe-pan-100",
+  "colorName": "Шампанское",
+  "colorId": "shampanskoe",
+  "colorMatch": "exact",
+  "cardName": "шампанское",
+  "cardCode": "547/2",
+  "hex": "#D3C63F",
+  "group": "yellow",
+  "groups": [
+   "yellow"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 291.5,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 172"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "shelkovitsa-sherst-30-pan-70",
+  "colorName": "Шелковица",
+  "colorId": "shelkovitsa",
+  "colorMatch": "exact",
+  "cardName": "шелковица",
+  "cardCode": "446/0",
+  "hex": "#1A1823",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 1,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 173"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "shokolad-sherst-30-pan-70",
+  "colorName": "Шоколад",
+  "colorId": "shokolad",
+  "colorMatch": "exact",
+  "cardName": "шоколад",
+  "cardCode": "533/2",
+  "hex": "#261E17",
+  "group": "brown",
+  "groups": [
+   "brown"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 703.98,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 174"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "shokolad-pan-100",
+  "colorName": "Шоколад",
+  "colorId": "shokolad",
+  "colorMatch": "exact",
+  "cardName": "шоколад",
+  "cardCode": "533/2",
+  "hex": "#261E17",
+  "group": "brown",
+  "groups": [
+   "brown"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 901.34,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 174"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "shtorm-sherst-30-pan-70",
+  "colorName": "Шторм",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 4334.85,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 175"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "edem-pan-100",
+  "colorName": "Эдем",
+  "colorId": "edem",
+  "colorMatch": "exact",
+  "cardName": "эдем",
+  "cardCode": "553/3",
+  "hex": "#06510B",
+  "group": "green",
+  "groups": [
+   "green"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 109.19,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 176"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "ekzotika-pan-100",
+  "colorName": "экзотика",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 299.21,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 177"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "yarko-flavin-sherst-30-pan-70",
+  "colorName": "Ярко-флавин",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 1087.85,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 178"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "yarkoe-zoloto-sherst-30-pan-70",
+  "colorName": "яркое золото",
+  "colorId": "yarkoe-zoloto",
+  "colorMatch": "exact",
+  "cardName": "яркое золото",
+  "cardCode": "508/5",
+  "hex": "#6F4509",
+  "group": "brown",
+  "groups": [
+   "brown",
+   "yellow"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 9.4,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 179"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "yasen-sherst-30-pan-70",
+  "colorName": "ясень",
+  "colorId": "yasen",
+  "colorMatch": "exact",
+  "cardName": "ясень",
+  "cardCode": "592/1",
+  "hex": "#7D6D52",
+  "group": "brown",
+  "groups": [
+   "brown"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": null,
+  "nm": null,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [
+   "machine"
+  ],
+  "stock": {
+   "kg": 569.98,
+   "date": "2015-09-23",
+   "source": "Наличие бобин, строка 180"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "angora-pan-100-290tex",
+  "colorName": "ангора",
+  "colorId": "angora",
+  "colorMatch": "exact",
+  "cardName": "ангора",
+  "cardCode": "567/8",
+  "hex": "#6C696D",
+  "group": "grey",
+  "groups": [
+   "grey"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [],
+  "stock": {
+   "kg": 12.9,
+   "date": null,
+   "source": "Сумма остатков, строка 7"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "vesta-sherst-30-pan-70-290tex",
+  "colorName": "Веста",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 34.4,
+   "date": null,
+   "source": "Сумма остатков, строка 8"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "geran-sherst-30-pan-70-290tex",
+  "colorName": "Герань",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 28,
+   "date": null,
+   "source": "Сумма остатков, строка 9"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "germes-pan-100-290tex",
+  "colorName": "гермес",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 4.6,
+   "date": null,
+   "source": "Сумма остатков, строка 10"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "gork-shokolad-sherst-30-pan-70-290tex",
+  "colorName": "Горьк.шоколад",
+  "colorId": "gorkiy-shokolad",
+  "colorMatch": "abbr",
+  "cardName": "горький шоколад",
+  "cardCode": "340/5",
+  "hex": "#26221C",
+  "group": "black",
+  "groups": [
+   "black",
+   "brown"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [],
+  "stock": {
+   "kg": 18,
+   "date": null,
+   "source": "Сумма остатков, строка 11"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец сопоставлен с картой по сокращённому названию: «Горьк.шоколад» → «горький шоколад»."
+  ]
+ },
+ {
+  "id": "delik-rozovyy-sherst-30-pan-70-290tex",
+  "colorName": "Делик. розовый",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 30,
+   "date": null,
+   "source": "Сумма остатков, строка 12"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "inzhir-sherst-30-pan-70-290tex",
+  "colorName": "Инжир",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 20,
+   "date": null,
+   "source": "Сумма остатков, строка 13"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "irida-sherst-30-pan-70-290tex",
+  "colorName": "Ирида",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 11.7,
+   "date": null,
+   "source": "Сумма остатков, строка 14"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "laminariya-sherst-30-pan-70-290tex",
+  "colorName": "Ламинария",
+  "colorId": "laminariya",
+  "colorMatch": "exact",
+  "cardName": "ламинария",
+  "cardCode": "369/2",
+  "hex": "#0C0F08",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [],
+  "stock": {
+   "kg": 10.2,
+   "date": null,
+   "source": "Сумма остатков, строка 15"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "plamennyy-sherst-30-pan-70-290tex",
+  "colorName": "Пламенный",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 12,
+   "date": null,
+   "source": "Сумма остатков, строка 16"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "sv-lavanda-sherst-30-pan-70-290tex",
+  "colorName": "Св. лаванда",
+  "colorId": "sv-lavanda",
+  "colorMatch": "exact",
+  "cardName": "св.лаванда",
+  "cardCode": "413/5",
+  "hex": "#8892B0",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [],
+  "stock": {
+   "kg": 28.6,
+   "date": null,
+   "source": "Сумма остатков, строка 17"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "sliva-pan-100-290tex",
+  "colorName": "слива",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 20,
+   "date": null,
+   "source": "Сумма остатков, строка 18"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "snezhok-sherst-30-pan-70-290tex",
+  "colorName": "Снежок",
+  "colorId": "snezhok",
+  "colorMatch": "exact",
+  "cardName": "снежок",
+  "cardCode": "301/С",
+  "hex": "#DDD3BA",
+  "group": "cream",
+  "groups": [
+   "cream"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [],
+  "stock": {
+   "kg": 67.1,
+   "date": null,
+   "source": "Сумма остатков, строка 19"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "shelkovitsa-sherst-30-pan-70-290tex",
+  "colorName": "Шелковица",
+  "colorId": "shelkovitsa",
+  "colorMatch": "exact",
+  "cardName": "шелковица",
+  "cardCode": "446/0",
+  "hex": "#1A1823",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [],
+  "stock": {
+   "kg": 13.8,
+   "date": null,
+   "source": "Сумма остатков, строка 20"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "kedr-sherst-30-pan-70-265tex",
+  "colorName": "Кедр",
+  "colorId": "kedr",
+  "colorMatch": "exact",
+  "cardName": "кедр",
+  "cardCode": "531/2",
+  "hex": "#151E23",
+  "group": "black",
+  "groups": [
+   "black"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 265,
+  "nm": 3.77,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [],
+  "stock": {
+   "kg": 19.5,
+   "date": null,
+   "source": "Сумма остатков, строка 49"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "krasnyy-rubin-sherst-30-pan-70-265tex",
+  "colorName": "красный рубин",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "red",
+  "groups": [
+   "red"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 265,
+  "nm": 3.77,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 9.4,
+   "date": null,
+   "source": "Сумма остатков, строка 50"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "m-siniy-pan-100-265tex",
+  "colorName": "М. синий",
+  "colorId": "m-siniy",
+  "colorMatch": "exact",
+  "cardName": "м.синий",
+  "cardCode": "571/2",
+  "hex": "#0C0C13",
+  "group": "black",
+  "groups": [
+   "black",
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": 265,
+  "nm": 3.77,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [],
+  "stock": {
+   "kg": 5,
+   "date": null,
+   "source": "Сумма остатков, строка 51"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "moroshka-pan-100-265tex",
+  "colorName": "морошка",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": 265,
+  "nm": 3.77,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 20,
+   "date": null,
+   "source": "Сумма остатков, строка 52"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "pervansh-pan-100-265tex",
+  "colorName": "Перванш",
+  "colorId": "pervansh",
+  "colorMatch": "exact",
+  "cardName": "перванш",
+  "cardCode": "519/0",
+  "hex": "#446C94",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": 265,
+  "nm": 3.77,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [],
+  "stock": {
+   "kg": 15,
+   "date": null,
+   "source": "Сумма остатков, строка 53"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "ryzhiy-kot-pan-100-265tex",
+  "colorName": "рыжий кот",
+  "colorId": "ryzhiy-kot",
+  "colorMatch": "exact",
+  "cardName": "рыжий кот",
+  "cardCode": "549/0",
+  "hex": "#81350B",
+  "group": "brown",
+  "groups": [
+   "brown"
+  ],
+  "composition": "ПАН 100% (акрил)",
+  "compositionSource": "ПАН-100%",
+  "categories": [
+   "acrylic"
+  ],
+  "fibers": [
+   "акрил (ПАН)"
+  ],
+  "tex": 265,
+  "nm": 3.77,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [],
+  "stock": {
+   "kg": 48,
+   "date": null,
+   "source": "Сумма остатков, строка 54"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "sv-nektar-sherst-30-pan-70-265tex",
+  "colorName": "Св. нектар",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 265,
+  "nm": 3.77,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 21.2,
+   "date": null,
+   "source": "Сумма остатков, строка 55"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "svetlaya-sliva-sherst-30-pan-70-265tex",
+  "colorName": "Светлая слива",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": null,
+  "groups": [],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 265,
+  "nm": 3.77,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 12.5,
+   "date": null,
+   "source": "Сумма остатков, строка 56"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "superbelyy-sherst-30-pan-70-265tex",
+  "colorName": "Супербелый",
+  "colorId": "superbelyy",
+  "colorMatch": "exact",
+  "cardName": "супербелый",
+  "cardCode": "501/5",
+  "hex": "#E1DAC3",
+  "group": "white",
+  "groups": [
+   "white"
+  ],
+  "composition": "Шерсть 30%, ПАН 70%",
+  "compositionSource": "Шерсть-30%, ПАН-70%",
+  "categories": [
+   "wool-acrylic",
+   "half-wool"
+  ],
+  "fibers": [
+   "шерсть",
+   "акрил (ПАН)"
+  ],
+  "tex": 265,
+  "nm": 3.77,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": "solid",
+  "purpose": [],
+  "stock": {
+   "kg": 11,
+   "date": null,
+   "source": "Сумма остатков, строка 57"
+  },
+  "assorti": null,
+  "notes": []
+ },
+ {
+  "id": "assorti-sostav-utochnyaetsya-290tex",
+  "colorName": "Ассорти",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "multi",
+  "groups": [
+   "multi"
+  ],
+  "composition": null,
+  "compositionSource": null,
+  "categories": [],
+  "fibers": [],
+  "tex": 290,
+  "nm": 3.45,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 108,
+   "date": null,
+   "source": "Сумма остатков, строка 25"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ },
+ {
+  "id": "assorti-sostav-utochnyaetsya-265tex",
+  "colorName": "Ассорти",
+  "colorId": null,
+  "colorMatch": null,
+  "cardName": null,
+  "cardCode": null,
+  "hex": null,
+  "group": "multi",
+  "groups": [
+   "multi"
+  ],
+  "composition": null,
+  "compositionSource": null,
+  "categories": [],
+  "fibers": [],
+  "tex": 265,
+  "nm": 3.77,
+  "ply": null,
+  "bobbinWeightKg": null,
+  "priceRub": null,
+  "minOrder": null,
+  "yarnType": null,
+  "purpose": [],
+  "stock": {
+   "kg": 413.56,
+   "date": null,
+   "source": "Сумма остатков, строка 62"
+  },
+  "assorti": null,
+  "notes": [
+   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+  ]
+ }
+]

@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.xlsx
+*.local
+.DS_Store
+*.tsbuildinfo
+.gh-pages/
