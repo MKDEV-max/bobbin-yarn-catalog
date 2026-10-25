@@ -1,47 +1,60 @@
 /*
- * Цветовые токены — фирменная палитра «Кавказская шерсть» (как на сайте компании
- * kavkazskaya-sherst: графит логотипа, натуральная шерсть, ледник).
- * Цвета товаров (образцы пряжи) — отдельно, в данных каталога, и сюда не входят.
+ * Цветовые токены. Основа — фирменная палитра «Кавказская шерсть» (графит логотипа, натуральная шерсть).
+ * Насыщенные акценты взяты из карты расцветок («карта цветов.xlsx») — реальные цвета пряжи:
+ *   «рыжий кот» 549/0, «камелия» 537/7, «изумрудный город» 529/2, «синий дождь» 520/7, «яркое золото» 508/5.
  * Контраст пар «текст/фон» проверен расчётом по WCAG 2.1 (AA: текст ≥ 4.5:1, границы ≥ 3:1).
  */
 :root {
-  /* Нейтральные */
-  --color-bg: #F6F4EF;
+  /* Нейтральная основа */
+  --color-bg: #F7F4EE;
   --color-surface: #FFFFFF;
-  --color-surface-alt: #EFEBE3;
-  --color-line: #DDD8CE;
+  --color-surface-alt: #F0EBE1;
+  --color-line: #E2DCD0;
   --color-line-strong: #8C958F;   /* 3.1:1 — граница полей */
 
   /* Текст */
-  --color-ink: #16232A;           /* графит логотипа — 14.6:1 на фоне */
-  --color-ink-muted: #4F5B58;     /* 6.4:1 на фоне */
+  --color-ink: #16232A;           /* графит логотипа — 14.6:1 */
+  --color-ink-muted: #4F5B58;     /* 6.4:1 */
   --color-heading: #16232A;
 
   /* Бренд */
-  --color-brand: #16232A;         /* графит: основные кнопки, подвал, первый экран */
+  --color-brand: #16232A;         /* графит: шапка, подвал, первый экран */
   --color-brand-2: #22343A;
-  --color-sand: #E4D5BA;          /* натуральная шерсть — главный акцент */
+  --color-sand: #E4D5BA;          /* натуральная шерсть */
   --color-sand-strong: #CDB994;
 
+  /* Акценты из карты расцветок */
+  --color-primary: #A14A15;       /* «рыжий кот» 549/0 — основные кнопки; белый текст 6.0:1 */
+  --color-primary-hover: #7E3A10;
+  --color-primary-soft: #F8E7DA;
+  --color-berry: #B02B77;         /* «камелия» 537/7 — надзаголовки, выделение; 5.6:1 на фоне */
+  --color-berry-soft: #F9E4EF;
+  --color-teal: #0A6B76;          /* «изумрудный город» 529/2 — ссылки, выбранные фильтры; 5.7:1 */
+  --color-teal-soft: #DDF0F1;
+  --color-blue: #376BB9;          /* «синий дождь» 520/7 */
+  --color-blue-soft: #E3ECF8;
+  --color-gold: #8C5D15;          /* «яркое золото» 508/5 */
+  --color-gold-soft: #F6ECD6;
+
   /* Роли интерфейса (имена используются в компонентах) */
-  --color-accent: #16232A;        /* основные кнопки; светлый текст 14:1 */
-  --color-accent-hover: #0C171C;
-  --color-accent-soft: #E4EFEE;   /* «ледник», осветлён */
-  --color-link: #1F6064;          /* «ледник» — ссылки, 6.5:1 на фоне */
-  --color-warm: #1F6064;          /* надзаголовки */
-  --color-warm-soft: #F1EADC;
+  --color-accent: var(--color-primary);
+  --color-accent-hover: var(--color-primary-hover);
+  --color-accent-soft: var(--color-teal-soft);
+  --color-link: var(--color-teal);
+  --color-warm: var(--color-berry);
+  --color-warm-soft: var(--color-primary-soft);
   --color-dark: #16232A;
   --color-on-dark: #F3EFE4;       /* 14:1 на графите */
-  --color-on-dark-muted: #B9C2BE; /* 8.8:1 на графите */
-  --color-on-dark-accent: #86C8C9;/* 8.5:1 на графите */
-  --color-highlight: #2B7478;     /* фокус, мелкие акценты */
+  --color-on-dark-muted: #B9C2BE; /* 8.8:1 */
+  --color-on-dark-accent: #F0A8CC;/* «камелия», осветлена — 9:1 на графите */
+  --color-highlight: #0A6B76;     /* фокус */
 
   /* Статусы */
   --color-ok: #1E6A3B;
   --color-ok-soft: #E6F2EA;
   --color-check: #7A4A06;
   --color-check-soft: #FBEFD9;
-  --color-danger: #A4241B;        /* 7.4:1 на белом */
+  --color-danger: #A4241B;
   --color-danger-soft: #FBECEA;
   --color-placeholder: #6A7470;   /* 4.8:1 на белом */
 }

@@ -13,13 +13,26 @@ import { FAQ_ITEMS } from './faqItems';
 import { Terms } from './DeliveryPage';
 
 const byCat = (id: string) => PRODUCTS.filter((p) => p.categories.includes(id));
-const swatchesOf = (list: typeof PRODUCTS, n = 8) => [...new Set(list.map((p) => p.colorId).filter(Boolean))].slice(0, n).map((id) => COLORS.find((c) => c.id === id)!);
+/** Порядок облака оттенков: тон (12 секторов), внутри — от светлого к тёмному; серые и чёрные — в конце */
+const cloudKey = (hex: string) => {
+  const v = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255), l = (Math.max(...v) + Math.min(...v)) / 2;
+  const h = hueOf(hex);
+  return (h >= 400 ? 13 : Math.floor(((h + 15) % 360) / 30)) * 10 + (1 - l) * 9;
+};
+const satOf = (hex: string) => { const v = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16)); const mx = Math.max(...v), mn = Math.min(...v); return mx ? (mx - mn) / mx : 0; };
+/** Мозаика категории: самые насыщенные реальные оттенки этой категории, по порядку тона */
+const swatchesOf = (list: typeof PRODUCTS, n = 8) => [...new Set(list.map((p) => p.colorId).filter(Boolean))].map((id) => COLORS.find((c) => c.id === id)!)
+  .sort((a, b) => satOf(b.hex) - satOf(a.hex)).slice(0, n).sort((a, b) => hueOf(a.hex) - hueOf(b.hex));
 
 export function HomePage() {
   const half = byCat('half-wool'), acr = byCat('acrylic');
   const melange = PRODUCTS.filter((p) => p.yarnType === 'melange' || p.groups.includes('melange'));
-  const top = [...PRODUCTS].sort((a, b) => b.stock.kg - a.stock.kg).slice(0, 6);
+  // Яркие цвета: самые насыщенные оттенки с остатком от 50 кг по таблице — по одному на группу цвета
+  const seenGroup = new Set<string>();
+  const top = PRODUCTS.filter((p) => p.hex && p.stock.kg >= 50).sort((a, b) => satOf(b.hex!) - satOf(a.hex!))
+    .filter((p) => { const g = p.group ?? ''; if (seenGroup.has(g)) return false; seenGroup.add(g); return true; }).slice(0, 8);
   const strip = [...COLORS].sort((a, b) => hueOf(a.hex) - hueOf(b.hex));
+  const cloud = [...COLORS].sort((a, b) => cloudKey(a.hex) - cloudKey(b.hex));
   const groupsWithItems = COLOR_GROUPS.filter((g) => COLORS.some((c) => c.groups.includes(g.id)));
   const cats = [
     { to: '/catalog?composition=half-wool', title: 'Полушерстяная пряжа', sub: 'Шерсть 30%, ПАН 70% — тепло шерсти и прочность акрила.', list: half },
@@ -39,7 +52,7 @@ export function HomePage() {
             <h1 id="hero-title">Бобинная пряжа для ваших идей и производства</h1>
             <p className="hero-lead">Подберите цвет, состав и толщину нити для вязания, трикотажа и текстильного производства. {COLORS.length} оттенков по карте расцветок, остатки по каждому цвету, поставки по всей России.</p>
             <div className="hero-actions">
-              <Link className="btn btn-sand" to="/catalog">Смотреть каталог</Link>
+              <Link className="btn btn-primary" to="/catalog">Смотреть каталог</Link>
               <Link className="btn btn-outline" to="/colors">Подобрать пряжу</Link>
               <Link className="link-arrow" to="/wholesale">Запросить оптовый прайс</Link>
             </div>
@@ -69,6 +82,11 @@ export function HomePage() {
         <Ridge />
       </section>
 
+      {/* Лента из всех цветов карты расцветок — нить, которая проходит через сайт */}
+      <div className="yarn-ribbon" aria-label="Все оттенки карты расцветок">
+        {strip.map((c) => <Link key={c.id} to={`/colors?pick=${c.id}`} title={`${c.name} · ${c.code}`} style={{ backgroundColor: c.hex }}><span className="sr-only">{c.name}</span></Link>)}
+      </div>
+
       <section className="section" aria-labelledby="products-title">
         <div className="container">
           <div className="section-head">
@@ -79,7 +97,7 @@ export function HomePage() {
           <div className="grid-3">
             {cats.map((c) => (
               <Link key={c.to} to={c.to} className="cat-card">
-                <span className="media cat-mosaic" aria-hidden="true">{swatchesOf(c.list).map((s) => <ColorChip key={s.id} hex={s.hex} size="fill" />)}</span>
+                <span className="media cat-mosaic" aria-hidden="true" style={{ gridTemplateColumns: `repeat(${Math.ceil(swatchesOf(c.list).length / 2)}, 1fr)` }}>{swatchesOf(c.list).map((s) => <ColorChip key={s.id} hex={s.hex} size="fill" />)}</span>
                 <span className="body"><h3>{c.title}</h3><p>{c.sub}</p><span className="more">{c.list.length} позиций →</span></span>
               </Link>
             ))}
@@ -87,15 +105,15 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section section-alt" aria-labelledby="pal-title">
+      <section className="section section-color on-dark" aria-labelledby="pal-title">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">Палитра</p>
             <h2 id="pal-title">{COLORS.length} оттенков по карте расцветок</h2>
             <p>Цвета из файла карты расцветок — однотонными образцами. Нажмите на группу, чтобы открыть подборку пряжи этих оттенков.</p>
           </div>
-          <div className="swatch-strip" aria-label="Все оттенки карты расцветок">
-            {strip.map((c) => <Link key={c.id} to={`/colors?pick=${c.id}`} title={`${c.name} · ${c.code}`} style={{ backgroundColor: c.hex }}><span className="sr-only">{c.name}</span></Link>)}
+          <div className="palette-cloud" aria-label="Все оттенки карты расцветок">
+            {cloud.map((c) => <Link key={c.id} to={`/colors?pick=${c.id}`} title={`${c.name} · ${c.code}`} style={{ backgroundColor: c.hex }}><span className="sr-only">{c.name}, {c.code}</span></Link>)}
           </div>
           <ul className="group-grid">
             {groupsWithItems.map((g) => {
@@ -103,7 +121,7 @@ export function HomePage() {
               return (
                 <li key={g.id}>
                   <Link to={`/catalog?group=${g.id}`} className="group-card">
-                    <span className="group-chips" aria-hidden="true">{cs.slice(0, 6).map((c) => <ColorChip key={c.id} hex={c.hex} size="sm" />)}</span>
+                    <span className="group-chips" aria-hidden="true">{cs.slice(0, 5).map((c) => <ColorChip key={c.id} hex={c.hex} size="dot" />)}</span>
                     <b>{labels.group(g.id)}</b><small>{cs.length} оттенков</small>
                   </Link>
                 </li>
@@ -117,16 +135,16 @@ export function HomePage() {
       <section className="section" aria-labelledby="top-title">
         <div className="container">
           <div className="section-head">
-            <p className="eyebrow">Популярные позиции</p>
-            <h2 id="top-title">Больше всего на складе</h2>
-            <p>По данным таблицы остатков на {formatDate(META.stockDate)}. Наличие перед заказом уточняйте у менеджера.</p>
+            <p className="eyebrow">Яркие цвета</p>
+            <h2 id="top-title">Насыщенные оттенки из каталога</h2>
+            <p>По одной позиции из разных групп цвета, с остатком от 50 кг по таблице склада на {formatDate(META.stockDate)}. Наличие перед заказом уточняйте у менеджера.</p>
           </div>
           <div className="product-grid">{top.map((p, i) => <ProductCard key={p.id} p={p} index={i} />)}</div>
-          <div className="section-foot"><Link className="link-arrow" to="/catalog?sort=stock">Весь каталог по остатку</Link></div>
+          <div className="section-foot"><Link className="btn btn-primary" to="/catalog">Смотреть каталог</Link></div>
         </div>
       </section>
 
-      <section className="section section-alt" aria-labelledby="who-title">
+      <section className="section section-warm" aria-labelledby="who-title">
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">О компании</p>
@@ -201,13 +219,13 @@ export function HomePage() {
 
       <section className="section" aria-label="Запрос предложения">
         <div className="container">
-          <div className="cta-band on-dark">
+          <div className="cta-band cta-warm on-dark">
             <div>
               <h2>Подберём пряжу под вашу задачу</h2>
               <p>Опишите изделие и оборудование — предложим позицию, пришлём образец и КП.</p>
             </div>
             <div className="actions">
-              <Link className="btn btn-sand" to="/wholesale">Получить КП</Link>
+              <Link className="btn btn-primary" to="/wholesale">Получить КП</Link>
               <Link className="btn btn-outline" to="/request">Запросить образец</Link>
             </div>
           </div>

@@ -134,7 +134,7 @@ export function AboutPage() {
               <p>Пришлём образец шерсти, топса или пряжи до заказа партии.</p>
             </div>
             <div className="actions">
-              <Link className="btn btn-sand" to="/request">Запросить образец</Link>
+              <Link className="btn btn-primary" to="/request">Запросить образец</Link>
               <Link className="btn btn-outline" to="/catalog">Смотреть каталог</Link>
             </div>
           </div>

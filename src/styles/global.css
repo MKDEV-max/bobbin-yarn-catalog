@@ -66,16 +66,15 @@ ul, ol { margin: 0; padding: 0; }
 /* Кнопки */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: 48px; padding: 12px 22px; border: 1px solid transparent; border-radius: var(--radius-md); font: 600 var(--fs-base)/1.2 var(--font-body); text-decoration: none; white-space: nowrap; cursor: pointer; transition: background-color .2s, border-color .2s, color .2s, transform .15s var(--ease), box-shadow .2s; }
 .btn svg { width: 20px; height: 20px; flex: none; }
-.btn-primary { background: var(--color-brand); color: var(--color-on-dark); }
-.btn-primary:hover { background: var(--color-accent-hover); color: var(--color-on-dark); box-shadow: var(--shadow-2); }
-.btn-light, .btn-sand { background: var(--color-sand); color: var(--color-ink); border-color: var(--color-sand-strong); }
-.btn-light:hover, .btn-sand:hover { background: #EDE2CC; color: var(--color-ink); box-shadow: var(--shadow-2); }
+/* Одна основная кнопка — насыщенная терракота «рыжий кот» с карты расцветок; остальные — спокойные контурные */
+.btn-primary, .btn-light, .btn-sand { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+.btn-primary:hover, .btn-light:hover, .btn-sand:hover { background: var(--color-primary-hover); border-color: var(--color-primary-hover); color: #fff; box-shadow: 0 8px 18px -10px rgb(161 74 21 / .7); transform: translateY(-1px); }
 .btn-outline { background: transparent; color: var(--color-ink); border-color: var(--color-line-strong); }
-.btn-outline:hover { background: var(--color-surface); color: var(--color-ink); border-color: var(--color-ink); }
+.btn-outline:hover { background: var(--color-surface); color: var(--color-ink); border-color: var(--color-ink); transform: translateY(-1px); }
 .section-dark .btn-outline, .hero .btn-outline, .on-dark .btn-outline { color: var(--color-on-dark); border-color: rgb(241 236 223 / .5); }
 .section-dark .btn-outline:hover, .hero .btn-outline:hover, .on-dark .btn-outline:hover { background: rgb(241 236 223 / .1); color: #fff; border-color: #fff; }
 .btn-ghost { background: transparent; color: var(--color-link); padding-inline: 12px; font-weight: 600; }
-.btn-ghost:hover { background: var(--color-accent-soft); color: var(--color-accent); }
+.btn-ghost:hover { background: var(--color-teal-soft); color: var(--color-teal); }
 .btn-sm { min-height: var(--tap); padding: 8px 14px; font-size: var(--fs-sm); }
 .btn-block { width: 100%; }
 .btn:active { transform: scale(.97); }
@@ -84,7 +83,7 @@ ul, ol { margin: 0; padding: 0; }
 .icon-btn:hover { background: var(--color-surface-alt); color: var(--color-ink); }
 .icon-btn:active { transform: scale(.95); }
 .icon-btn svg { width: 20px; height: 20px; }
-.icon-btn[aria-pressed="true"] { color: #B4322A; border-color: #E9C2BD; background: #FDF2F0; }
+.icon-btn[aria-pressed="true"] { color: var(--color-berry); border-color: #EDBCD6; background: var(--color-berry-soft); }
 .count-badge { position: absolute; top: -6px; right: -6px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: var(--radius-pill); background: var(--color-sand-strong); color: var(--color-ink); font-size: 11px; font-weight: 700; line-height: 20px; text-align: center; }
 
 /* Метки */

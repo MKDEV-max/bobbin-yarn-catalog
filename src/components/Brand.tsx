@@ -40,9 +40,9 @@ export function Ridge({ low }: { low?: boolean }) {
 }
 
 /** Тёмная шапка внутренних страниц с силуэтом гор — как .page-hero на сайте компании */
-export function PageHero({ crumbs, title, lead, children }: { crumbs: { to?: string; label: string }[]; title: string; lead?: React.ReactNode; children?: React.ReactNode }) {
+export function PageHero({ crumbs, title, lead, compact, children }: { crumbs: { to?: string; label: string }[]; title: string; lead?: React.ReactNode; compact?: boolean; children?: React.ReactNode }) {
   return (
-    <header className="page-hero on-dark">
+    <header className={`page-hero on-dark${compact ? ' page-hero-compact' : ''}`}>
       <div className="container">
         <nav className="breadcrumbs" aria-label="Хлебные крошки">
           <ol>

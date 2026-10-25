@@ -7,7 +7,7 @@ import { isLight, type Color } from '../data/catalog';
  */
 
 /** Однотонный квадрат цвета. hex = null — цвет неизвестен (пунктирная рамка) */
-export function ColorChip({ hex, size = 'md', className = '' }: { hex: string | null; size?: 'sm' | 'md' | 'lg' | 'fill'; className?: string }) {
+export function ColorChip({ hex, size = 'md', className = '' }: { hex: string | null; size?: 'dot' | 'sm' | 'md' | 'lg' | 'fill'; className?: string }) {
   return (
     <span className={`color-chip color-chip-${size}${hex && isLight(hex) ? ' is-light' : ''}${hex ? '' : ' is-unknown'} ${className}`}
       style={hex ? { backgroundColor: hex } : undefined} aria-hidden="true" />

@@ -72,7 +72,7 @@ export function DeliveryPage() {
               <p>Укажите позицию, объём и город доставки — пришлём КП.</p>
             </div>
             <div className="actions">
-              <Link className="btn btn-sand" to="/wholesale">Получить КП</Link>
+              <Link className="btn btn-primary" to="/wholesale">Получить КП</Link>
               <Link className="btn btn-outline" to="/catalog">Смотреть каталог</Link>
             </div>
           </div>

@@ -22,7 +22,7 @@ export function Footer() {
           <div className="footer-brand">
             <Logo lazy />
             <p>Мытая шерсть, топс и шерстяная пряжа из шерсти дагестанского мериноса. Производство — {site.region}. Поставки для текстильных, трикотажных и ковровых производств по всей России.</p>
-            <Link to="/contacts" className="btn btn-sand btn-sm">Связаться с нами</Link>
+            <Link to="/contacts" className="btn btn-primary btn-sm">Связаться с нами</Link>
           </div>
           <nav aria-label="Разделы сайта">
             <h2>Разделы</h2>

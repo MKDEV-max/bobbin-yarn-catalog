@@ -39,7 +39,8 @@
 /* ---------- Карточки категорий ---------- */
 .cat-card { display: grid; grid-template-rows: auto 1fr; overflow: hidden; background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius-lg); color: var(--color-ink); text-decoration: none; transition: transform .42s var(--ease), box-shadow .42s; }
 .cat-card .media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--color-surface-alt); }
-.cat-mosaic { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); }
+.cat-mosaic { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); grid-auto-flow: column; }
+.cat-mosaic > :first-child:nth-last-child(odd) { grid-row: span 2; }  /* нечётное число оттенков — первый на всю высоту, без пустых клеток */
 .cat-card .body { display: grid; gap: var(--space-2); align-content: start; padding: var(--space-5); }
 .cat-card h3 { font-size: var(--fs-lg); }
 .cat-card p { color: var(--color-ink-muted); font-size: var(--fs-sm); }
@@ -113,31 +114,57 @@
 .faq-layout .section-head > div { margin-top: var(--space-2); }
 @media (min-width: 1024px) { .faq-layout { grid-template-columns: 1fr 1.7fr; gap: var(--space-8); align-items: start; } }
 
-/* ---------- Каталог ---------- */
-.catalog { display: grid; gap: var(--space-6); padding-block: var(--space-6) var(--space-section); }
-.catalog-side { display: none; }
-.catalog-main { min-width: 0; }
-.filters { display: grid; gap: var(--space-6); }
-.shade-list { list-style: none; max-height: 280px; overflow-y: auto; padding-right: 4px; margin-top: var(--space-2); }
-.shade-list .check { align-items: center; min-height: 36px; padding-top: 0; }
-.input-sm { min-height: 40px; padding-block: 8px; font-size: var(--fs-sm); }
-.toolbar { display: grid; grid-template-columns: 1fr auto; gap: var(--space-3); align-items: center; }
-.toolbar-search { position: relative; grid-column: 1 / -1; }
+/* ---------- Каталог: поиск, компактная строка фильтров, галерея ---------- */
+.page-hero-compact .container { padding-block: var(--space-5) calc(max(32px, 100vw / 18) + var(--space-4)); }
+.page-hero-compact h1 { font-size: var(--fs-2xl); }
+.catalog { display: grid; gap: var(--space-4); padding-block: var(--space-5) var(--space-section); }
+.catalog-results { scroll-margin-top: calc(var(--header-h) + 16px); }
+.cat-top { display: grid; grid-template-columns: 1fr auto; gap: var(--space-3); align-items: center; }
+.toolbar-search { position: relative; }
 .toolbar-search svg { position: absolute; left: 14px; top: 50%; translate: 0 -50%; width: 18px; height: 18px; color: var(--color-ink-muted); pointer-events: none; }
 .toolbar-search .input { padding-left: 42px; }
-.filters-btn .chip-n { background: var(--color-sand); }
-.results-bar { display: grid; gap: var(--space-3); margin-block: var(--space-4); }
+.select-sm { min-height: 48px; width: auto; padding-block: 8px; font-size: var(--fs-sm); }
+.fbar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); }
+.fbar .results-count { margin-left: auto; }
+.fbar-desk { display: none; flex-wrap: wrap; gap: var(--space-2); }
+@media (min-width: 1024px) { .fbar-desk { display: flex; } .fbar .filters-btn { display: none; } }
+.fbtn { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 6px 12px 6px 14px; border: 1px solid var(--color-line); border-radius: var(--radius-pill); background: var(--color-surface); color: var(--color-ink); font: 500 var(--fs-sm)/1 var(--font-body); cursor: pointer; transition: border-color .2s, background-color .2s, box-shadow .2s; }
+.fbtn svg { width: 16px; height: 16px; color: var(--color-ink-muted); transition: rotate .2s; }
+.fbtn:hover { border-color: var(--color-line-strong); }
+.fbtn[aria-expanded="true"] { border-color: var(--color-teal); box-shadow: inset 0 0 0 1px var(--color-teal); }
+.fbtn[aria-expanded="true"] svg { rotate: 180deg; }
+.fbtn.has-value { border-color: var(--color-teal); background: var(--color-teal-soft); }
+.fbtn-n { display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 6px; border-radius: var(--radius-pill); background: var(--color-teal); color: #fff; font-size: 11px; font-weight: 700; }
+.fpop { position: relative; }
+.fpanel { position: absolute; left: 0; top: calc(100% + 6px); z-index: 30; width: 280px; max-height: 420px; overflow-y: auto; padding: var(--space-4); background: var(--color-surface); border: 1px solid var(--color-line); border-radius: var(--radius-lg); box-shadow: var(--shadow-3); }
+.fpanel-wide { width: 440px; }
+@media (prefers-reduced-motion: no-preference) { .fpanel { animation: fpanel-in .18s var(--ease); } @keyframes fpanel-in { from { opacity: 0; translate: 0 -4px; } } }
+.fhint { margin: var(--space-2) 0; font-size: var(--fs-xs); color: var(--color-ink-muted); }
+.fhint:first-child { margin-top: 0; }
+.dot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px var(--space-2); margin-bottom: var(--space-2); }
+.dot-opt { display: flex; align-items: center; gap: 8px; min-height: 36px; padding: 4px 8px; border: 1px solid transparent; border-radius: var(--radius-md); background: none; color: var(--color-ink); font-size: var(--fs-sm); text-align: left; cursor: pointer; transition: background-color .15s, border-color .15s; }
+.dot-opt > span:not(.color-chip) { flex: 1; min-width: 0; }
+.dot-opt small { color: var(--color-ink-muted); font-variant-numeric: tabular-nums; }
+.dot-opt:hover { background: var(--color-surface-alt); }
+.dot-opt[aria-pressed="true"] { border-color: var(--color-teal); background: var(--color-teal-soft); }
+.dot-opt[aria-pressed="true"] .color-chip { box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--color-teal); }
+.shade-list { list-style: none; max-height: 220px; overflow-y: auto; margin-top: var(--space-2); padding-right: 4px; }
+.check-sm { align-items: center; min-height: 34px; padding-top: 0; gap: var(--space-2); }
+.check-sm input { width: 18px; height: 18px; }
+.opt-list { display: grid; }
+.fgroup { border: 0; margin: 0 0 var(--space-5); padding: 0; min-width: 0; }
+.fgroup legend { padding: 0; margin-bottom: var(--space-2); font-weight: 600; }
+.fpanel .fgroup:last-child { margin-bottom: 0; }
+.fmore { border-top: 1px solid var(--color-line); padding-top: var(--space-4); }
+.fmore summary { display: flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 600; cursor: pointer; color: var(--color-teal); }
+.fmore[open] summary { margin-bottom: var(--space-3); }
 .results-count { color: var(--color-ink-muted); font-size: var(--fs-sm); }
 .results-count b { color: var(--color-ink); }
-.active-chips { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
-.active-chips .chip svg { width: 14px; height: 14px; }
+.active-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.achip { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 4px 8px 4px 10px; border: 0; border-radius: var(--radius-pill); background: var(--color-teal-soft); color: var(--color-ink); font-size: var(--fs-xs); font-weight: 500; cursor: pointer; transition: background-color .15s; }
+.achip svg { width: 14px; height: 14px; }
+.achip:hover { background: #C9E6E8; }
 .more-row { display: grid; justify-items: center; gap: var(--space-2); margin-top: var(--space-6); }
-@media (min-width: 1024px) {
-  .catalog { grid-template-columns: 280px 1fr; align-items: start; }
-  .catalog-side { display: block; position: sticky; top: calc(var(--header-h) + 16px); max-height: calc(100vh - var(--header-h) - 32px); overflow-y: auto; padding-right: var(--space-3); }
-  .filters-btn { display: none; }
-  .toolbar-search { grid-column: auto; }
-}
 
 .drawer { position: fixed; inset: 0; z-index: 90; }
 .drawer[hidden] { display: none; }
@@ -223,3 +250,52 @@
 .about-photo { margin: 0; display: grid; gap: var(--space-2); }
 .about-photo img { width: 100%; border-radius: var(--radius-lg); aspect-ratio: 4 / 3; object-fit: cover; background: var(--color-surface-alt); }
 .about-photo figcaption { font-size: var(--fs-xs); color: var(--color-ink-muted); }
+
+/* ---------- Цветные секции главной (цвета — из карты расцветок) ---------- */
+/* Лента всех оттенков под первым экраном */
+.yarn-ribbon { display: flex; height: 14px; background: var(--color-brand-2); }
+.yarn-ribbon a { flex: 1; min-width: 0; transition: flex-grow .2s var(--ease), transform .2s var(--ease); }
+.yarn-ribbon a:hover, .yarn-ribbon a:focus-visible { flex-grow: 8; transform: scaleY(1.6); }
+@media (min-width: 768px) { .yarn-ribbon { height: 18px; } }
+
+/* Палитра на глубоком «лагуна» 729/7 */
+.section-color { background: #144454; border: 0; }
+.section-color .section-head p { color: var(--color-on-dark-muted); }
+.section-color .eyebrow { color: #9FE0E6; }
+.section-color .group-card { background: rgb(255 255 255 / .06); border-color: rgb(255 255 255 / .14); color: var(--color-on-dark); }
+.section-color .group-card:hover { background: rgb(255 255 255 / .12); border-color: rgb(255 255 255 / .4); color: #fff; transform: translateY(-2px); }
+.section-color .group-card small { color: var(--color-on-dark-muted); }
+.section-color .group-chips .color-chip { width: 22px; height: 22px; border-radius: 50%; margin-left: -6px; box-shadow: 0 0 0 2px #144454; }
+.section-color .group-chips .color-chip:first-child { margin-left: 0; }
+.group-card { transition: border-color .2s, box-shadow .2s, background-color .2s, transform .2s var(--ease); }
+
+/* Тёплая секция — натуральная шерсть */
+.section-warm { background: var(--color-primary-soft); }
+.section-warm .fact { border-left-color: var(--color-primary); }
+
+/* Разноцветные акценты в блоках */
+.facts-4 .fact:nth-child(1) { border-left-color: var(--color-berry); }
+.facts-4 .fact:nth-child(2) { border-left-color: var(--color-teal); }
+.facts-4 .fact:nth-child(3) { border-left-color: var(--color-gold); }
+.facts-4 .fact:nth-child(4) { border-left-color: var(--color-blue); }
+.steps li:nth-child(1)::before { color: var(--color-primary); }
+.steps li:nth-child(2)::before { color: var(--color-berry); }
+.steps li:nth-child(3)::before { color: var(--color-teal); }
+.steps li:nth-child(4)::before { color: var(--color-gold); }
+.steps li { transition: transform .25s var(--ease), box-shadow .25s; }
+.steps li:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }
+.cat-card .more { color: var(--color-primary); }
+.cat-card .media { transition: transform .5s var(--ease); }
+.cat-card:hover .media { transform: scale(1.03); }
+
+/* Призыв — терракота «рыжий кот» */
+.cta-warm { background: var(--color-primary); }
+.cta-warm p { color: #FBE3D2; }
+.cta-warm .btn-primary { background: #fff; border-color: #fff; color: var(--color-primary); }
+.cta-warm .btn-primary:hover { background: var(--color-primary-soft); border-color: var(--color-primary-soft); color: var(--color-primary-hover); }
+/* Облако всех оттенков — центральный элемент палитры */
+.palette-cloud { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: var(--space-7); }
+.palette-cloud a { width: 26px; height: 26px; border-radius: 50%; box-shadow: 0 0 0 1px rgb(255 255 255 / .16); transition: transform .2s var(--ease), box-shadow .2s; }
+.palette-cloud a:hover, .palette-cloud a:focus-visible { transform: scale(1.45); box-shadow: 0 0 0 2px #fff, 0 6px 14px rgb(0 0 0 / .35); position: relative; z-index: 1; }
+@media (min-width: 768px) { .palette-cloud { gap: 8px; } .palette-cloud a { width: 32px; height: 32px; } }
+.section-color .group-chips .color-chip { width: 26px; height: 26px; }
