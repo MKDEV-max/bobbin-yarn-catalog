@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import { Boxes, FileSpreadsheet, Palette, Truck } from 'lucide-react';
 import { Seo } from '../components/Seo';
 import { ContactForm } from '../components/ContactForm';
-import { COLORS, PRODUCTS, productTitle, productById } from '../data/catalog';
-import { COMPOSITIONS } from '../data/taxonomy';
+import { CATALOG, catalogById } from '../data/catalog';
+import { COMPOSITION_OPTIONS, compText } from '../data/variants';
 import { IMAGES } from '../data/images';
 import { useStore } from '../state/store';
 import { PageHead } from './PageHead';
 
-// Только составы, которые реально есть в каталоге
-const COMPS = COMPOSITIONS.filter((c) => PRODUCTS.some((p) => p.categories.includes(c.id)));
+const COMPS = COMPOSITION_OPTIONS.map((c) => ({ id: c.id, label: c.note ? `${c.label} — ${c.note}` : c.label }));
 const VOLUMES = ['до 50 кг', '50–200 кг', '200–1000 кг', 'более 1 т', 'регулярные поставки'];
 
 export function WholesalePage() {
@@ -19,25 +18,25 @@ export function WholesalePage() {
   const [comps, setComps] = useState<string[]>([]);
   const [colors, setColors] = useState('');
   const [withList, setWithList] = useState(true);
-  const listItems = request.map((i) => productById.get(i.id)).filter(Boolean);
+  const listItems = request.filter((i) => catalogById.has(i.colorId));
 
   const body = () => [
     'Запрос оптового прайса',
     `Объём: ${volume || 'не указан'}`,
     `Составы: ${comps.length ? comps.map((id) => COMPS.find((c) => c.id === id)?.label).join(', ') : 'не указаны'}`,
     colors.trim() && `Цвета: ${colors.trim()}`,
-    withList && listItems.length > 0 && `Позиции из списка заявки: ${listItems.map((p) => productTitle(p!)).join('; ')}`,
+    withList && listItems.length > 0 && `Позиции из списка заявки: ${listItems.map((i) => `${catalogById.get(i.colorId)!.name}, ${i.twist}, ${compText(i.comp, i.wool, i.pan)}`).join('; ')}`,
   ].filter(Boolean).join('\n');
 
   return (
     <>
-      <Seo title="Оптовым покупателям — прайс на бобинную пряжу" description={`Оптовые поставки бобинной пряжи: ${COLORS.length} оттенков, полушерсть и акрил. Запросите прайс и расчёт под ваш объём.`} />
+      <Seo title="Оптовым покупателям — прайс на бобинную пряжу" description={`Оптовые поставки бобинной пряжи: ${CATALOG.length} цветов, скрутка 16/2 и 32/2, составы от 100% ПАН до индивидуального. Запросите прайс и расчёт под ваш объём.`} />
       <PageHead title="Оптовым покупателям" lead="Трикотажным производствам, мастерским и магазинам: расчёт под объём, подбор цветов, образцы." />
 
       <section className="section" style={{ paddingTop: 'var(--space-6)' }}>
         <div className="container">
           <ul className="adv">
-            <li><Palette aria-hidden="true" /><b>Широкая палитра</b><span>{COLORS.length} оттенков с карты расцветок — подбор по образцам.</span></li>
+            <li><Palette aria-hidden="true" /><b>Широкая палитра</b><span>{CATALOG.length} оттенков с карты расцветок — подбор по образцам.</span></li>
             <li><Boxes aria-hidden="true" /><b>Остатки по каждому цвету</b><span>Видно, какие цвета есть на складе в большом объёме.</span></li>
             <li><FileSpreadsheet aria-hidden="true" /><b>Прайс по запросу</b><span>Цена зависит от объёма и состава — пришлём расчёт.</span></li>
             <li><Truck aria-hidden="true" /><b>Условия поставки</b><span>Сроки, упаковку и доставку согласуем под заказ.</span></li>

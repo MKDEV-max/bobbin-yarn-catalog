@@ -1,125 +1,130 @@
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import { Check, ClipboardPlus, Heart, Palette, Plus } from 'lucide-react';
+import { Link, Navigate, useParams } from 'react-router-dom';
+import { Heart, Palette } from 'lucide-react';
 import { Seo } from '../components/Seo';
 import { Bobbin } from '../components/Bobbin';
-import { ProductCard, tint } from '../components/ProductCard';
 import { ColorChip } from '../components/ColorSwatch';
+import { Configurator } from '../components/Configurator';
+import { ProductCard, tint } from '../components/ProductCard';
 import { site } from '../config/site';
-import { PRODUCTS, colorById, formatDate, formatKg, hueOf, labels, productById, productSubtitle, productTitle, stockStatus } from '../data/catalog';
+import { CATALOG, capName, catalogById, colorConfigs, formatDate, formatKg, hueOf, labels, legacyToColor, META } from '../data/catalog';
+import { COMPOSITION_OPTIONS, TWISTS } from '../data/variants';
 import { useStore, useToast } from '../state/store';
 import { NotFoundPage } from './NotFoundPage';
 
 const TYPE: Record<string, string> = { solid: 'Однотонная', melange: 'Меланжевая', mouline: 'Мулинированная (из нитей разных цветов)' };
-const norm = (s: string) => s.toLowerCase().replace(/ё/g, 'е').replace(/[\s.]/g, '');
 
+/** Страница цвета: выбор конфигурации, все 8 вариантов, подробные сведения */
 export function ProductPage() {
   const { id = '' } = useParams();
-  const p = productById.get(id);
-  const { isFavorite, toggleFavorite, inRequest, addToRequest, updateItem } = useStore();
+  const c = catalogById.get(id);
+  const { isFavorite, toggleFavorite } = useStore();
   const toast = useToast();
-  const navigate = useNavigate();
-  if (!p) return <NotFoundPage />;
-
-  const color = p.colorId ? colorById.get(p.colorId) : null;
-  const title = productTitle(p);
-  const status = stockStatus(p);
-  const fav = isFavorite(p.id), added = inRequest(p.id);
-  const unknown = <span className="muted">уточняется</span>;
-
-  // Тот же цвет в других составах / толщинах
-  const variants = PRODUCTS.filter((q) => q.id !== p.id && ((p.colorId && q.colorId === p.colorId) || norm(q.colorName) === norm(p.colorName)));
-  // Похожие оттенки: тот же состав, та же группа, ближайшие по тону
-  const similar = PRODUCTS.filter((q) => q.id !== p.id && !variants.includes(q) && q.composition === p.composition && q.groups.some((g) => p.groups.includes(g)))
-    .sort((a, b) => Math.abs(hueOf(a.hex) - hueOf(p.hex)) - Math.abs(hueOf(b.hex) - hueOf(p.hex))).slice(0, 4);
-
-  const requestSample = () => {
-    addToRequest(p.id);
-    updateItem(p.id, { comment: 'Нужен образец' });
-    navigate('/request');
-  };
+  if (!c) {
+    const to = legacyToColor.get(id);   // старая ссылка на позицию «цвет + состав» → страница цвета
+    return to ? <Navigate to={`/product/${to}`} replace /> : <NotFoundPage />;
+  }
+  const name = capName(c.name.trim());
+  const fav = isFavorite(c.id);
+  const configs = colorConfigs(c);
+  const similar = CATALOG.filter((x) => x.id !== c.id && x.hex && c.hex && x.groups.some((g) => c.groups.includes(g)))
+    .sort((a, b) => Math.abs(hueOf(a.hex) - hueOf(c.hex)) - Math.abs(hueOf(b.hex) - hueOf(c.hex))).slice(0, 4);
 
   return (
     <>
-      <Seo title={`${title} — ${productSubtitle(p)}`} description={`${title}: ${productSubtitle(p)}${p.tex ? `, ${p.tex} текс` : ''}. Пряжа на бобинах${p.purpose.includes('machine') ? ' для машинного вязания' : ''}, образец цвета, остаток по данным склада. Цена по запросу.`} />
-      <div className="page-head page-head-compact">
+      <Seo title={`Пряжа «${name}»${c.code ? ` ${c.code}` : ''} — скрутка 16/2 и 32/2`}
+        description={`Бобинная пряжа цвета «${name}»${c.code ? `, артикул ${c.code}` : ''}: скрутка 16/2 или 32/2, состав 30% шерсть / 70% ПАН, 50/50, 100% ПАН или индивидуальный. Цена по запросу.`} />
+      <div className="page-head-compact">
         <div className="container">
-          <nav className="breadcrumbs" aria-label="Хлебные крошки"><ol><li><Link to="/">Главная</Link></li><li><Link to="/catalog">Каталог</Link></li><li aria-current="page">{title}</li></ol></nav>
+          <nav className="breadcrumbs" aria-label="Хлебные крошки"><ol><li><Link to="/">Главная</Link></li><li><Link to="/catalog">Каталог</Link></li><li aria-current="page">{name}</li></ol></nav>
         </div>
       </div>
 
       <section className="section product" style={{ paddingTop: 'var(--space-5)' }}>
         <div className="container product-grid-2">
           <div className="gallery">
-            <div className="gallery-main" style={{ background: tint(p.hex, 0.8) }}>
-              <Bobbin hex={p.hex} type={p.yarnType} className="gallery-bobbin" title={`Иллюстрация бобины в цвете «${p.cardName ?? p.colorName}»`} />
+            <div className="gallery-main" style={{ background: tint(c.hex, 0.8) }}>
+              <Bobbin hex={c.hex} type={c.type} className="gallery-bobbin" title={`Иллюстрация бобины в цвете «${name}»`} />
               <span className="badge badge-dark gallery-note">Иллюстрация, цвет приблизительный</span>
             </div>
-            {color ? (
-              <figure className="gallery-swatch">
-                <ColorChip hex={color.hex} size="lg" />
-                <figcaption><b>Цвет по карте расцветок</b><span>«{color.name}», артикул {color.code}</span><span className="muted">{color.hex} — приблизительно</span></figcaption>
-              </figure>
-            ) : <p className="alert alert-warm">Образец этого оттенка на карте расцветок не найден. Уточните цвет у менеджера или запросите образец.</p>}
+            <figure className="gallery-swatch">
+              <ColorChip hex={c.hex} size="lg" />
+              <figcaption>
+                <b>{c.hex ? 'Цвет по карте расцветок' : 'Образца на карте расцветок нет'}</b>
+                <span>«{c.name}»{c.code && <>, артикул {c.code}</>}</span>
+                <span className="muted">{c.hex ? `${c.hex} — приблизительно` : 'Цвет уточните у менеджера или запросите образец'}</span>
+              </figcaption>
+            </figure>
           </div>
 
           <div className="product-info">
-            <span className={`badge badge-${status.tone}`}>{status.label}</span>
-            <h1>{title}</h1>
-            <p className="product-sub">{productSubtitle(p)}{p.purpose.includes('machine') ? ' · для машинного вязания' : ''}</p>
-            <p className="product-price">{p.priceRub ? `${p.priceRub.toLocaleString('ru-RU')} ₽/кг` : 'Цена по запросу'}</p>
-
-            <div className="product-actions">
-              <button className={`btn ${added ? 'btn-outline' : 'btn-primary'}`} type="button" aria-pressed={added} onClick={() => { if (!added) { addToRequest(p.id); toast.show('Добавлено в заявку'); } else navigate('/request'); }}>
-                {added ? <><Check aria-hidden="true" />В заявке — открыть</> : <><Plus aria-hidden="true" />В заявку</>}
-              </button>
-              <button className="btn btn-outline" type="button" onClick={requestSample}><ClipboardPlus aria-hidden="true" />Запросить образец</button>
-              <button className="icon-btn" type="button" aria-pressed={fav} aria-label={fav ? 'Убрать из избранного' : 'В избранное'} onClick={() => { toggleFavorite(p.id); toast.show(fav ? 'Убрано из избранного' : 'Добавлено в избранное'); }}>
-                <Heart aria-hidden="true" fill={fav ? 'currentColor' : 'none'} />
-              </button>
+            <p className="pc-kind">Бобинная пряжа · {site.name}</p>
+            <h1>{name}</h1>
+            <p className="product-sub">{c.code ? `Артикул ${c.code}` : 'Цвет из таблицы остатков'}{c.groups.length > 0 && ` · ${c.groups.map((g) => labels.group(g)).join(', ')}`}</p>
+            <div className="card cfg-card">
+              <Configurator key={c.id} color={c} />
             </div>
+            <button className="btn btn-ghost" type="button" aria-pressed={fav} onClick={() => { toggleFavorite(c.id); toast.show(fav ? 'Убрано из избранного' : 'Добавлено в избранное'); }}>
+              <Heart aria-hidden="true" fill={fav ? 'currentColor' : 'none'} />{fav ? 'В избранном' : 'В избранное'}
+            </button>
+
+            <h2 className="h-small">Варианты этого цвета</h2>
+            <div className="variants-table-wrap">
+              <table className="variants-table">
+                <caption className="sr-only">8 конфигураций цвета «{name}»: скрутка и состав</caption>
+                <thead><tr><th scope="col">Состав</th>{TWISTS.map((t) => <th scope="col" key={t}>Скрутка {t}</th>)}</tr></thead>
+                <tbody>
+                  {COMPOSITION_OPTIONS.map((o) => (
+                    <tr key={o.id}>
+                      <th scope="row">{o.label}{o.note && <small>{o.note}</small>}</th>
+                      {TWISTS.map((t) => {
+                        const k = configs.find((x) => x.twist === t && x.comp === o.id)!;
+                        return <td key={t}>{k.priceRub ? `${k.priceRub.toLocaleString('ru-RU')} ₽/кг` : 'По запросу'}{k.available === true && <small className="ok">в наличии</small>}</td>;
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="hint">Цена и наличие каждой комбинации подтверждаются менеджером по заявке.</p>
 
             <h2 className="h-small">Характеристики</h2>
             <dl className="spec-table">
-              <dt>Оттенок (название на складе)</dt><dd>{p.colorName}</dd>
-              <dt>Оттенок на карте расцветок</dt><dd>{p.cardName ? <>«{p.cardName}», артикул {p.cardCode}</> : unknown}</dd>
-              <dt>Группа оттенка</dt><dd>{p.groups.length ? p.groups.map((g) => labels.group(g)).join(', ') : unknown}</dd>
-              <dt>Состав</dt><dd>{p.composition ?? unknown}</dd>
-              <dt>Тип нити</dt><dd>{p.yarnType ? TYPE[p.yarnType] : unknown}</dd>
-              <dt>Линейная плотность</dt><dd>{p.tex ? `${p.tex} текс` : unknown}</dd>
-              <dt>Номер Nm</dt><dd>{p.nm ? <>≈ {p.nm.toLocaleString('ru-RU')} <span className="muted">(расчёт: 1000 / текс)</span></> : unknown}</dd>
-              <dt>Сложения</dt><dd>{p.ply ?? unknown}</dd>
-              <dt>Масса бобины</dt><dd>{p.bobbinWeightKg ? `${p.bobbinWeightKg} кг` : unknown}</dd>
-              <dt>Назначение</dt><dd>{p.purpose.length ? p.purpose.map((x) => labels.purpose(x)).join(', ') : unknown}</dd>
-              <dt>Минимальная партия</dt><dd>{p.minOrder ?? unknown}</dd>
-              {site.stock.show && <><dt>Остаток на складе</dt><dd>{formatKg(p.stock.kg)} {p.stock.date ? <span className="muted">по данным на {formatDate(p.stock.date)}</span> : <span className="muted">(дата в таблице не указана)</span>}</dd></>}
+              <dt>Цвет</dt><dd>{c.name}</dd>
+              <dt>Артикул на карте расцветок</dt><dd>{c.code ?? <span className="muted">нет образца на карте</span>}</dd>
+              <dt>Тип нити</dt><dd>{c.type ? TYPE[c.type] : <span className="muted">уточняется</span>}</dd>
+              <dt>Скрутка</dt><dd>16/2 или 32/2 — на выбор</dd>
+              <dt>Состав</dt><dd>30% шерсть / 70% ПАН, 50% шерсть / 50% ПАН, 100% ПАН или индивидуальный</dd>
+              <dt>Масса бобины</dt><dd><span className="muted">уточняется</span></dd>
             </dl>
-            {site.stock.show && <p className="hint">Остаток — общая масса этого цвета на складе по таблице остатков, а не масса одной бобины. Перед заказом уточняйте наличие.</p>}
 
-            {p.assorti && (
+            {site.stock.show && c.stock.length > 0 && (
+              <>
+                <h2 className="h-small">Таблица остатков (справочно)</h2>
+                <ul className="stock-list">
+                  {c.stock.map((s, i) => (
+                    <li key={i}>{s.composition ?? 'Состав не указан'}{s.tex ? `, ${s.tex} текс` : ''} — {formatKg(s.kg)} <span className="muted">{s.date ? `на ${formatDate(s.date)}` : `таблица на ${formatDate(META.stockDate)}`}</span></li>
+                  ))}
+                </ul>
+                <p className="hint">Это строки старой таблицы склада: общая масса цвета, а не вес бобины, и не подтверждение наличия выбранной скрутки и состава.</p>
+              </>
+            )}
+            {c.assorti && (
               <div className="assorti">
                 <h2 className="h-small">Из каких цветов состоит «Ассорти»</h2>
-                <ul className="tag-list">{p.assorti.map((n) => <li key={n}>{n}</li>)}</ul>
+                <ul className="tag-list">{c.assorti.map((n) => <li key={n}>{n}</li>)}</ul>
               </div>
             )}
-            {p.notes.length > 0 && <ul className="notes">{p.notes.map((n) => <li key={n}>{n}</li>)}</ul>}
-            <Link className="btn btn-ghost" to={color ? `/colors?pick=${color.id}` : '/colors'}><Palette aria-hidden="true" />Подобрать сочетания на палитре</Link>
+            {c.notes.length > 0 && <ul className="notes">{c.notes.map((n) => <li key={n}>{n}</li>)}</ul>}
+            <Link className="btn btn-ghost" to={c.source === 'card' ? `/colors?pick=${c.id}` : '/colors'}><Palette aria-hidden="true" />Подобрать сочетания на палитре</Link>
           </div>
         </div>
       </section>
 
-      {variants.length > 0 && (
-        <section className="section section-alt" aria-labelledby="var-title">
-          <div className="container">
-            <div className="section-head"><h2 id="var-title">Этот оттенок в других вариантах</h2><p>Другие составы или толщины с тем же цветом.</p></div>
-            <div className="product-grid">{variants.map((q, i) => <ProductCard key={q.id} p={q} index={i} />)}</div>
-          </div>
-        </section>
-      )}
       {similar.length > 0 && (
-        <section className="section" aria-labelledby="sim-title">
+        <section className="section section-alt" aria-labelledby="sim-title">
           <div className="container">
-            <div className="section-head"><h2 id="sim-title">Похожие оттенки</h2><p>Тот же состав, близкие цвета.</p></div>
-            <div className="product-grid">{similar.map((q, i) => <ProductCard key={q.id} p={q} index={i} />)}</div>
+            <div className="section-head"><h2 id="sim-title">Похожие цвета</h2></div>
+            <div className="product-grid">{similar.map((x, i) => <ProductCard key={x.id} c={x} index={i} />)}</div>
           </div>
         </section>
       )}

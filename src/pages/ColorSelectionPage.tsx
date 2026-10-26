@@ -1,13 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { ClipboardPlus, Columns3, Search, X } from 'lucide-react';
+import { Columns3, Search, X } from 'lucide-react';
 import { Seo } from '../components/Seo';
 import { PageHead } from './PageHead';
 import { ColorChip, ColorSwatch } from '../components/ColorSwatch';
 import { ProductCard } from '../components/ProductCard';
-import { COLORS, PRODUCTS, colorById, hueOf, labels } from '../data/catalog';
+import { COLORS, catalogById, colorById, hueOf, labels } from '../data/catalog';
 import { COLOR_GROUPS } from '../data/taxonomy';
-import { useStore, useToast } from '../state/store';
 
 const norm = (s: string) => s.toLowerCase().replace(/ё/g, 'е').trim();
 
@@ -17,18 +16,15 @@ export function ColorSelectionPage() {
   const [q, setQ] = useState('');
   const [group, setGroup] = useState('');
   const [compare, setCompare] = useState(false);
-  const { addToRequest } = useStore();
-  const toast = useToast();
 
   const setPicked = (ids: string[]) => { const n = new URLSearchParams(sp); if (ids.length) n.set('pick', ids.join(',')); else n.delete('pick'); setSp(n, { replace: true }); };
   const toggle = (id: string) => setPicked(picked.includes(id) ? picked.filter((x) => x !== id) : [...picked, id]);
 
-  const counts = useMemo(() => { const m = new Map<string, number>(); for (const p of PRODUCTS) if (p.colorId) m.set(p.colorId, (m.get(p.colorId) ?? 0) + 1); return m; }, []);
   const list = COLORS.filter((c) => (!group || c.groups.includes(group)) && (!q || norm(c.name).includes(norm(q)) || c.code.toLowerCase().includes(norm(q))))
     .sort((a, b) => hueOf(a.hex) - hueOf(b.hex));
   const groups = COLOR_GROUPS.filter((g) => COLORS.some((c) => c.groups.includes(g.id)));
   const pickedColors = picked.map((id) => colorById.get(id)!);
-  const matches = PRODUCTS.filter((p) => p.colorId && picked.includes(p.colorId));
+  const matches = picked.map((id) => catalogById.get(id)).filter((c): c is NonNullable<typeof c> => !!c);
 
   return (
     <>
@@ -57,7 +53,7 @@ export function ColorSelectionPage() {
           <p className="results-count" aria-live="polite">Оттенков: <b>{list.length}</b>{picked.length > 0 && <> · выбрано: <b>{picked.length}</b></>}</p>
           {list.length ? (
             <div className="palette">
-              {list.map((c) => <ColorSwatch key={c.id} c={c} selected={picked.includes(c.id)} onToggle={() => toggle(c.id)} count={counts.get(c.id) ?? 0} />)}
+              {list.map((c) => <ColorSwatch key={c.id} c={c} selected={picked.includes(c.id)} onToggle={() => toggle(c.id)} />)}
             </div>
           ) : (
             <div className="empty-state"><h2>Оттенок не найден</h2><p>Проверьте написание или выберите другую группу.</p><button className="btn btn-outline" type="button" onClick={() => { setQ(''); setGroup(''); }}>Показать все оттенки</button></div>
@@ -70,10 +66,9 @@ export function ColorSelectionPage() {
           <div className="container">
             <div className="head-row">
               <div className="section-head"><p className="eyebrow">Выбранные оттенки</p><h2 id="picked-title">Ваша подборка: {picked.length}</h2>
-                <p>{matches.length ? `Подходящих позиций в каталоге: ${matches.length}.` : 'Этих оттенков нет в таблице остатков — уточните возможность заказа в заявке.'}</p></div>
+                <p>{matches.length ? 'Ниже карточки этих цветов: выберите скрутку и состав и добавьте в заявку.' : 'Этих цветов нет в каталоге — уточните возможность заказа в заявке.'}</p></div>
               <div className="actions">
                 <button className="btn btn-outline" type="button" aria-pressed={compare} onClick={() => setCompare((v) => !v)}><Columns3 aria-hidden="true" />{compare ? 'Скрыть сравнение' : 'Сравнить'}</button>
-                {matches.length > 0 && <button className="btn btn-primary" type="button" onClick={() => { addToRequest(matches.map((m) => m.id)); toast.show(`В заявку добавлено позиций: ${matches.length}`); }}><ClipboardPlus aria-hidden="true" />Все в заявку</button>}
                 <button className="btn btn-ghost" type="button" onClick={() => setPicked([])}>Очистить</button>
               </div>
             </div>
@@ -82,7 +77,7 @@ export function ColorSelectionPage() {
               {pickedColors.map((c) => (
                 <li key={c.id} className="picked-chip">
                   <ColorChip hex={c.hex} size="md" />
-                  <span><b>{c.name}</b><small>{c.code} · {counts.get(c.id) ?? 0} поз.</small></span>
+                  <span><b>{c.name}</b><small>{c.code}</small></span>
                   <button className="icon-btn" type="button" onClick={() => toggle(c.id)} aria-label={`Убрать оттенок «${c.name}»`}><X aria-hidden="true" /></button>
                 </li>
               ))}
@@ -105,7 +100,7 @@ export function ColorSelectionPage() {
               </div>
             )}
 
-            {matches.length > 0 && <div className="product-grid" style={{ marginTop: 'var(--space-6)' }}>{matches.map((p, i) => <ProductCard key={p.id} p={p} index={i} />)}</div>}
+            {matches.length > 0 && <div className="product-grid" style={{ marginTop: 'var(--space-6)' }}>{matches.map((c, i) => <ProductCard key={c.id} c={c} index={i} />)}</div>}
           </div>
         </section>
       )}

@@ -299,3 +299,18 @@
 .palette-cloud a:hover, .palette-cloud a:focus-visible { transform: scale(1.45); box-shadow: 0 0 0 2px #fff, 0 6px 14px rgb(0 0 0 / .35); position: relative; z-index: 1; }
 @media (min-width: 768px) { .palette-cloud { gap: 8px; } .palette-cloud a { width: 32px; height: 32px; } }
 .section-color .group-chips .color-chip { width: 26px; height: 26px; }
+
+/* Страница цвета: таблица 8 конфигураций, остатки */
+.variants-table-wrap { overflow-x: auto; border: 1px solid var(--color-line); border-radius: var(--radius-lg); }
+.variants-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); background: var(--color-surface); }
+.variants-table th, .variants-table td { padding: 10px 12px; border-bottom: 1px solid var(--color-line); text-align: left; vertical-align: top; }
+.variants-table tbody tr:last-child > * { border-bottom: 0; }
+.variants-table thead th { background: var(--color-surface-alt); font-weight: 600; white-space: nowrap; }
+.variants-table th small, .variants-table td small { display: block; font-weight: 400; color: var(--color-ink-muted); }
+.variants-table td small.ok { color: var(--color-ok); }
+.stock-list { list-style: none; display: grid; gap: 6px; font-size: var(--fs-sm); }
+.req-config { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; margin: 0; font-size: var(--fs-sm); }
+.req-config dt { color: var(--color-ink-muted); }
+.req-config dd { margin: 0; font-weight: 600; }
+.req-item { grid-template-columns: 48px 1fr; }
+@media (max-width: 479px) { .req-item { grid-template-columns: 1fr; } }

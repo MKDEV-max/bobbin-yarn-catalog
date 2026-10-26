@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
-import { Check, Heart, Plus } from 'lucide-react';
-import { materialShort, productTitle, type Product } from '../data/catalog';
+import { Heart } from 'lucide-react';
+import { capName, type CatalogColor } from '../data/catalog';
+import type { CompId, Twist } from '../data/variants';
 import { useStore, useToast } from '../state/store';
 import { Bobbin } from './Bobbin';
 import { ColorChip } from './ColorSwatch';
+import { Configurator } from './Configurator';
 
 export const asset = (p: string) => `${import.meta.env.BASE_URL}${p}`;
 
@@ -14,40 +16,31 @@ export function tint(hex: string | null, k = 0.86) {
   return `rgb(${m(n >> 16)},${m((n >> 8) & 255)},${m(n & 255)})`;
 }
 
-const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
-
 /*
- * Карточка — только главное: изображение бобины, вид пряжи, цвет, состав (если известен), цена и «В заявку».
- * Толщина, остатки, назначение и прочие характеристики — на странице товара (вся карточка ведёт туда).
+ * Карточка цвета: одна на цвет. Внутри — выбор одной из 8 конфигураций (скрутка × состав).
+ * Изображение — иллюстрация бобины в цвете образца (фото бобин в проекте нет); образец цвета — однотонный.
  */
-export function ProductCard({ p, index = 0 }: { p: Product; index?: number }) {
-  const { isFavorite, toggleFavorite, inRequest, addToRequest } = useStore();
+export function ProductCard({ c, index = 0, twist = null, comp = null }: { c: CatalogColor; index?: number; twist?: Twist | null; comp?: CompId | null }) {
+  const { isFavorite, toggleFavorite } = useStore();
   const toast = useToast();
-  const fav = isFavorite(p.id), added = inRequest(p.id);
-  const title = productTitle(p);
-  const colorName = cap((p.cardName ?? p.colorName).trim());
+  const fav = isFavorite(c.id);
+  const name = capName(c.name.trim());
   return (
     <article className="product-card fade-in" style={{ animationDelay: `${Math.min(index, 8) * 30}ms` }}>
-      <div className="pc-media" style={{ background: tint(p.hex) }}>
-        <Bobbin hex={p.hex} type={p.yarnType} className="pc-bobbin" />
-      </div>
+      <Link to={`/product/${c.id}`} className="pc-media" style={{ background: tint(c.hex) }} tabIndex={-1} aria-hidden="true">
+        <Bobbin hex={c.hex} type={c.type} className="pc-bobbin" />
+      </Link>
       <div className="pc-body">
-        <p className="pc-kind">{materialShort(p)}{p.tex ? `, ${p.tex} текс` : ''}</p>
         <h3 className="pc-title">
-          <Link to={`/product/${p.id}`} className="pc-link" title={title}>
-            <ColorChip hex={p.hex} size="sm" /><span>{colorName}</span>
+          <Link to={`/product/${c.id}`} className="pc-name">
+            <ColorChip hex={c.hex} size="md" className="pc-chip" />
+            <span><span className="pc-name-text">{name}</span><small>{c.code ? `арт. ${c.code}` : 'без образца на карте'}</small></span>
           </Link>
         </h3>
-        {p.composition && <p className="pc-comp">{p.composition}</p>}
-        <p className="pc-price">{p.priceRub ? `${p.priceRub.toLocaleString('ru-RU')} ₽/кг` : 'Цена по запросу'}</p>
-        <button className={`btn btn-sm pc-add ${added ? 'btn-outline' : 'btn-primary'}`} type="button" aria-pressed={added}
-          aria-label={added ? `В заявке: ${title}` : `В заявку: ${title}`}
-          onClick={() => { if (!added) { addToRequest(p.id); toast.show('Добавлено в заявку'); } }}>
-          {added ? <><Check aria-hidden="true" />В заявке</> : <><Plus aria-hidden="true" />В заявку</>}
-        </button>
+        <Configurator color={c} initialTwist={twist} initialComp={comp} compact detailsLink />
       </div>
-      <button className="pc-fav" type="button" aria-pressed={fav} aria-label={fav ? `Убрать из избранного: ${title}` : `В избранное: ${title}`}
-        onClick={() => { toggleFavorite(p.id); toast.show(fav ? 'Убрано из избранного' : 'Добавлено в избранное'); }}>
+      <button className="pc-fav" type="button" aria-pressed={fav} aria-label={fav ? `Убрать из избранного: ${name}` : `В избранное: ${name}`}
+        onClick={() => { toggleFavorite(c.id); toast.show(fav ? 'Убрано из избранного' : 'Добавлено в избранное'); }}>
         <Heart aria-hidden="true" fill={fav ? 'currentColor' : 'none'} />
       </button>
     </article>

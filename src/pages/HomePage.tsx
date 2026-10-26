@@ -5,61 +5,60 @@ import { ProductCard } from '../components/ProductCard';
 import { ColorChip } from '../components/ColorSwatch';
 import { Faq } from '../components/Faq';
 import { Ridge } from '../components/Brand';
-import { COLORS, META, PRODUCTS, formatDate, hueOf, labels } from '../data/catalog';
+import { CATALOG, COLORS, hueOf, labels } from '../data/catalog';
+import { COMPOSITION_OPTIONS } from '../data/variants';
 import { COLOR_GROUPS } from '../data/taxonomy';
 import { IMAGES } from '../data/images';
 import { site } from '../config/site';
 import { FAQ_ITEMS } from './faqItems';
 import { Terms } from './DeliveryPage';
 
-const byCat = (id: string) => PRODUCTS.filter((p) => p.categories.includes(id));
 /** Порядок облака оттенков: тон (12 секторов), внутри — от светлого к тёмному; серые и чёрные — в конце */
 const cloudKey = (hex: string) => {
   const v = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255), l = (Math.max(...v) + Math.min(...v)) / 2;
   const h = hueOf(hex);
   return (h >= 400 ? 13 : Math.floor(((h + 15) % 360) / 30)) * 10 + (1 - l) * 9;
 };
+const capFirst = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
 const satOf = (hex: string) => { const v = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16)); const mx = Math.max(...v), mn = Math.min(...v); return mx ? (mx - mn) / mx : 0; };
-/** Мозаика категории: самые насыщенные реальные оттенки этой категории, по порядку тона */
-const swatchesOf = (list: typeof PRODUCTS, n = 8) => [...new Set(list.map((p) => p.colorId).filter(Boolean))].map((id) => COLORS.find((c) => c.id === id)!)
-  .sort((a, b) => satOf(b.hex) - satOf(a.hex)).slice(0, n).sort((a, b) => hueOf(a.hex) - hueOf(b.hex));
+/** Насыщенные цвета каталога — для мозаик карточек составов (каждая карточка — своя восьмёрка) */
+const VIVID = CATALOG.filter((c) => c.hex).sort((a, b) => satOf(b.hex!) - satOf(a.hex!));
+const mosaic = (i: number) => VIVID.slice(i * 8, i * 8 + 8).sort((a, b) => hueOf(a.hex) - hueOf(b.hex));
+const COMP_TEXT: Record<string, string> = {
+  w30: 'Тепло шерсти и прочность ПАН — универсальный вариант для трикотажа.',
+  w50: 'Больше шерсти: мягкость и упругость петли.',
+  pan100: 'Яркие стойкие цвета и простой уход.',
+  custom: 'Свои проценты шерсти и ПАН — укажите прямо в карточке цвета.',
+};
 
 export function HomePage() {
-  const half = byCat('half-wool'), acr = byCat('acrylic');
-  const melange = PRODUCTS.filter((p) => p.yarnType === 'melange' || p.groups.includes('melange'));
-  // Яркие цвета: самые насыщенные оттенки с остатком от 50 кг по таблице — по одному на группу цвета
+  // Яркие цвета: самые насыщенные цвета каталога — по одному на группу цвета
   const seenGroup = new Set<string>();
-  const top = PRODUCTS.filter((p) => p.hex && p.stock.kg >= 50).sort((a, b) => satOf(b.hex!) - satOf(a.hex!))
-    .filter((p) => { const g = p.group ?? ''; if (seenGroup.has(g)) return false; seenGroup.add(g); return true; }).slice(0, 8);
+  const top = VIVID.filter((c) => { const g = c.group ?? ''; if (seenGroup.has(g)) return false; seenGroup.add(g); return true; }).slice(0, 8);
   const strip = [...COLORS].sort((a, b) => hueOf(a.hex) - hueOf(b.hex));
   const cloud = [...COLORS].sort((a, b) => cloudKey(a.hex) - cloudKey(b.hex));
   const groupsWithItems = COLOR_GROUPS.filter((g) => COLORS.some((c) => c.groups.includes(g.id)));
-  const cats = [
-    { to: '/catalog?composition=half-wool', title: 'Полушерстяная пряжа', sub: 'Шерсть 30%, ПАН 70% — тепло шерсти и прочность акрила.', list: half },
-    { to: '/catalog?composition=acrylic', title: 'Акриловая пряжа', sub: 'ПАН 100% — яркие стойкие цвета и простой уход.', list: acr },
-    { to: '/catalog?type=melange', title: 'Меланжевая пряжа', sub: 'Нить с вкраплениями оттенков.', list: melange },
-  ].filter((c) => c.list.length);
 
   return (
     <>
-      <Seo title={`${site.name} — бобинная пряжа оптом: полушерсть и акрил, ${COLORS.length} оттенков`}
-        description={`«${site.name}»: бобинная пряжа для машинного вязания и трикотажа — полушерсть и акрил, ${COLORS.length} оттенков по карте расцветок, состав и остатки по каждой позиции. Подбор по цвету, заявка и КП.`} />
+      <Seo title={`${site.name} — бобинная пряжа оптом: ${CATALOG.length} цветов, скрутка 16/2 и 32/2`}
+        description={`«${site.name}»: бобинная пряжа для машинного вязания и трикотажа — ${CATALOG.length} цветов, скрутка 16/2 и 32/2, составы 30/70, 50/50, 100% ПАН или индивидуальный. Подбор по цвету, заявка и КП.`} />
 
       <section className="hero on-dark" aria-labelledby="hero-title">
         <div className="container hero-inner">
           <div>
             <p className="eyebrow">{site.name} · {site.region}</p>
             <h1 id="hero-title">Бобинная пряжа для ваших идей и производства</h1>
-            <p className="hero-lead">Подберите цвет, состав и толщину нити для вязания, трикотажа и текстильного производства. {COLORS.length} оттенков по карте расцветок, остатки по каждому цвету, поставки по всей России.</p>
+            <p className="hero-lead">Выберите цвет, скрутку 16/2 или 32/2 и состав — от 100% ПАН до вашего соотношения шерсти и ПАН. {CATALOG.length} цветов, поставки по всей России.</p>
             <div className="hero-actions">
               <Link className="btn btn-primary" to="/catalog">Смотреть каталог</Link>
               <Link className="btn btn-outline" to="/colors">Подобрать пряжу</Link>
               <Link className="link-arrow" to="/wholesale">Запросить оптовый прайс</Link>
             </div>
             <dl className="hero-facts">
-              <div><dt>Оттенков на карте</dt><dd>{COLORS.length}</dd></div>
-              <div><dt>Позиций в каталоге</dt><dd>{PRODUCTS.length}</dd></div>
-              <div><dt>Составы</dt><dd>полушерсть, акрил</dd></div>
+              <div><dt>Цветов в каталоге</dt><dd>{CATALOG.length}</dd></div>
+              <div><dt>Скрутка</dt><dd>16/2 и 32/2</dd></div>
+              <div><dt>Составы</dt><dd>30/70, 50/50, 100% ПАН, свой</dd></div>
               <div><dt>Оплата</dt><dd>по счёту, безнал</dd></div>
             </dl>
           </div>
@@ -68,13 +67,13 @@ export function HomePage() {
               <img src={IMAGES.hero.srcSmall} width={800} height={600} alt={IMAGES.hero.alt} fetchPriority="high" decoding="async" />
               <span>Пряжа на бобинах</span>
             </Link>
-            <Link className="hero-tile" to="/catalog?composition=half-wool">
+            <Link className="hero-tile" to="/catalog?comp=w30">
               <img src={IMAGES.guide.srcSmall} width={800} height={600} alt={IMAGES.guide.alt} decoding="async" />
-              <span>Полушерсть</span>
+              <span>30% шерсть / 70% ПАН</span>
             </Link>
-            <Link className="hero-tile" to="/catalog?composition=acrylic">
+            <Link className="hero-tile" to="/catalog?comp=pan100">
               <img src={IMAGES.wholesale.srcSmall} width={800} height={500} alt={IMAGES.wholesale.alt} decoding="async" />
-              <span>Акрил</span>
+              <span>100% ПАН</span>
             </Link>
             <p className="hero-media-note">Фото — иллюстрации продукции (Unsplash)</p>
           </div>
@@ -91,14 +90,14 @@ export function HomePage() {
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">Продукция</p>
-            <h2 id="products-title">Бобинная пряжа в каталоге</h2>
-            <p>Пряжа для машинного вязания и трикотажа. Состав, толщина и остаток — в карточке каждой позиции; остатки по данным склада на {formatDate(META.stockDate)}, наличие уточняйте у менеджера.</p>
+            <h2 id="products-title">Четыре состава для любого цвета</h2>
+            <p>Каждый цвет каталога — в скрутке 16/2 или 32/2 и в одном из четырёх составов. Цену и наличие конкретного сочетания подтверждает менеджер по заявке.</p>
           </div>
-          <div className="grid-3">
-            {cats.map((c) => (
-              <Link key={c.to} to={c.to} className="cat-card">
-                <span className="media cat-mosaic" aria-hidden="true" style={{ gridTemplateColumns: `repeat(${Math.ceil(swatchesOf(c.list).length / 2)}, 1fr)` }}>{swatchesOf(c.list).map((s) => <ColorChip key={s.id} hex={s.hex} size="fill" />)}</span>
-                <span className="body"><h3>{c.title}</h3><p>{c.sub}</p><span className="more">{c.list.length} позиций →</span></span>
+          <div className="grid-4">
+            {COMPOSITION_OPTIONS.map((o, i) => (
+              <Link key={o.id} to={`/catalog?comp=${o.id}`} className="cat-card">
+                <span className="media cat-mosaic" aria-hidden="true">{mosaic(i).map((c) => <ColorChip key={c.id} hex={c.hex} size="fill" />)}</span>
+                <span className="body"><h3>{o.label}</h3><p>{o.note ? `${capFirst(o.note)}. ` : ''}{COMP_TEXT[o.id]}</p><span className="more">Скрутка 16/2 и 32/2 →</span></span>
               </Link>
             ))}
           </div>
@@ -136,10 +135,10 @@ export function HomePage() {
         <div className="container">
           <div className="section-head">
             <p className="eyebrow">Яркие цвета</p>
-            <h2 id="top-title">Насыщенные оттенки из каталога</h2>
-            <p>По одной позиции из разных групп цвета, с остатком от 50 кг по таблице склада на {formatDate(META.stockDate)}. Наличие перед заказом уточняйте у менеджера.</p>
+            <h2 id="top-title">Насыщенные цвета каталога</h2>
+            <p>По одному цвету из разных групп. Выберите скрутку и состав прямо в карточке — и добавьте в заявку.</p>
           </div>
-          <div className="product-grid">{top.map((p, i) => <ProductCard key={p.id} p={p} index={i} />)}</div>
+          <div className="product-grid">{top.map((c, i) => <ProductCard key={c.id} c={c} index={i} />)}</div>
           <div className="section-foot"><Link className="btn btn-primary" to="/catalog">Смотреть каталог</Link></div>
         </div>
       </section>

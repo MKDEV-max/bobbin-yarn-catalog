@@ -8,6 +8,7 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { buildCatalogColors } from '../src/data/variants.ts';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = join(ROOT, 'dist');
@@ -17,30 +18,32 @@ const URL_ = siteSrc.match(/url:\s*'([^']+)'/)[1].replace(/\/?$/, '/');
 const products = JSON.parse(readFileSync(join(ROOT, 'src/data/generated/products.json'), 'utf8'));
 const colors = JSON.parse(readFileSync(join(ROOT, 'src/data/generated/colors.json'), 'utf8'));
 const shell = readFileSync(join(DIST, 'index.html'), 'utf8');
+// Каталог по цветам — та же функция, что на сайте (src/data/variants.ts)
+const includeAll = /includeAllCardColors:\s*true/.test(siteSrc);
+const catalog = buildCatalogColors(products, colors, includeAll);
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
-// Те же правила, что в src/data/catalog.ts
-const material = (p) => (p.categories.includes('half-wool') ? 'Полушерсть' : p.categories.includes('acrylic') ? 'Акрил' : 'Пряжа');
-const title = (p) => `${material(p)} «${cap(p.colorName.trim())}»${p.tex ? `, ${p.tex} текс` : ''}`;
-const sub = (p) => p.composition ?? 'Состав уточняется';
 
 const pages = [
-  { path: '', title: `${NAME} — бобинная пряжа оптом: полушерсть и акрил, ${colors.length} оттенков`, desc: `«${NAME}»: бобинная пряжа для машинного вязания и трикотажа — полушерсть и акрил, ${colors.length} оттенков по карте расцветок, состав и остатки по каждой позиции. Подбор по цвету, заявка и КП.` },
-  { path: 'catalog', title: 'Каталог пряжи на бобинах', desc: `Каталог бобинной пряжи «${NAME}»: ${products.length} позиций — полушерсть и акрил, ${colors.length} оттенков по карте расцветок. Фильтры по цвету и составу, заявка на опт.` },
+  { path: '', title: `${NAME} — бобинная пряжа оптом: ${catalog.length} цветов, скрутка 16/2 и 32/2`, desc: `«${NAME}»: бобинная пряжа для машинного вязания и трикотажа — ${catalog.length} цветов, скрутка 16/2 и 32/2, составы 30/70, 50/50, 100% ПАН или индивидуальный. Подбор по цвету, заявка и КП.` },
+  { path: 'catalog', title: 'Каталог пряжи на бобинах', desc: `Каталог бобинной пряжи «${NAME}»: ${catalog.length} цветов, скрутка 16/2 и 32/2, составы 30/70, 50/50, 100% ПАН и индивидуальный. Фильтры по цвету, скрутке и составу, заявка на опт.` },
   { path: 'colors', title: 'Подбор пряжи по цвету — палитра оттенков', desc: `Палитра из ${colors.length} оттенков бобинной пряжи по карте расцветок: цвет, название и артикул. Выберите цвета, сравните и добавьте позиции в заявку.` },
   { path: 'about', title: 'О производстве: переработка шерсти дагестанского мериноса', desc: 'Производство мытой шерсти, топса и шерстяной пряжи в Республике Дагестан: сортировка, мойка, гребнечесание, прядение, контроль и отгрузка. Сырьё — шерсть дагестанского мериноса.' },
   { path: 'delivery', title: 'Оплата и доставка пряжи', desc: 'Как заказать бобинную пряжу: заявка, КП и счёт на email, безналичная оплата, отгрузка по всей России — ТК, автотранспорт, железная дорога.' },
-  { path: 'wholesale', title: 'Оптовым покупателям — прайс на бобинную пряжу', desc: `Оптовые поставки бобинной пряжи: ${colors.length} оттенков, полушерсть и акрил. Запросите прайс и расчёт под ваш объём.` },
+  { path: 'wholesale', title: 'Оптовым покупателям — прайс на бобинную пряжу', desc: `Оптовые поставки бобинной пряжи: ${catalog.length} цветов, скрутка 16/2 и 32/2, составы от 100% ПАН до индивидуального. Запросите прайс и расчёт под ваш объём.` },
   { path: 'contacts', title: 'Контакты', desc: `Контакты: ${NAME}. Вопросы по пряже, образцам и оптовым заказам.` },
   { path: 'privacy', title: 'Политика конфиденциальности', desc: `Как сайт «${NAME}» обрабатывает персональные данные из заявок.` },
   { path: 'favorites', title: 'Избранное', desc: 'Сохранённые позиции бобинной пряжи.', noindex: true },
   { path: 'request', title: 'Заявка на пряжу', desc: 'Список выбранной бобинной пряжи: укажите объём и отправьте заявку на расчёт.', noindex: true },
-  ...products.map((p) => ({
-    path: `product/${p.id}`,
-    title: `${title(p)} — ${sub(p)}`,
-    desc: `${title(p)}: ${sub(p)}${p.tex ? `, ${p.tex} текс` : ''}. Пряжа на бобинах${p.purpose.includes('machine') ? ' для машинного вязания' : ''}, образец цвета, остаток по данным склада. Цена по запросу.`,
-  })),
+  ...catalog.map((c) => {
+    const name = cap(c.name.trim());
+    return {
+      path: `product/${c.id}`,
+      title: `Пряжа «${name}»${c.code ? ` ${c.code}` : ''} — скрутка 16/2 и 32/2`,
+      desc: `Бобинная пряжа цвета «${name}»${c.code ? `, артикул ${c.code}` : ''}: скрутка 16/2 или 32/2, состав 30% шерсть / 70% ПАН, 50/50, 100% ПАН или индивидуальный. Цена по запросу.`,
+    };
+  }),
 ];
 
 function render({ path, title: t, desc, noindex }) {

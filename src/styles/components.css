@@ -209,3 +209,53 @@ button.swatch:hover .sw-color { transform: scale(1.03); }
 .toast { position: fixed; left: 50%; bottom: 24px; z-index: 80; translate: -50% 0; max-width: calc(100vw - 32px); padding: 12px 18px; border-radius: var(--radius-md); background: var(--color-ink); color: #fff; font-size: var(--fs-sm); box-shadow: var(--shadow-3); }
 .toast[hidden] { display: none; }
 @media (prefers-reduced-motion: no-preference) { .toast:not([hidden]) { animation: toast-in .25s var(--ease); } @keyframes toast-in { from { opacity: 0; translate: -50% 8px; } } }
+
+/* ---------- Карточка цвета и выбор конфигурации ---------- */
+.pc-name { display: flex; align-items: center; gap: 10px; color: var(--color-ink); text-decoration: none; }
+.pc-name:hover { color: var(--color-teal); }
+.pc-name > span:last-child { display: grid; min-width: 0; line-height: 1.2; }
+.pc-name-text { overflow-wrap: anywhere; }
+.pc-name small { font: 500 var(--fs-xs)/1.3 var(--font-body); color: var(--color-ink-muted); }
+.pc-chip { width: 34px; height: 34px; border-radius: var(--radius-sm); }
+@media (max-width: 479px) { .pc-chip { width: 26px; height: 26px; } }
+.cfg { display: grid; gap: 10px; }
+.cfg-row { display: grid; gap: 4px; }
+.cfg-label { font-size: var(--fs-xs); font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--color-ink-muted); }
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 3px; border-radius: var(--radius-md); background: var(--color-surface-alt); }
+.seg-btn { min-height: 38px; border: 0; border-radius: 6px; background: none; color: var(--color-ink); font: 600 var(--fs-sm)/1 var(--font-body); font-variant-numeric: tabular-nums; cursor: pointer; transition: background-color .15s, color .15s, box-shadow .15s; }
+.seg-btn:hover { background: rgb(255 255 255 / .7); }
+.seg-btn[aria-checked="true"] { background: var(--color-teal); color: #fff; box-shadow: var(--shadow-1); }
+.select-cfg { min-height: 42px; padding-block: 8px; font-size: var(--fs-sm); }
+.select-cfg:disabled { color: var(--color-ink-muted); background-color: var(--color-surface-alt); cursor: not-allowed; }
+.cfg-custom { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0; padding: 10px; border: 1px dashed var(--color-teal); border-radius: var(--radius-md); background: var(--color-teal-soft); }
+.cfg-custom label { display: grid; gap: 4px; font-size: var(--fs-xs); font-weight: 600; }
+.cfg-custom .input { min-height: 40px; padding: 8px 10px; }
+.cfg-custom .input[aria-invalid="true"] { border-color: var(--color-danger); }
+.cfg-sum { grid-column: 1 / -1; font-size: var(--fs-xs); color: var(--color-ink-muted); }
+.cfg-sum.is-bad { color: var(--color-danger); font-weight: 600; }
+.cfg-sum.is-ok { color: var(--color-ok); font-weight: 600; }
+.cfg-pick { font-size: var(--fs-xs); color: var(--color-teal); font-weight: 600; }
+.cfg-price { font-size: var(--fs-sm); font-weight: 600; }
+.cfg-error { font-size: var(--fs-xs); font-weight: 600; color: var(--color-danger); }
+.cfg-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.cfg-actions .btn { padding-inline: 6px; }
+.cfg-actions .btn:only-child { grid-column: 1 / -1; }
+.cfg-inreq { font-size: var(--fs-xs); font-weight: 600; color: var(--color-teal); }
+@media (max-width: 479px) { .cfg-compact .cfg-actions { grid-template-columns: 1fr; } .cfg-compact .seg-btn { min-height: 36px; } }
+.product-card .pc-media { aspect-ratio: 4 / 3; }
+.product-card .pc-body { gap: var(--space-3); }
+.product-card .cfg { position: relative; z-index: 2; margin-top: auto; }
+.cfg-card { padding: var(--space-4); }
+.cfg-card .cfg-actions { grid-template-columns: 1fr; }
+/* Компактная карточка на телефоне: названия без разрыва посреди слова, ровные поля процентов */
+.pc-name-text { overflow-wrap: normal; word-break: normal; hyphens: auto; }
+.product-card .cfg { margin-top: 0; }
+.cfg-custom label { white-space: nowrap; }
+@media (max-width: 479px) {
+  .product-card .pc-title { font-size: 1rem; }
+  .product-card .pc-name { gap: 8px; }
+  .cfg-compact .select-cfg { font-size: 13px; padding-inline: 8px 26px; background-position: right 8px center; }
+  .cfg-compact .cfg-custom { padding: 8px; gap: 6px; }
+  .cfg-compact .cfg-custom label { font-size: 11px; }
+  .cfg-compact .cfg-custom .input { min-height: 38px; padding: 6px 8px; }
+}

@@ -5,46 +5,22 @@ import { Seo } from '../components/Seo';
 import { PageHead } from './PageHead';
 import { ProductCard } from '../components/ProductCard';
 import { ColorChip } from '../components/ColorSwatch';
-import { COLORS, META, PRODUCTS, colorById, formatDate, hueOf, labels, productTitle, searchText, type Product } from '../data/catalog';
-import { COLOR_GROUPS, COMPOSITIONS, PURPOSES } from '../data/taxonomy';
+import { CATALOG, META, colorConfigs, colorSearchText, formatDate, hueOf, labels, type CatalogColor } from '../data/catalog';
+import { COLOR_GROUPS } from '../data/taxonomy';
+import { COMPOSITION_OPTIONS, TWISTS, type CompId, type Twist } from '../data/variants';
 
 const UNKNOWN = 'unknown';
 const PAGE = 24;
-
-/*
- * Фильтры строятся по данным: фильтр показывается, только если у товаров есть хотя бы два разных значения
- * (поэтому «Цена» появится сама, когда в данных будут цены). main — в основной строке, остальные — в «Ещё фильтры».
- */
-type Def = { key: string; label: string; main?: boolean; values: (p: Product) => string[]; label4: (v: string) => string; order?: string[] };
-const DEFS: Def[] = [
-  { key: 'composition', label: 'Состав', main: true, values: (p) => (p.categories.length ? p.categories : [UNKNOWN]),
-    label4: (v) => (v === UNKNOWN ? 'Состав уточняется' : labels.composition(v)), order: ['half-wool', ...COMPOSITIONS.map((c) => c.id).filter((id) => id !== 'half-wool'), UNKNOWN] },
-  { key: 'price', label: 'Цена', main: true, values: (p) => [p.priceRub ? 'known' : UNKNOWN], label4: (v) => (v === UNKNOWN ? 'По запросу' : 'Указана') },
-  { key: 'type', label: 'Тип пряжи', main: true, values: (p) => [p.yarnType ?? UNKNOWN],
-    label4: (v) => ({ solid: 'Однотонная', melange: 'Меланжевая', mouline: 'Мулинированная', [UNKNOWN]: 'Не указан' } as Record<string, string>)[v] ?? v, order: ['solid', 'melange', 'mouline', UNKNOWN] },
-  { key: 'tex', label: 'Толщина', values: (p) => [p.tex ? String(p.tex) : UNKNOWN],
-    label4: (v) => (v === UNKNOWN ? 'Уточняется' : `${v} текс (Nm ≈ ${(1000 / Number(v)).toLocaleString('ru-RU', { maximumFractionDigits: 2 })})`) },
-  { key: 'ply', label: 'Сложения', values: (p) => [p.ply ? String(p.ply) : UNKNOWN], label4: (v) => (v === UNKNOWN ? 'Не указано' : `${v} сложения`) },
-  { key: 'weight', label: 'Масса бобины', values: (p) => [p.bobbinWeightKg ? String(p.bobbinWeightKg) : UNKNOWN], label4: (v) => (v === UNKNOWN ? 'Не указана' : `${v} кг`) },
-  { key: 'purpose', label: 'Назначение', values: (p) => (p.purpose.length ? p.purpose : [UNKNOWN]),
-    label4: (v) => (v === UNKNOWN ? 'Не указано' : labels.purpose(v)), order: [...PURPOSES.map((c) => c.id), UNKNOWN] },
-];
-const STOCK = [{ v: '', l: 'Любое' }, { v: '10', l: 'от 10 кг' }, { v: '100', l: 'от 100 кг' }, { v: '500', l: 'от 500 кг' }, { v: '1000', l: 'от 1 т' }];
-const SORTS = [{ v: 'color', l: 'По цвету' }, { v: 'name', l: 'По названию' }, { v: 'stock', l: 'По остатку' }, ...(PRODUCTS.some((p) => p.priceRub) ? [{ v: 'price', l: 'По цене' }] : [])];
+const TYPE_LABEL: Record<string, string> = { solid: 'Однотонная', melange: 'Меланжевая', mouline: 'Мулинированная', [UNKNOWN]: 'Не указан' };
+const SORTS = [{ v: 'color', l: 'По цвету' }, { v: 'name', l: 'По названию' }, { v: 'code', l: 'По артикулу' }];
 
 const norm = (s: string) => s.toLowerCase().replace(/ё/g, 'е').trim();
-const groupsOf = (p: Product) => (p.groups.length ? p.groups : [UNKNOWN]);
-const SHOWN = DEFS.filter((d) => new Set(PRODUCTS.flatMap(d.values)).size >= 2);
-const MAIN = SHOWN.filter((d) => d.main), MORE = SHOWN.filter((d) => !d.main);
-const GROUP_OPTS = [...COLOR_GROUPS.map((g) => g.id), UNKNOWN].filter((g) => PRODUCTS.some((p) => groupsOf(p).includes(g)));
-const groupHex = (g: string) => COLORS.find((c) => c.group === g)?.hex ?? null;
-
-/** Варианты фильтра: синонимы, выбирающие одни и те же товары (полушерсть = шерсть с акрилом), показываются один раз */
-function optionsOf(d: Def) {
-  const sorted = [...new Set(PRODUCTS.flatMap(d.values))].sort((a, b) => (d.order ? d.order.indexOf(a) - d.order.indexOf(b) : a === UNKNOWN ? 1 : b === UNKNOWN ? -1 : a.localeCompare(b, 'ru', { numeric: true })));
-  const seen = new Set<string>();
-  return sorted.filter((v) => { const k = PRODUCTS.filter((p) => d.values(p).includes(v)).map((p) => p.id).join(); if (seen.has(k)) return false; seen.add(k); return true; });
-}
+const groupsOf = (c: CatalogColor) => (c.groups.length ? c.groups : [UNKNOWN]);
+const typeOf = (c: CatalogColor) => c.type ?? UNKNOWN;
+const GROUP_OPTS = [...COLOR_GROUPS.map((g) => g.id), UNKNOWN].filter((g) => CATALOG.some((c) => groupsOf(c).includes(g)));
+const TYPE_OPTS = ['solid', 'melange', 'mouline', UNKNOWN].filter((t) => CATALOG.some((c) => typeOf(c) === t));
+const groupHex = (g: string) => CATALOG.find((c) => c.group === g && c.hex)?.hex ?? null;
+const STOCK_OPTS = [{ v: 'yes', l: 'Есть в таблице остатков' }, { v: 'no', l: 'Нет в таблице остатков' }];
 
 /** Компактная выпадающая кнопка фильтра (компьютер) */
 function Popover({ label, count, id, open, setOpen, children, wide }: { label: string; count: number; id: string; open: string; setOpen: (v: string) => void; children: ReactNode; wide?: boolean }) {
@@ -72,7 +48,6 @@ export function CatalogPage() {
   const get = (k: string) => (sp.get(k) ?? '').split(',').filter(Boolean);
   const q = sp.get('q') ?? '';
   const sort = sp.get('sort') ?? 'color';
-  const minKg = Number(sp.get('stock') || 0);
   const [limit, setLimit] = useState(PAGE);
   const [drawer, setDrawer] = useState(false);
   const [pop, setPop] = useState('');
@@ -87,120 +62,152 @@ export function CatalogPage() {
     setLimit(PAGE);
   };
   const toggle = (k: string, v: string) => { const cur = get(k); setParam(k, cur.includes(v) ? cur.filter((x) => x !== v) : [...cur, v]); };
+  const twists = get('twist').filter((t): t is Twist => (TWISTS as readonly string[]).includes(t));
+  const comps = get('comp').filter((c): c is CompId => COMPOSITION_OPTIONS.some((o) => o.id === c));
 
-  /** Совпадение товара со всеми фильтрами; skip — какой фильтр не учитывать (для счётчиков вариантов) */
+  /** Совпадение цвета со всеми фильтрами; skip — какой фильтр не учитывать (для счётчиков вариантов) */
   const matches = useMemo(() => {
     const words = norm(q).split(/\s+/).filter(Boolean);
-    const groups = get('group'), colors = get('color');
-    const sel = Object.fromEntries(SHOWN.map((d) => [d.key, get(d.key)]));
-    return (p: Product, skip = '') => {
-      if (words.length) { const t = searchText(p); if (!words.every((w) => t.includes(w))) return false; }
+    const groups = get('group'), shades = get('color'), types = get('type'), stock = get('stock');
+    return (c: CatalogColor, skip = '') => {
+      if (words.length) { const t = colorSearchText(c); if (!words.every((w) => t.includes(w))) return false; }
       // Цвет: выбранные группы и отдельные оттенки складываются («или»)
-      if (skip !== 'color' && (groups.length || colors.length)) {
-        const byGroup = groups.length && groupsOf(p).some((g) => groups.includes(g));
-        const byShade = colors.length && p.colorId && colors.includes(p.colorId);
-        if (!byGroup && !byShade) return false;
+      if (skip !== 'color' && (groups.length || shades.length)) {
+        if (!(groups.length && groupsOf(c).some((g) => groups.includes(g))) && !shades.includes(c.id)) return false;
       }
-      if (skip !== 'stock' && minKg && p.stock.kg < minKg) return false;
-      return SHOWN.every((d) => d.key === skip || !sel[d.key].length || d.values(p).some((v) => sel[d.key].includes(v)));
+      // Скрутка и состав: у цвета должна быть конфигурация, подходящая под оба условия сразу
+      if ((twists.length || comps.length) && skip !== 'twist' && skip !== 'comp') {
+        if (!colorConfigs(c).some((k) => (!twists.length || twists.includes(k.twist)) && (!comps.length || comps.includes(k.comp)))) return false;
+      }
+      if (skip !== 'type' && types.length && !types.includes(typeOf(c))) return false;
+      if (skip !== 'stock' && stock.length && !stock.includes(c.stock.length ? 'yes' : 'no')) return false;
+      return true;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sp]);
 
   const filtered = useMemo(() => {
-    const by: Record<string, (a: Product, b: Product) => number> = {
-      color: (a, b) => hueOf(a.hex) - hueOf(b.hex) || a.colorName.localeCompare(b.colorName, 'ru'),
-      name: (a, b) => productTitle(a).localeCompare(productTitle(b), 'ru'),
-      stock: (a, b) => b.stock.kg - a.stock.kg,
-      price: (a, b) => (a.priceRub ?? Infinity) - (b.priceRub ?? Infinity),
+    const by: Record<string, (a: CatalogColor, b: CatalogColor) => number> = {
+      color: (a, b) => hueOf(a.hex) - hueOf(b.hex) || a.name.localeCompare(b.name, 'ru'),
+      name: (a, b) => a.name.localeCompare(b.name, 'ru'),
+      code: (a, b) => (a.code ?? '~').localeCompare(b.code ?? '~', 'ru', { numeric: true }),
     };
-    return PRODUCTS.filter((p) => matches(p)).sort(by[sort] ?? by.color);
+    return CATALOG.filter((c) => matches(c)).sort(by[sort] ?? by.color);
   }, [matches, sort]);
 
-  const countFor = (skip: string, test: (p: Product) => boolean) => PRODUCTS.filter((p) => matches(p, skip) && test(p)).length;
+  const countFor = (skip: string, test: (c: CatalogColor) => boolean) => CATALOG.filter((c) => matches(c, skip) && test(c)).length;
+  const configCount = (skip: string, test: (k: ReturnType<typeof colorConfigs>[number]) => boolean) =>
+    CATALOG.filter((c) => matches(c, skip)).reduce((n, c) => n + colorConfigs(c).filter(test).length, 0);
 
   const active = [
-    ...get('group').map((v) => ({ k: 'group', v, l: v === UNKNOWN ? 'Без образца' : labels.group(v), hex: v === UNKNOWN ? null : groupHex(v) })),
-    ...get('color').map((v) => ({ k: 'color', v, l: colorById.get(v)?.name ?? v, hex: colorById.get(v)?.hex ?? null })),
-    ...SHOWN.flatMap((d) => get(d.key).map((v) => ({ k: d.key, v, l: d.label4(v), hex: undefined as string | null | undefined }))),
-    ...(minKg ? [{ k: 'stock', v: '', l: `Наличие ${STOCK.find((s) => s.v === String(minKg))?.l ?? ''}`, hex: undefined }] : []),
+    ...get('group').map((v) => ({ k: 'group', v, l: v === UNKNOWN ? 'Без образца' : labels.group(v), hex: v === UNKNOWN ? null : groupHex(v) as string | null | undefined })),
+    ...get('color').map((v) => { const c = CATALOG.find((x) => x.id === v); return { k: 'color', v, l: c?.name ?? v, hex: c?.hex ?? null as string | null | undefined }; }),
+    ...twists.map((v) => ({ k: 'twist', v, l: `Скрутка ${v}`, hex: undefined })),
+    ...comps.map((v) => ({ k: 'comp', v, l: COMPOSITION_OPTIONS.find((o) => o.id === v)!.label, hex: undefined })),
+    ...get('type').map((v) => ({ k: 'type', v, l: TYPE_LABEL[v] ?? v, hex: undefined })),
+    ...get('stock').map((v) => ({ k: 'stock', v, l: STOCK_OPTS.find((o) => o.v === v)?.l ?? v, hex: undefined })),
     ...(q ? [{ k: 'q', v: '', l: `«${q}»`, hex: undefined }] : []),
   ];
   const reset = () => { setSp(new URLSearchParams(sort !== 'color' ? { sort } : {}), { replace: true }); setLimit(PAGE); };
   const colorCount = get('group').length + get('color').length;
+  // Одна скрутка и один состав в фильтре — подставляем их в карточки
+  const preTwist = twists.length === 1 ? twists[0] : null, preComp = comps.length === 1 ? comps[0] : null;
 
   useEffect(() => { document.body.classList.toggle('scroll-lock', drawer); return () => document.body.classList.remove('scroll-lock'); }, [drawer]);
   useEffect(() => { if (!drawer) return; const k = (e: KeyboardEvent) => e.key === 'Escape' && setDrawer(false); document.addEventListener('keydown', k); return () => document.removeEventListener('keydown', k); }, [drawer]);
 
   /* ---------- Содержимое фильтров (общее для выпадашек и мобильной панели) ---------- */
-  const shadeOptions = COLORS.filter((c) => PRODUCTS.some((p) => p.colorId === c.id)).filter((c) => !shadeQ || norm(c.name).includes(norm(shadeQ)) || c.code.includes(shadeQ)).sort((a, b) => hueOf(a.hex) - hueOf(b.hex));
+  const shadeOptions = CATALOG.filter((c) => !shadeQ || norm(c.name).includes(norm(shadeQ)) || (c.code ?? '').includes(shadeQ)).sort((a, b) => hueOf(a.hex) - hueOf(b.hex) || a.name.localeCompare(b.name, 'ru'));
   const colorFilter = (
     <>
       <p className="fhint">Группа оттенков</p>
       <div className="dot-grid">
-        {GROUP_OPTS.map((g) => {
-          const sel = get('group').includes(g), n = countFor('color', (p) => groupsOf(p).includes(g));
-          return (
-            <button key={g} type="button" className="dot-opt" aria-pressed={sel} onClick={() => toggle('group', g)} title={g === UNKNOWN ? 'Без образца на карте' : labels.group(g)}>
-              <ColorChip hex={g === UNKNOWN ? null : groupHex(g)} size="dot" />
-              <span>{g === UNKNOWN ? 'Без образца' : labels.group(g)}</span><small>{n}</small>
-            </button>
-          );
-        })}
+        {GROUP_OPTS.map((g) => (
+          <button key={g} type="button" className="dot-opt" aria-pressed={get('group').includes(g)} onClick={() => toggle('group', g)} title={g === UNKNOWN ? 'Без образца на карте' : labels.group(g)}>
+            <ColorChip hex={g === UNKNOWN ? null : groupHex(g)} size="dot" />
+            <span>{g === UNKNOWN ? 'Без образца' : labels.group(g)}</span><small>{countFor('color', (c) => groupsOf(c).includes(g))}</small>
+          </button>
+        ))}
       </div>
-      <p className="fhint">Конкретный оттенок</p>
-      <label className="sr-only" htmlFor="shade-q">Найти оттенок по названию или артикулу</label>
+      <p className="fhint">Конкретный цвет</p>
+      <label className="sr-only" htmlFor="shade-q">Найти цвет по названию или артикулу</label>
       <input id="shade-q" className="input input-sm" type="search" placeholder="Название или артикул" value={shadeQ} onChange={(e) => setShadeQ(e.target.value)} />
       <ul className="shade-list">
         {shadeOptions.map((c) => (
           <li key={c.id}>
-            <label className="check check-sm" title={`${c.name}, ${c.code}`}>
+            <label className="check check-sm" title={`${c.name}${c.code ? `, ${c.code}` : ''}`}>
               <input type="checkbox" checked={get('color').includes(c.id)} onChange={() => toggle('color', c.id)} />
               <ColorChip hex={c.hex} size="dot" />
-              <span>{c.name} <span className="muted">{c.code}</span></span>
+              <span>{c.name} {c.code && <span className="muted">{c.code}</span>}</span>
             </label>
           </li>
         ))}
-        {!shadeOptions.length && <li className="muted small">Оттенок не найден</li>}
+        {!shadeOptions.length && <li className="muted small">Цвет не найден</li>}
       </ul>
     </>
   );
-  const defFilter = (d: Def) => (
+  const twistFilter = (
     <div className="opt-list">
-      {optionsOf(d).map((v) => (
-        <label className="check check-sm" key={v}>
-          <input type="checkbox" checked={get(d.key).includes(v)} onChange={() => toggle(d.key, v)} />
-          <span>{d.label4(v)} <span className="muted">{countFor(d.key, (p) => d.values(p).includes(v))}</span></span>
+      {TWISTS.map((t) => (
+        <label className="check check-sm" key={t}>
+          <input type="checkbox" checked={twists.includes(t)} onChange={() => toggle('twist', t)} />
+          <span>Скрутка {t} <span className="muted">{configCount('twist', (k) => k.twist === t && (!comps.length || comps.includes(k.comp)))} конф.</span></span>
+        </label>
+      ))}
+    </div>
+  );
+  const compFilter = (
+    <div className="opt-list">
+      {COMPOSITION_OPTIONS.map((o) => (
+        <label className="check check-sm" key={o.id}>
+          <input type="checkbox" checked={comps.includes(o.id)} onChange={() => toggle('comp', o.id)} />
+          <span>{o.label}{o.note && <span className="muted"> — {o.note}</span>} <span className="muted">{configCount('comp', (k) => k.comp === o.id && (!twists.length || twists.includes(k.twist)))} конф.</span></span>
+        </label>
+      ))}
+    </div>
+  );
+  const typeFilter = (
+    <div className="opt-list">
+      {TYPE_OPTS.map((t) => (
+        <label className="check check-sm" key={t}>
+          <input type="checkbox" checked={get('type').includes(t)} onChange={() => toggle('type', t)} />
+          <span>{TYPE_LABEL[t]} <span className="muted">{countFor('type', (c) => typeOf(c) === t)}</span></span>
         </label>
       ))}
     </div>
   );
   const stockFilter = (
     <div className="opt-list">
-      <p className="fhint">Остаток по таблице склада на {formatDate(META.stockDate)}; перед заказом уточняйте</p>
-      {STOCK.map((s) => (
-        <label className="check check-sm" key={s.l}>
-          <input type="radio" name={`stock-${drawer ? 'm' : 'd'}`} checked={String(minKg || '') === s.v} onChange={() => setParam('stock', s.v)} />
-          <span>{s.l}{s.v && <> <span className="muted">{countFor('stock', (p) => p.stock.kg >= Number(s.v))}</span></>}</span>
+      <p className="fhint">Справочно: таблица склада на {formatDate(META.stockDate)}. Не подтверждает наличие конкретной скрутки и состава.</p>
+      {STOCK_OPTS.map((o) => (
+        <label className="check check-sm" key={o.v}>
+          <input type="checkbox" checked={get('stock').includes(o.v)} onChange={() => toggle('stock', o.v)} />
+          <span>{o.l} <span className="muted">{countFor('stock', (c) => (c.stock.length ? 'yes' : 'no') === o.v)}</span></span>
         </label>
       ))}
     </div>
   );
-  const moreFilter = MORE.map((d) => <fieldset className="fgroup" key={d.key}><legend>{d.label}</legend>{defFilter(d)}</fieldset>);
-  const moreCount = MORE.reduce((n, d) => n + get(d.key).length, 0);
+  const moreFilter = (
+    <>
+      {TYPE_OPTS.length > 1 && <fieldset className="fgroup"><legend>Тип пряжи</legend>{typeFilter}</fieldset>}
+      <fieldset className="fgroup"><legend>Таблица остатков</legend>{stockFilter}</fieldset>
+    </>
+  );
+  const moreCount = get('type').length + get('stock').length;
 
   return (
     <>
       <Seo title={get('group').length === 1 && get('group')[0] !== UNKNOWN ? `Пряжа на бобинах: ${labels.group(get('group')[0]).toLowerCase()}` : 'Каталог пряжи на бобинах'}
-        description={`Каталог бобинной пряжи «Кавказская шерсть»: ${PRODUCTS.length} позиций — полушерсть и акрил, ${COLORS.length} оттенков по карте расцветок. Фильтры по цвету и составу, заявка на опт.`} />
-      <PageHead title="Каталог пряжи" crumb="Каталог" compact lead="Полушерсть и акрил на бобинах для машинного вязания. Выберите цвет — и добавьте пряжу в заявку." />
+        description={`Каталог бобинной пряжи «Кавказская шерсть»: ${CATALOG.length} цветов, скрутка 16/2 и 32/2, составы 30/70, 50/50, 100% ПАН и индивидуальный. Фильтры по цвету, скрутке и составу, заявка на опт.`} />
+      <PageHead title="Каталог пряжи" crumb="Каталог" compact
+        lead={`${CATALOG.length} цветов. Для каждого — скрутка 16/2 или 32/2 и состав: 30/70, 50/50, 100% ПАН или индивидуальный.`} />
 
       <div className="container catalog">
         <div className="cat-top">
           <form className="toolbar-search" role="search" onSubmit={(e) => e.preventDefault()}>
-            <label className="sr-only" htmlFor="cat-q">Поиск по названию, цвету, составу, артикулу</label>
+            <label className="sr-only" htmlFor="cat-q">Поиск по названию цвета и артикулу</label>
             <Search aria-hidden="true" />
-            <input id="cat-q" className="input" type="search" placeholder="Поиск: цвет, состав, артикул" value={q} onChange={(e) => setParam('q', e.target.value)} />
+            <input id="cat-q" className="input" type="search" placeholder="Поиск: название цвета или артикул" value={q} onChange={(e) => setParam('q', e.target.value)} />
           </form>
           <label className="sort">
             <span className="sr-only">Сортировка</span>
@@ -216,18 +223,18 @@ export function CatalogPage() {
           </button>
           <div className="fbar-desk">
             <Popover id="color" label="Цвет" count={colorCount} open={pop} setOpen={setPop} wide>{colorFilter}</Popover>
-            {MAIN.map((d) => <Popover key={d.key} id={d.key} label={d.label} count={get(d.key).length} open={pop} setOpen={setPop}>{defFilter(d)}</Popover>)}
-            <Popover id="stock" label="Наличие" count={minKg ? 1 : 0} open={pop} setOpen={setPop}>{stockFilter}</Popover>
-            {MORE.length > 0 && <Popover id="more" label="Ещё фильтры" count={moreCount} open={pop} setOpen={setPop}>{moreFilter}</Popover>}
+            <Popover id="twist" label="Скрутка" count={twists.length} open={pop} setOpen={setPop}>{twistFilter}</Popover>
+            <Popover id="comp" label="Состав" count={comps.length} open={pop} setOpen={setPop} wide>{compFilter}</Popover>
+            <Popover id="more" label="Ещё фильтры" count={moreCount} open={pop} setOpen={setPop}>{moreFilter}</Popover>
           </div>
-          <p className="results-count" aria-live="polite">Найдено: <b>{filtered.length}</b></p>
+          <p className="results-count" aria-live="polite">Цветов: <b>{filtered.length}</b></p>
         </div>
 
         {active.length > 0 && (
           <ul className="active-chips" aria-label="Выбранные фильтры">
             {active.map((a) => (
               <li key={a.k + a.v}>
-                <button type="button" className="achip" onClick={() => (a.k === 'q' || a.k === 'stock' ? setParam(a.k, '') : toggle(a.k, a.v))} aria-label={`Убрать фильтр: ${a.l}`}>
+                <button type="button" className="achip" onClick={() => (a.k === 'q' ? setParam('q', '') : toggle(a.k, a.v))} aria-label={`Убрать фильтр: ${a.l}`}>
                   {a.hex !== undefined && <ColorChip hex={a.hex} size="dot" />}{a.l}<X aria-hidden="true" />
                 </button>
               </li>
@@ -239,7 +246,9 @@ export function CatalogPage() {
         <div ref={resultsRef} className="catalog-results">
           {filtered.length ? (
             <>
-              <div className="product-grid">{filtered.slice(0, limit).map((p, i) => <ProductCard key={p.id} p={p} index={i % PAGE} />)}</div>
+              <div className="product-grid">
+                {filtered.slice(0, limit).map((c, i) => <ProductCard key={`${c.id}|${preTwist}|${preComp}`} c={c} index={i % PAGE} twist={preTwist} comp={preComp} />)}
+              </div>
               {limit < filtered.length && (
                 <div className="more-row">
                   <button className="btn btn-outline" type="button" onClick={() => setLimit((l) => l + PAGE)}>Показать ещё {Math.min(PAGE, filtered.length - limit)}</button>
@@ -250,8 +259,8 @@ export function CatalogPage() {
           ) : (
             <div className="empty-state">
               <h2>Ничего не найдено</h2>
-              <p>Под выбранные условия нет пряжи. Уберите часть фильтров или поищите оттенок на палитре.</p>
-              <div className="actions"><button className="btn btn-primary" type="button" onClick={reset}>Сбросить</button><Link className="btn btn-outline" to="/colors">Подбор по цвету</Link></div>
+              <p>Под выбранные условия нет цветов. Уберите часть фильтров или поищите цвет на палитре.</p>
+              <div className="actions"><button className="btn btn-primary" type="button" onClick={reset}>Сбросить фильтры</button><Link className="btn btn-outline" to="/colors">Подбор по цвету</Link></div>
             </div>
           )}
         </div>
@@ -263,14 +272,12 @@ export function CatalogPage() {
           <div className="drawer-head"><h2>Фильтры</h2><button className="icon-btn" type="button" onClick={() => setDrawer(false)} aria-label="Закрыть фильтры"><X aria-hidden="true" /></button></div>
           {drawer && <div className="drawer-body">
             <fieldset className="fgroup"><legend>Цвет</legend>{colorFilter}</fieldset>
-            {MAIN.map((d) => <fieldset className="fgroup" key={d.key}><legend>{d.label}</legend>{defFilter(d)}</fieldset>)}
-            <fieldset className="fgroup"><legend>Наличие</legend>{stockFilter}</fieldset>
-            {MORE.length > 0 && (
-              <details className="fmore" open={moreCount > 0}>
-                <summary>Ещё фильтры{moreCount > 0 && <span className="fbtn-n">{moreCount}</span>}</summary>
-                {moreFilter}
-              </details>
-            )}
+            <fieldset className="fgroup"><legend>Скрутка</legend>{twistFilter}</fieldset>
+            <fieldset className="fgroup"><legend>Состав</legend>{compFilter}</fieldset>
+            <details className="fmore" open={moreCount > 0}>
+              <summary>Ещё фильтры{moreCount > 0 && <span className="fbtn-n">{moreCount}</span>}</summary>
+              {moreFilter}
+            </details>
           </div>}
           <div className="drawer-foot">
             <button className="btn btn-outline" type="button" onClick={reset}>Сбросить</button>
