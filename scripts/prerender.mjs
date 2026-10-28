@@ -20,7 +20,7 @@ const colors = JSON.parse(readFileSync(join(ROOT, 'src/data/generated/colors.jso
 const shell = readFileSync(join(DIST, 'index.html'), 'utf8');
 // Каталог по цветам — та же функция, что на сайте (src/data/variants.ts)
 const includeAll = /includeAllCardColors:\s*true/.test(siteSrc);
-const catalog = buildCatalogColors(products, colors, includeAll);
+const catalog = buildCatalogColors(products, colors, includeAll, JSON.parse(readFileSync(join(ROOT, 'src/data/color-overrides.json'), 'utf8')));
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);

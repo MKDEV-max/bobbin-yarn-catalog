@@ -3,7 +3,7 @@ import { Trash2 } from 'lucide-react';
 import { Seo } from '../components/Seo';
 import { PageHead } from './PageHead';
 import { ContactForm } from '../components/ContactForm';
-import { ColorChip } from '../components/ColorSwatch';
+import { ColorMark } from '../components/ColorSwatch';
 import { capName, catalogById } from '../data/catalog';
 import { compText } from '../data/variants';
 import { useStore, type RequestItem, type Unit } from '../state/store';
@@ -41,7 +41,7 @@ export function RequestPage() {
                     const name = capName(c.name.trim());
                     return (
                       <li key={i.key} className="req-item">
-                        <div className="req-visual"><ColorChip hex={c.hex} size="md" /></div>
+                        <div className="req-visual"><ColorMark c={c} size="md" /></div>
                         <div className="req-main">
                           <Link to={`/product/${c.id}`} className="req-title">{name}{c.code && <span className="muted"> · {c.code}</span>}</Link>
                           <dl className="req-config">

@@ -259,3 +259,14 @@ button.swatch:hover .sw-color { transform: scale(1.03); }
   .cfg-compact .cfg-custom label { font-size: 11px; }
   .cfg-compact .cfg-custom .input { min-height: 38px; padding: 6px 8px; }
 }
+
+/* ---------- Образцы цвета: единый вид во всех местах ---------- */
+.color-chip { box-shadow: inset 0 0 0 1px rgb(22 35 42 / .16); }
+.color-chip.is-light { box-shadow: inset 0 0 0 1px var(--color-line-strong); }
+.color-chip.is-multi { box-shadow: inset 0 0 0 1px rgb(22 35 42 / .22); }
+/* Оттенок не определён: нейтральный знак «нет образца» (перечёркнутый круг), без выдуманного цвета */
+.color-chip.is-unknown { border: 0; border-radius: 50%; background: var(--color-surface-alt) linear-gradient(135deg, transparent calc(50% - .75px), var(--color-line-strong) calc(50% - .75px) calc(50% + .75px), transparent calc(50% + .75px)); box-shadow: inset 0 0 0 1px var(--color-line-strong); }
+.color-chip[role="img"] { cursor: help; }
+.tone-list { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-block: 2px; }
+.tone-list > span { display: inline-flex; align-items: center; gap: 6px; }
+.bobbin-photo { object-fit: contain; aspect-ratio: 1; }

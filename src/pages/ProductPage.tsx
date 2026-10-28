@@ -1,8 +1,8 @@
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { Heart, Palette } from 'lucide-react';
 import { Seo } from '../components/Seo';
-import { Bobbin } from '../components/Bobbin';
-import { ColorChip } from '../components/ColorSwatch';
+import { BobbinImage } from '../components/BobbinImage';
+import { ColorChip, ColorMark } from '../components/ColorSwatch';
 import { Configurator } from '../components/Configurator';
 import { ProductCard, tint } from '../components/ProductCard';
 import { site } from '../config/site';
@@ -43,15 +43,18 @@ export function ProductPage() {
         <div className="container product-grid-2">
           <div className="gallery">
             <div className="gallery-main" style={{ background: tint(c.hex, 0.8) }}>
-              <Bobbin hex={c.hex} type={c.type} className="gallery-bobbin" title={`Иллюстрация бобины в цвете «${name}»`} />
-              <span className="badge badge-dark gallery-note">Иллюстрация, цвет приблизительный</span>
+              <BobbinImage c={c} className="gallery-bobbin" titled />
+              <span className="badge badge-dark gallery-note">{c.photo ? 'Фото бобины' : c.status === 'unverified' ? 'Иллюстрация, цвет уточняется' : 'Иллюстрация, цвет приблизительный'}</span>
             </div>
             <figure className="gallery-swatch">
-              <ColorChip hex={c.hex} size="lg" />
+              <ColorMark c={c} size="lg" />
               <figcaption>
-                <b>{c.hex ? 'Цвет по карте расцветок' : 'Образца на карте расцветок нет'}</b>
+                <b>{c.status === 'unverified' ? 'Оттенок уточняется' : c.tones.length > 1 ? 'Составной цвет' : c.status === 'manual' ? 'Цвет подтверждён вручную' : 'Цвет по карте расцветок'}</b>
                 <span>«{c.name}»{c.code && <>, артикул {c.code}</>}</span>
-                <span className="muted">{c.hex ? `${c.hex} — приблизительно` : 'Цвет уточните у менеджера или запросите образец'}</span>
+                {c.tones.length > 1 && <span className="tone-list">{c.tones.map((t, i) => <span key={i}><ColorChip hex={t} size="dot" />{c.toneNames[i]}</span>)}</span>}
+                {c.tones.length === 1 && <span className="muted">{c.hex} — приблизительно, по фото карты</span>}
+                {c.statusNote && <span className="muted">{c.statusNote}</span>}
+                {c.status === 'unverified' && <span className="muted">Цвет уточните у менеджера или запросите образец.</span>}
               </figcaption>
             </figure>
           </div>

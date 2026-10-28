@@ -9,7 +9,8 @@ import rawMeta from './generated/meta.json';
 import { COLOR_GROUPS, COMPOSITIONS, PURPOSES, YARN_TYPES, labelOf } from './taxonomy';
 import { site } from '../config/site';
 import rawOffers from './offers.json';
-import { buildCatalogColors, configsFor, type CatalogColor, type Offer } from './variants';
+import rawOverrides from './color-overrides.json';
+import { buildCatalogColors, configsFor, type CatalogColor, type ColorOverride, type Offer } from './variants';
 export type { CatalogColor } from './variants';
 
 export type YarnType = 'solid' | 'melange' | 'mouline';
@@ -65,12 +66,19 @@ export const productById = new Map(PRODUCTS.map((p) => [p.id, p]));
 
 /* ---------- Каталог по цветам: одна карточка = один цвет, у каждого 8 конфигураций (см. variants.ts) ---------- */
 export const OFFERS = rawOffers as Record<string, Offer>;
-export const CATALOG: CatalogColor[] = buildCatalogColors(PRODUCTS, COLORS, site.catalog.includeAllCardColors);
+export const CATALOG: CatalogColor[] = buildCatalogColors(PRODUCTS, COLORS, site.catalog.includeAllCardColors, rawOverrides as Record<string, ColorOverride>);
 export const catalogById = new Map(CATALOG.map((c) => [c.id, c]));
 /** Старые ссылки /product/<id позиции> → цвет */
 export const legacyToColor = new Map(CATALOG.flatMap((c) => c.legacyIds.map((id) => [id, c.id] as const)));
 export const colorConfigs = (c: CatalogColor) => configsFor(c.id, OFFERS);
 export const capName = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+/** Короткая подпись под названием цвета в карточке */
+export function colorCaption(c: CatalogColor) {
+  if (c.code) return `арт. ${c.code}`;
+  if (c.status === 'composite') return c.assorti ? 'смесь расцветок' : 'составной цвет';
+  if (c.status === 'manual') return 'цвет подтверждён';
+  return 'цвет уточняется';
+}
 export const colorTitle = (c: CatalogColor) => `${capName(c.name.trim())}${c.code ? ` · ${c.code}` : ''}`;
 export function colorSearchText(c: CatalogColor) {
   return [c.name, c.code, ...c.groups.map((g) => labelOf(COLOR_GROUPS, g))].filter(Boolean).join(' ').toLowerCase().replace(/ё/g, 'е');

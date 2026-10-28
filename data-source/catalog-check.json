@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-26",
+  "date": "2026-10-28",
   "oldCatalogPositions": 212,
-  "oldCatalogColors": 165,
-  "oldColorsKept": 165,
-  "cardColorsAdded": 139,
-  "catalogColors": 304,
+  "oldCatalogColors": 164,
+  "oldColorsKept": 164,
+  "cardColorsAdded": 137,
+  "catalogColors": 301,
   "configsPerColor": 8,
-  "configsTotal": 2432,
+  "configsTotal": 2408,
   "colorsWithoutAll8": 0,
   "errors": []
 }

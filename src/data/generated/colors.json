@@ -1660,7 +1660,9 @@
   "groups": [
    "pink"
   ],
-  "inStockAs": []
+  "inStockAs": [
+   "Светлая слива"
+  ]
  },
  {
   "id": "valeryana",
@@ -2852,7 +2854,9 @@
   "groups": [
    "blue"
   ],
-  "inStockAs": []
+  "inStockAs": [
+   "т.пролеска"
+  ]
  },
  {
   "id": "alpiyskiy",
@@ -2936,7 +2940,8 @@
    "turquoise"
   ],
   "inStockAs": [
-   "т.бирюза"
+   "т.бирюза",
+   "Темная бирюза"
   ]
  },
  {

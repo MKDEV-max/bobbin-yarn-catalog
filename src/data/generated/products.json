@@ -5453,13 +5453,15 @@
  {
   "id": "svetlaya-sliva-sherst-30-pan-70",
   "colorName": "Светлая слива",
-  "colorId": null,
-  "colorMatch": null,
-  "cardName": null,
-  "cardCode": null,
-  "hex": null,
-  "group": null,
-  "groups": [],
+  "colorId": "sv-sliva",
+  "colorMatch": "abbr",
+  "cardName": "св.слива",
+  "cardCode": "464/4",
+  "hex": "#792A40",
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
   "composition": "Шерсть 30%, ПАН 70%",
   "compositionSource": "Шерсть-30%, ПАН-70%",
   "categories": [
@@ -5476,7 +5478,7 @@
   "bobbinWeightKg": null,
   "priceRub": null,
   "minOrder": null,
-  "yarnType": null,
+  "yarnType": "solid",
   "purpose": [
    "machine"
   ],
@@ -5487,7 +5489,7 @@
   },
   "assorti": null,
   "notes": [
-   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+   "Образец сопоставлен с картой по сокращённому названию: «Светлая слива» → «св.слива»."
   ]
  },
  {
@@ -6244,13 +6246,15 @@
  {
   "id": "t-proleska-pan-100",
   "colorName": "т.пролеска",
-  "colorId": null,
-  "colorMatch": null,
-  "cardName": null,
-  "cardCode": null,
-  "hex": null,
-  "group": null,
-  "groups": [],
+  "colorId": "temnaya-proleska",
+  "colorMatch": "abbr",
+  "cardName": "темная пролеска",
+  "cardCode": "521/7",
+  "hex": "#7089C0",
+  "group": "blue",
+  "groups": [
+   "blue"
+  ],
   "composition": "ПАН 100% (акрил)",
   "compositionSource": "ПАН-100%",
   "categories": [
@@ -6265,7 +6269,7 @@
   "bobbinWeightKg": null,
   "priceRub": null,
   "minOrder": null,
-  "yarnType": null,
+  "yarnType": "solid",
   "purpose": [
    "machine"
   ],
@@ -6276,7 +6280,7 @@
   },
   "assorti": null,
   "notes": [
-   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+   "Образец сопоставлен с картой по сокращённому названию: «т.пролеска» → «темная пролеска»."
   ]
  },
  {
@@ -6320,13 +6324,14 @@
  {
   "id": "temnaya-biryuza-pan-100",
   "colorName": "Темная бирюза",
-  "colorId": null,
-  "colorMatch": null,
-  "cardName": null,
-  "cardCode": null,
-  "hex": null,
-  "group": "turquoise",
+  "colorId": "t-biryuza",
+  "colorMatch": "abbr",
+  "cardName": "т.бирюза",
+  "cardCode": "518/3",
+  "hex": "#0A4F8C",
+  "group": "blue",
   "groups": [
+   "blue",
    "turquoise"
   ],
   "composition": "ПАН 100% (акрил)",
@@ -6343,7 +6348,7 @@
   "bobbinWeightKg": null,
   "priceRub": null,
   "minOrder": null,
-  "yarnType": null,
+  "yarnType": "solid",
   "purpose": [
    "machine"
   ],
@@ -6354,7 +6359,7 @@
   },
   "assorti": null,
   "notes": [
-   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+   "Образец сопоставлен с картой по сокращённому названию: «Темная бирюза» → «т.бирюза»."
   ]
  },
  {
@@ -8211,13 +8216,15 @@
  {
   "id": "svetlaya-sliva-sherst-30-pan-70-265tex",
   "colorName": "Светлая слива",
-  "colorId": null,
-  "colorMatch": null,
-  "cardName": null,
-  "cardCode": null,
-  "hex": null,
-  "group": null,
-  "groups": [],
+  "colorId": "sv-sliva",
+  "colorMatch": "abbr",
+  "cardName": "св.слива",
+  "cardCode": "464/4",
+  "hex": "#792A40",
+  "group": "pink",
+  "groups": [
+   "pink"
+  ],
   "composition": "Шерсть 30%, ПАН 70%",
   "compositionSource": "Шерсть-30%, ПАН-70%",
   "categories": [
@@ -8234,7 +8241,7 @@
   "bobbinWeightKg": null,
   "priceRub": null,
   "minOrder": null,
-  "yarnType": null,
+  "yarnType": "solid",
   "purpose": [],
   "stock": {
    "kg": 12.5,
@@ -8243,7 +8250,7 @@
   },
   "assorti": null,
   "notes": [
-   "Образец цвета на карте расцветок не найден — оттенок уточняйте у менеджера."
+   "Образец сопоставлен с картой по сокращённому названию: «Светлая слива» → «св.слива»."
   ]
  },
  {

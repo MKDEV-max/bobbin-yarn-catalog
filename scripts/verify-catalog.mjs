@@ -24,7 +24,7 @@ const norm = (s) => s.toLowerCase().replace(/ё/g, 'е').replace(/\s+/g, ' ').re
 const oldColors = new Map();
 for (const p of products) { const k = p.colorId ? `card:${p.colorId}` : `stock:${norm(p.colorName)}`; if (!oldColors.has(k)) oldColors.set(k, p); }
 
-const catalog = buildCatalogColors(products, colors, includeAll);
+const catalog = buildCatalogColors(products, colors, includeAll, JSON.parse(readFileSync(join(ROOT, 'src/data/color-overrides.json'), 'utf8')));
 const ids = new Set();
 for (const c of catalog) { if (ids.has(c.id)) fail(`Повторяющийся id цвета: ${c.id}`); ids.add(c.id); }
 
@@ -35,7 +35,9 @@ const oldKept = [...oldColors.values()].filter((p) => catalog.some((c) => c.lega
 if (oldKept !== oldColors.size) fail(`Сохранено ${oldKept} из ${oldColors.size} прежних цветов`);
 for (const [k, p] of oldColors) {
   const c = catalog.find((x) => x.legacyIds.includes(p.id));
-  if (c && k.startsWith('stock:') && norm(c.name) !== norm(p.colorName)) fail(`Название цвета изменено: «${p.colorName}» → «${c.name}»`);
+  // Цвет из остатков может слиться с цветом карты, только если это то же название в другом написании (card-abbr)
+  if (c && k.startsWith('stock:') && norm(c.name) !== norm(p.colorName) && c.status !== 'card-abbr') fail(`Название цвета изменено: «${p.colorName}» → «${c.name}»`);
+  if (c && !c.stockNames.some((n) => norm(n) === norm(p.colorName))) fail(`Название из остатков потеряно: «${p.colorName}»`);
 }
 if (includeAll) for (const cc of colors) if (!ids.has(cc.id)) fail(`Цвет карты расцветок не в каталоге: ${cc.name} ${cc.code}`);
 
@@ -75,6 +77,47 @@ if (new Set(keys).size !== keys.length) fail('Разные конфигурац�
 if (requestKey({ colorId: id, twist: '16/2', comp: 'w30' }) !== keys[0]) fail('Одинаковая конфигурация даёт разные позиции');
 
 // Отчёт
+// 6. Цвета образцов: каждый образец — из данных; без выдуманных оттенков
+const isHex = (h) => /^#[0-9A-F]{6}$/i.test(h);
+const cardHex = new Set(colors.map((c) => c.hex.toUpperCase()));
+const overrides = JSON.parse(readFileSync(join(ROOT, 'src/data/color-overrides.json'), 'utf8'));
+const overrideHex = new Set(Object.values(overrides).flatMap((o) => [o.hex, ...(o.tones ?? [])]).filter(Boolean).map((h) => h.toUpperCase()));
+for (const c of catalog) {
+  if (c.status === 'unverified') { if (c.tones.length || c.hex) fail(`${c.name}: оттенок без сопоставления`); continue; }
+  if (!c.tones.length) fail(`${c.name}: нет образца при статусе ${c.status}`);
+  for (const t of c.tones) {
+    if (!isHex(t)) fail(`${c.name}: неверный HEX ${t}`);
+    else if (!cardHex.has(t.toUpperCase()) && !overrideHex.has(t.toUpperCase())) fail(`${c.name}: оттенок ${t} не с карты расцветок и не из ручного подтверждения`);
+  }
+}
+// Дубли одного цвета из-за написания (регистр, пробелы, сокращения через точку)
+const seenNames = new Map();
+for (const c of catalog) { const k = norm(c.name).replace(/\./g, '. ').replace(/\s+/g, ' '); if (seenNames.has(k)) fail(`Дубль цвета: «${c.name}» и «${seenNames.get(k)}»`); seenNames.set(k, c.name); }
+
+// Подсказки для ручной проверки: названия карты с тем же корнем (не применяются автоматически)
+const roots = (n) => norm(n).split(/[\s.+-]+/).filter((w) => w.length >= 4).map((w) => w.slice(0, 5));
+const unverified = catalog.filter((c) => c.status === 'unverified').map((c) => {
+  const r = roots(c.name);
+  const similar = colors.filter((cc) => roots(cc.name).some((w) => r.includes(w))).map((cc) => `${cc.name} ${cc.code}`);
+  return { id: c.id, name: c.name, reason: c.statusNote, similarOnCard: similar };
+});
+const byStatus = catalog.reduce((m, c) => ({ ...m, [c.status]: (m[c.status] ?? 0) + 1 }), {});
+const colorReport = {
+  totalColors: catalog.length,
+  matchedToCard: (byStatus.card ?? 0) + (byStatus['card-abbr'] ?? 0),
+  matchedExact: byStatus.card ?? 0,
+  matchedByAbbreviation: catalog.filter((c) => c.status === 'card-abbr').map((c) => `${c.stockNames.join(' / ')} → ${c.name} ${c.code}`),
+  composite: catalog.filter((c) => c.status === 'composite').map((c) => `${c.name}: ${c.toneNames.join(', ')}`),
+  multiToneCardColors: catalog.filter((c) => c.status === 'card' && c.tones.length > 1).map((c) => `${c.name}: ${c.toneNames.join(' + ')}`),
+  manual: catalog.filter((c) => c.status === 'manual').map((c) => c.name),
+  withSwatch: catalog.filter((c) => c.tones.length > 0).length,
+  withRealPhoto: catalog.filter((c) => c.photo).length,
+  withColoredIllustration: catalog.filter((c) => !c.photo && c.tones.length > 0).length,
+  withNeutralIllustration: catalog.filter((c) => !c.photo && !c.tones.length).length,
+  needsManualCheck: unverified,
+};
+writeFileSync(join(ROOT, 'data-source', 'color-report.json'), JSON.stringify(colorReport, null, 2) + '\n');
+
 const report = {
   date: new Date().toISOString().slice(0, 10),
   oldCatalogPositions: products.length,
@@ -90,5 +133,7 @@ const report = {
 writeFileSync(join(ROOT, 'data-source', 'catalog-check.json'), JSON.stringify(report, null, 2) + '\n');
 console.log(`Проверка каталога: прежний каталог — ${report.oldCatalogPositions} позиций, ${report.oldCatalogColors} цветов; сохранено ${report.oldColorsKept}.`);
 console.log(`Добавлено цветов карты расцветок: ${report.cardColorsAdded}. Цветов в каталоге: ${report.catalogColors}. Конфигураций: ${report.configsTotal} (по 8 на цвет). Цветов без всех 8 вариантов: ${incomplete}.`);
-if (errors.length) { console.error(`ОШИБКИ (${errors.length}):\n- ${errors.slice(0, 30).join('\n- ')}`); process.exit(1); }
+if (errors.length) { console.log(`Цвета: образцов ${colorReport.withSwatch} из ${colorReport.totalColors}.`); console.error(`ОШИБКИ (${errors.length}):\n- ${errors.slice(0, 30).join('\n- ')}`); process.exit(1); }
+console.log(`Цвета: ${colorReport.totalColors}; с карты расцветок ${colorReport.matchedToCard} (из них по сокращению ${colorReport.matchedByAbbreviation.length}); составных ${colorReport.composite.length}; подтверждены вручную ${colorReport.manual.length}.`);
+console.log(`Образцы: ${colorReport.withSwatch}; настоящие фото: ${colorReport.withRealPhoto}; цветные иллюстрации: ${colorReport.withColoredIllustration}; оттенок уточняется: ${colorReport.withNeutralIllustration} (список — data-source/color-report.json).`);
 console.log('Ошибок нет.');

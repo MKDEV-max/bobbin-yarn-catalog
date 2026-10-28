@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
-import { capName, type CatalogColor } from '../data/catalog';
+import { capName, colorCaption, type CatalogColor } from '../data/catalog';
 import type { CompId, Twist } from '../data/variants';
 import { useStore, useToast } from '../state/store';
-import { Bobbin } from './Bobbin';
-import { ColorChip } from './ColorSwatch';
+import { ColorMark } from './ColorSwatch';
+import { BobbinImage } from './BobbinImage';
 import { Configurator } from './Configurator';
 
 export const asset = (p: string) => `${import.meta.env.BASE_URL}${p}`;
@@ -28,13 +28,13 @@ export function ProductCard({ c, index = 0, twist = null, comp = null }: { c: Ca
   return (
     <article className="product-card fade-in" style={{ animationDelay: `${Math.min(index, 8) * 30}ms` }}>
       <Link to={`/product/${c.id}`} className="pc-media" style={{ background: tint(c.hex) }} tabIndex={-1} aria-hidden="true">
-        <Bobbin hex={c.hex} type={c.type} className="pc-bobbin" />
+        <BobbinImage c={c} className="pc-bobbin" />
       </Link>
       <div className="pc-body">
         <h3 className="pc-title">
           <Link to={`/product/${c.id}`} className="pc-name">
-            <ColorChip hex={c.hex} size="md" className="pc-chip" />
-            <span><span className="pc-name-text">{name}</span><small>{c.code ? `арт. ${c.code}` : 'без образца на карте'}</small></span>
+            <ColorMark c={c} size="md" className="pc-chip" />
+            <span><span className="pc-name-text">{name}</span><small>{colorCaption(c)}</small></span>
           </Link>
         </h3>
         <Configurator color={c} initialTwist={twist} initialComp={comp} compact detailsLink />

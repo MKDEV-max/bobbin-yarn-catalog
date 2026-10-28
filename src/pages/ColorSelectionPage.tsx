@@ -76,7 +76,7 @@ export function ColorSelectionPage() {
             <ul className="picked-row">
               {pickedColors.map((c) => (
                 <li key={c.id} className="picked-chip">
-                  <ColorChip hex={c.hex} size="md" />
+                  <ColorChip hex={c.hex} tones={catalogById.get(c.id)?.tones} size="md" label={c.name} />
                   <span><b>{c.name}</b><small>{c.code}</small></span>
                   <button className="icon-btn" type="button" onClick={() => toggle(c.id)} aria-label={`Убрать оттенок «${c.name}»`}><X aria-hidden="true" /></button>
                 </li>
@@ -87,7 +87,7 @@ export function ColorSelectionPage() {
               <div className="compare" role="region" aria-label="Сравнение оттенков">
                 {pickedColors.map((c) => (
                   <figure key={c.id} className="compare-item">
-                    <ColorChip hex={c.hex} size="fill" className="compare-color" />
+                    <ColorChip hex={c.hex} tones={catalogById.get(c.id)?.tones} size="fill" className="compare-color" />
                     <figcaption>
                       <b>{c.name}</b>
                       <span>Артикул {c.code}</span>

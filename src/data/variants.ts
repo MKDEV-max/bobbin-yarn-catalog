@@ -60,58 +60,136 @@ export function compText(comp: CompId, wool?: string | number | null, pan?: stri
 
 type CardColor = { id: string; name: string; code: string; hex: string; type: string; group: string | null; groups: string[] };
 type StockProduct = {
-  id: string; colorName: string; colorId: string | null; cardName: string | null; cardCode: string | null; hex: string | null;
+  id: string; colorName: string; colorId: string | null; colorMatch?: string | null; cardName: string | null; cardCode: string | null; hex: string | null;
   group: string | null; groups: string[]; composition: string | null; tex: number | null; yarnType: string | null;
   stock: { kg: number; date: string | null; source: string }; assorti: string[] | null; notes: string[];
 };
 export type StockRecord = { composition: string | null; tex: number | null; kg: number; date: string | null };
+/**
+ * Откуда взят цвет образца:
+ *  card       — цвет есть на карте расцветок (точное название);
+ *  card-abbr  — название в остатках — сокращение (или полная форма) названия на карте; сопоставление проверено вручную;
+ *  composite  — составной цвет («Ассорти», «A+B»): несколько оттенков, каждый — с карты расцветок;
+ *  unverified — на карте расцветок такого цвета нет: оттенок не выдумываем, нужна ручная проверка.
+ *  manual     — цвет подтверждён владельцем в src/data/color-overrides.json (по карте, образцу или фото).
+ */
+export type ColorStatus = 'card' | 'card-abbr' | 'composite' | 'manual' | 'unverified';
 export type CatalogColor = {
-  id: string;                  // для цветов карты — id цвета карты; для цветов только из остатков — транслит названия
+  id: string;                  // для цветов карты — id цвета карты; для цветов только из остатков — «s-» + транслит названия
   name: string;                // название как в источнике (карта расцветок или таблица остатков)
   code: string | null;         // артикул с карты расцветок
-  hex: string | null;          // однотонный образец; null — образца на карте нет
+  hex: string | null;          // основной оттенок (замер по фото карты); null — оттенок не определён
+  tones: string[];             // все оттенки образца: [hex] для однотонных, 2+ для составных, [] — не определён
+  toneNames: string[];         // названия оттенков с карты — для подписи составного образца
+  status: ColorStatus;
+  statusNote: string;          // пояснение для ручной проверки / сопоставления
+  photo: string | null;        // путь к настоящей фотографии бобины этого цвета (в public/); пока фото нет
   type: string | null;         // solid / melange / mouline
   group: string | null;
   groups: string[];
   source: 'card' | 'stock';    // откуда цвет: карта расцветок / только таблица остатков
   inCatalogBefore: boolean;    // был ли цвет в каталоге до перехода на конфигурации
   stock: StockRecord[];        // справочно: строки таблицы остатков (на дату файла)
+  stockNames: string[];        // как цвет записан в таблице остатков (все написания)
   assorti: string[] | null;
   notes: string[];
-  legacyIds: string[];         // прежние id товаров — для перенаправления старых ссылок
+  legacyIds: string[];         // прежние id (позиций и цветов) — для перенаправления старых ссылок
 };
 
 const normName = (s: string) => s.toLowerCase().replace(/ё/g, 'е').replace(/\s+/g, ' ').replace(/\.\s+/g, '.').trim();
 const TR: Record<string, string> = { а: 'a', б: 'b', в: 'v', г: 'g', д: 'd', е: 'e', ё: 'e', ж: 'zh', з: 'z', и: 'i', й: 'y', к: 'k', л: 'l', м: 'm', н: 'n', о: 'o', п: 'p', р: 'r', с: 's', т: 't', у: 'u', ф: 'f', х: 'h', ц: 'ts', ч: 'ch', ш: 'sh', щ: 'sch', ъ: '', ы: 'y', ь: '', э: 'e', ю: 'yu', я: 'ya' };
 const translit = (s: string) => normName(s).split('').map((c) => TR[c] ?? c).join('').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+/** id цвета, который есть только в таблице остатков (так он назывался на сайте до сопоставления) */
+export const stockColorId = (name: string) => `s-${translit(name)}`;
+
+/** Составной цвет: «A+B» или «Ассорти» (по расшифровке из Excel) — оттенки только тех составляющих, что есть на карте */
+function compositeTones(name: string, assorti: string[] | null, cardByNorm: Map<string, CardColor>) {
+  const n = normName(name);
+  const parts = n.includes('+') ? n.split('+').map((x) => x.trim()) : /ассорти/.test(n) && assorti ? assorti.map(normName) : [];
+  const found = parts.map((x) => cardByNorm.get(x)).filter((c): c is CardColor => !!c);
+  const uniq = [...new Map(found.map((c) => [c.id, c])).values()];
+  return { parts, found: uniq };
+}
 
 /**
  * Цвета каталога: все цвета прежнего каталога (позиции таблицы остатков, сгруппированные по цвету)
  * + при includeCardOnly — цвета карты расцветок, которых в остатках не было.
  */
-export function buildCatalogColors(products: StockProduct[], cardColors: CardColor[], includeCardOnly: boolean): CatalogColor[] {
+/**
+ * Ручные подтверждения (src/data/color-overrides.json). Ключ — id цвета каталога или его название в таблице остатков.
+ *   { "Брусничный": { "card": "brusnika", "note": "сверено с образцом" } }   — оттенок цвета карты расцветок
+ *   { "s-aurora-krasnaya": { "hex": "#B3262E", "note": "замер по образцу" } } — свой замер
+ *   { "biryuza": { "photo": "photos/biryuza.jpg" } }                            — настоящее фото бобины (public/)
+ */
+export type ColorOverride = { card?: string; hex?: string; tones?: string[]; photo?: string; note?: string };
+
+export function buildCatalogColors(products: StockProduct[], cardColors: CardColor[], includeCardOnly: boolean, overrides: Record<string, ColorOverride> = {}): CatalogColor[] {
   const byKey = new Map<string, CatalogColor>();
   const cardById = new Map(cardColors.map((c) => [c.id, c]));
+  const cardByNorm = new Map(cardColors.map((c) => [normName(c.name), c]));
+  const fromCard = (card: CardColor, inCatalogBefore: boolean): CatalogColor => ({
+    id: card.id, name: card.name, code: card.code, hex: card.hex, tones: [card.hex], toneNames: [card.name], status: 'card', statusNote: '', photo: null,
+    type: card.type, group: card.group, groups: card.groups, source: 'card', inCatalogBefore, stock: [], stockNames: [], assorti: null, notes: [], legacyIds: [],
+  });
   for (const p of products) {
     const card = p.colorId ? cardById.get(p.colorId) : undefined;
     const key = card ? `card:${card.id}` : `stock:${normName(p.colorName)}`;
     let c = byKey.get(key);
     if (!c) {
-      c = card
-        ? { id: card.id, name: card.name, code: card.code, hex: card.hex, type: card.type, group: card.group, groups: card.groups, source: 'card', inCatalogBefore: true, stock: [], assorti: null, notes: [], legacyIds: [] }
-        : { id: `s-${translit(p.colorName)}`, name: p.colorName.trim(), code: null, hex: null, type: p.yarnType, group: p.group, groups: p.groups, source: 'stock', inCatalogBefore: true, stock: [], assorti: null, notes: [], legacyIds: [] };
+      c = card ? fromCard(card, true) : {
+        id: stockColorId(p.colorName), name: p.colorName.trim(), code: null, hex: null, tones: [], toneNames: [], status: 'unverified',
+        statusNote: 'Цвета с таким названием нет на карте расцветок в «карта цветов.xlsx» — оттенок не определён, нужна ручная проверка (образец или фото).',
+        photo: null, type: p.yarnType, group: p.group, groups: p.groups, source: 'stock', inCatalogBefore: true, stock: [], stockNames: [], assorti: null, notes: [], legacyIds: [],
+      };
       byKey.set(key, c);
     }
+    if (card && p.colorMatch === 'abbr' && c.status === 'card') {
+      c.status = 'card-abbr';
+      c.statusNote = `В таблице остатков записан как «${p.colorName.trim()}», на карте расцветок — «${card.name}» ${card.code}.`;
+    }
+    // Цвет раньше был отдельной карточкой «только из остатков» — его старый адрес ведёт сюда
+    if (card) { const old = stockColorId(p.colorName); if (old !== c.id && !c.legacyIds.includes(old)) c.legacyIds.push(old); }
+    if (!c.stockNames.includes(p.colorName.trim())) c.stockNames.push(p.colorName.trim());
     c.stock.push({ composition: p.composition, tex: p.tex, kg: p.stock.kg, date: p.stock.date });
     c.legacyIds.push(p.id);
-    if (p.assorti) c.assorti = p.assorti;
+    // У «Ассорти» две расшифровки (ПАН и полушерсть) — объединяем
+    if (p.assorti) c.assorti = [...new Set([...(c.assorti ?? []), ...p.assorti])];
     for (const n of p.notes) if (!c.notes.includes(n)) c.notes.push(n);
   }
   if (includeCardOnly) {
-    for (const card of cardColors) {
-      if (byKey.has(`card:${card.id}`)) continue;
-      byKey.set(`card:${card.id}`, { id: card.id, name: card.name, code: card.code, hex: card.hex, type: card.type, group: card.group, groups: card.groups, source: 'card', inCatalogBefore: false, stock: [], assorti: null, notes: [], legacyIds: [] });
+    for (const card of cardColors) if (!byKey.has(`card:${card.id}`)) byKey.set(`card:${card.id}`, fromCard(card, false));
+  }
+  // Составные цвета: образец из оттенков составляющих, если они есть на карте расцветок
+  for (const c of byKey.values()) {
+    const { parts, found } = compositeTones(c.name, c.assorti, cardByNorm);
+    if (!parts.length) continue;
+    if (c.source === 'card' && found.length === parts.length && found.length >= 2) {
+      // мулине с карты: замер фото + оттенки обеих нитей
+      c.tones = found.map((x) => x.hex); c.toneNames = found.map((x) => x.name);
+    } else if (c.source === 'stock' && found.length >= 2 && (n2(c.name).includes('+') ? found.length === parts.length : true)) {
+      c.tones = found.slice(0, 8).map((x) => x.hex); c.toneNames = found.slice(0, 8).map((x) => x.name);
+      c.hex = c.tones[0]; c.status = 'composite';
+      c.statusNote = n2(c.name).includes('+')
+        ? `Составной цвет: ${found.map((x) => `«${x.name}» ${x.code}`).join(' + ')} — оттенки с карты расцветок.`
+        : `Смесь расцветок по расшифровке «Ассорти» в Excel. На образце — ${c.toneNames.length} из ${parts.length} цветов смеси, которые есть на карте расцветок.`;
+    } else if (c.source === 'stock') {
+      const missing = parts.filter((x) => !cardByNorm.has(x));
+      c.statusNote = `Составной цвет; на карте расцветок нет: ${missing.map((x) => `«${x}»`).join(', ')} — оттенок не определён, нужна ручная проверка.`;
+    }
+  }
+  // Ручные подтверждения владельца
+  const ov = new Map(Object.entries(overrides).map(([k, v]) => [normName(k), v]));
+  for (const c of byKey.values()) {
+    const o = ov.get(normName(c.id)) ?? ov.get(normName(c.name)) ?? c.stockNames.map((n) => ov.get(normName(n))).find(Boolean);
+    if (!o) continue;
+    if (o.photo) c.photo = o.photo;
+    const card = o.card ? cardById.get(o.card) : undefined;
+    const tones = o.tones?.length ? o.tones : card ? [card.hex] : o.hex ? [o.hex] : null;
+    if (tones) {
+      c.tones = tones; c.hex = tones[0]; c.toneNames = card ? [card.name] : [c.name]; c.status = 'manual';
+      c.statusNote = `Цвет подтверждён вручную${card ? `: оттенок «${card.name}» ${card.code} с карты расцветок` : ''}${o.note ? ` (${o.note})` : ''}.`;
     }
   }
   return [...byKey.values()];
 }
+const n2 = normName;

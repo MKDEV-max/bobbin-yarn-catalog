@@ -4,7 +4,7 @@ import { ChevronDown, Search, SlidersHorizontal, X } from 'lucide-react';
 import { Seo } from '../components/Seo';
 import { PageHead } from './PageHead';
 import { ProductCard } from '../components/ProductCard';
-import { ColorChip } from '../components/ColorSwatch';
+import { ColorChip, ColorMark } from '../components/ColorSwatch';
 import { CATALOG, META, colorConfigs, colorSearchText, formatDate, hueOf, labels, type CatalogColor } from '../data/catalog';
 import { COLOR_GROUPS } from '../data/taxonomy';
 import { COMPOSITION_OPTIONS, TWISTS, type CompId, type Twist } from '../data/variants';
@@ -100,8 +100,8 @@ export function CatalogPage() {
     CATALOG.filter((c) => matches(c, skip)).reduce((n, c) => n + colorConfigs(c).filter(test).length, 0);
 
   const active = [
-    ...get('group').map((v) => ({ k: 'group', v, l: v === UNKNOWN ? 'Без образца' : labels.group(v), hex: v === UNKNOWN ? null : groupHex(v) as string | null | undefined })),
-    ...get('color').map((v) => { const c = CATALOG.find((x) => x.id === v); return { k: 'color', v, l: c?.name ?? v, hex: c?.hex ?? null as string | null | undefined }; }),
+    ...get('group').map((v) => ({ k: 'group', v, l: v === UNKNOWN ? 'Цвет уточняется' : labels.group(v), hex: v === UNKNOWN ? null : groupHex(v) as string | null | undefined })),
+    ...get('color').map((v) => { const c = CATALOG.find((x) => x.id === v); return { k: 'color', v, l: c?.name ?? v, hex: c?.hex ?? null as string | null | undefined, tones: c?.tones }; }),
     ...twists.map((v) => ({ k: 'twist', v, l: `Скрутка ${v}`, hex: undefined })),
     ...comps.map((v) => ({ k: 'comp', v, l: COMPOSITION_OPTIONS.find((o) => o.id === v)!.label, hex: undefined })),
     ...get('type').map((v) => ({ k: 'type', v, l: TYPE_LABEL[v] ?? v, hex: undefined })),
@@ -123,9 +123,9 @@ export function CatalogPage() {
       <p className="fhint">Группа оттенков</p>
       <div className="dot-grid">
         {GROUP_OPTS.map((g) => (
-          <button key={g} type="button" className="dot-opt" aria-pressed={get('group').includes(g)} onClick={() => toggle('group', g)} title={g === UNKNOWN ? 'Без образца на карте' : labels.group(g)}>
+          <button key={g} type="button" className="dot-opt" aria-pressed={get('group').includes(g)} onClick={() => toggle('group', g)} title={g === UNKNOWN ? 'Цвет уточняется' : labels.group(g)}>
             <ColorChip hex={g === UNKNOWN ? null : groupHex(g)} size="dot" />
-            <span>{g === UNKNOWN ? 'Без образца' : labels.group(g)}</span><small>{countFor('color', (c) => groupsOf(c).includes(g))}</small>
+            <span>{g === UNKNOWN ? 'Цвет уточняется' : labels.group(g)}</span><small>{countFor('color', (c) => groupsOf(c).includes(g))}</small>
           </button>
         ))}
       </div>
@@ -137,8 +137,8 @@ export function CatalogPage() {
           <li key={c.id}>
             <label className="check check-sm" title={`${c.name}${c.code ? `, ${c.code}` : ''}`}>
               <input type="checkbox" checked={get('color').includes(c.id)} onChange={() => toggle('color', c.id)} />
-              <ColorChip hex={c.hex} size="dot" />
-              <span>{c.name} {c.code && <span className="muted">{c.code}</span>}</span>
+              <ColorMark c={c} size="dot" />
+              <span>{c.name} {c.code ? <span className="muted">{c.code}</span> : c.status === 'unverified' && <span className="muted">· уточняется</span>}</span>
             </label>
           </li>
         ))}
@@ -235,7 +235,7 @@ export function CatalogPage() {
             {active.map((a) => (
               <li key={a.k + a.v}>
                 <button type="button" className="achip" onClick={() => (a.k === 'q' ? setParam('q', '') : toggle(a.k, a.v))} aria-label={`Убрать фильтр: ${a.l}`}>
-                  {a.hex !== undefined && <ColorChip hex={a.hex} size="dot" />}{a.l}<X aria-hidden="true" />
+                  {a.hex !== undefined && <ColorChip hex={a.hex} tones={(a as { tones?: string[] }).tones} size="dot" />}{a.l}<X aria-hidden="true" />
                 </button>
               </li>
             ))}
