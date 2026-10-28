@@ -15,7 +15,7 @@ export function channels(subject: string, text: string): Channel[] {
   if (c.email) list.push({ label: `Отправить на ${c.email}`, href: `mailto:${c.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}` });
   if (c.whatsapp) list.push({ label: 'Отправить в WhatsApp', href: `https://wa.me/${c.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent(text)}`, external: true });
   if (c.telegram) list.push({ label: `Открыть Telegram @${c.telegram.replace(/^@/, '')}`, href: `https://t.me/${c.telegram.replace(/^@/, '')}`, external: true });
-  if (c.phone) list.push({ label: `Позвонить: ${c.phone}`, href: `tel:${c.phone.replace(/[^\d+]/g, '')}` });
+  // Телефон компании не предлагается для заявок — он не для оформления заказов
   return list;
 }
 

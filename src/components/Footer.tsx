@@ -7,8 +7,8 @@ import { NAV } from './Header';
 export function Footer() {
   const c = site.contacts, l = site.legal;
   const contacts = [
-    c.phone && <a key="p" href={`tel:${c.phone.replace(/[^\d+]/g, '')}`}>{c.phone}</a>,
-    c.email && <a key="e" href={`mailto:${c.email}`}>{c.email}</a>,
+    c.email && <span key="e" className="footer-contact"><a href={`mailto:${c.email}`}>{c.email}</a><small>Заявки на пряжу — на почту</small></span>,
+    c.phone && <span key="p" className="footer-contact"><a href={`tel:${c.phoneTel}`}>{c.phone}</a><small>{c.phoneWarning}</small></span>,
     c.whatsapp && <a key="w" href={`https://wa.me/${c.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener">WhatsApp</a>,
     c.telegram && <a key="t" href={`https://t.me/${c.telegram.replace(/^@/, '')}`} target="_blank" rel="noopener">Telegram</a>,
     c.workHours && <span key="h">{c.workHours}</span>,

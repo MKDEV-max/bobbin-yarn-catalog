@@ -14,8 +14,6 @@ export const NAV: { to: string; label: string; compact?: boolean }[] = [
   { to: '/contacts', label: 'Контакты' },
 ];
 
-const tel = (p: string) => `tel:${p.replace(/[^\d+]/g, '')}`;
-
 /** Шапка как на сайте компании: логотип, меню, телефон, «Получить КП», бургер на мобильных */
 export function Header() {
   const { favorites, request } = useStore();
@@ -71,15 +69,14 @@ export function Header() {
             <li className="nav-mobile-only"><NavLink to="/favorites">Избранное{favorites.length > 0 && ` (${favorites.length})`}</NavLink></li>
             <li className="nav-mobile-only"><NavLink to="/request">Заявка{request.length > 0 && ` (${request.length})`}</NavLink></li>
           </ul>
-          {(site.contacts.phone || site.contacts.email) && (
+          {site.contacts.email && (
             <div className="nav-contacts">
-              {site.contacts.phone && <a href={tel(site.contacts.phone)}>{site.contacts.phone}</a>}
-              {site.contacts.email && <a href={`mailto:${site.contacts.email}`}>{site.contacts.email}</a>}
+              <a href={`mailto:${site.contacts.email}`}>{site.contacts.email}</a>
+              <small>Заявки на пряжу — на почту</small>
             </div>
           )}
         </nav>
 
-        {site.contacts.phone && <a className="header-phone" href={tel(site.contacts.phone)}>{site.contacts.phone}</a>}
         <Link to="/catalog" className="icon-btn header-search-btn" aria-label="Поиск по каталогу"><Search aria-hidden="true" /></Link>
         <Link to="/favorites" className="icon-btn header-fav" aria-label={`Избранное: ${favorites.length}`}>
           <Heart aria-hidden="true" />{favorites.length > 0 && <span className="count-badge" aria-hidden="true">{favorites.length}</span>}
