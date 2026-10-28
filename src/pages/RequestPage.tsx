@@ -86,7 +86,8 @@ export function RequestPage() {
           <aside className="request-form card">
             <h2 className="h-small">Контакты</h2>
             <ContactForm subject={`Заявка на пряжу: ${items.length} поз.`} body={body} precheck={() => (items.length ? '' : 'Добавьте хотя бы одну позицию в заявку.')}
-              fields={() => ({ 'Позиций': String(items.length) })} />
+              fields={() => ({ 'Позиций': String(items.length), ...Object.fromEntries(items.map((i, n) => [`Позиция ${n + 1}`, requestLine(i, n + 1).replace(/^\d+\.\s*/, '')])) })}
+              onSent={clearRequest} />
           </aside>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import { useState, type FormEvent, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { channels, formReady, formatPhone, sendRequest, validate } from '../lib/submit';
+import { SubmitError, channels, formReady, formatPhone, sendRequest, validate } from '../lib/submit';
 
 type Props = {
   subject: string;
@@ -51,7 +51,7 @@ export function ContactForm({ subject, body, fields, precheck, submitLabel = 'О
       setResult({ kind: 'sent', text, email: v.email.trim() });
       onSent?.();
     } catch (x) {
-      setFailed(x instanceof Error && x.name === 'AbortError' ? 'сервис не ответил вовремя' : navigator.onLine === false ? 'нет подключения к интернету' : 'сервис отправки вернул ошибку');
+      setFailed(x instanceof Error && x.name === 'AbortError' ? 'сервис не ответил вовремя' : navigator.onLine === false ? 'нет подключения к интернету' : x instanceof SubmitError ? `сервис отправки ответил: «${x.message}»` : 'сервис отправки недоступен');
     } finally { setBusy(false); }
   };
 
