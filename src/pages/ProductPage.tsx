@@ -6,7 +6,7 @@ import { ColorChip, ColorMark } from '../components/ColorSwatch';
 import { Configurator } from '../components/Configurator';
 import { ProductCard, tint } from '../components/ProductCard';
 import { site } from '../config/site';
-import { CATALOG, capName, catalogById, colorConfigs, formatDate, formatKg, hueOf, labels, legacyToColor, META } from '../data/catalog';
+import { CATALOG, capName, catalogById, colorConfigs, hueOf, labels, legacyToColor } from '../data/catalog';
 import { COMPOSITION_OPTIONS, TWISTS } from '../data/variants';
 import { useStore, useToast } from '../state/store';
 import { NotFoundPage } from './NotFoundPage';
@@ -53,7 +53,7 @@ export function ProductPage() {
                 <span>«{c.name}»{c.code && <>, артикул {c.code}</>}</span>
                 {c.tones.length > 1 && <span className="tone-list">{c.tones.map((t, i) => <span key={i}><ColorChip hex={t} size="dot" />{c.toneNames[i]}</span>)}</span>}
                 {c.tones.length === 1 && <span className="muted">{c.hex} — приблизительно, по фото карты</span>}
-                {c.statusNote && <span className="muted">{c.statusNote}</span>}
+                {c.statusNote && c.status !== 'card-abbr' && <span className="muted">{c.statusNote}</span>}
                 {c.status === 'unverified' && <span className="muted">Цвет уточните у менеджера или запросите образец.</span>}
               </figcaption>
             </figure>
@@ -62,7 +62,7 @@ export function ProductPage() {
           <div className="product-info">
             <p className="pc-kind">Бобинная пряжа · {site.name}</p>
             <h1>{name}</h1>
-            <p className="product-sub">{c.code ? `Артикул ${c.code}` : 'Цвет из таблицы остатков'}{c.groups.length > 0 && ` · ${c.groups.map((g) => labels.group(g)).join(', ')}`}</p>
+            <p className="product-sub">{c.code ? `Артикул ${c.code}` : 'Артикул уточняется'}{c.groups.length > 0 && ` · ${c.groups.map((g) => labels.group(g)).join(', ')}`}</p>
             <div className="card cfg-card">
               <Configurator key={c.id} color={c} />
             </div>
@@ -88,7 +88,7 @@ export function ProductPage() {
                 </tbody>
               </table>
             </div>
-            <p className="hint">Цена и наличие каждой комбинации подтверждаются менеджером по заявке.</p>
+            <p className="hint">Актуальное наличие и возможность поставки выбранной пряжи уточняйте по электронной почте.</p>
 
             <h2 className="h-small">Характеристики</h2>
             <dl className="spec-table">
@@ -100,24 +100,12 @@ export function ProductPage() {
               <dt>Масса бобины</dt><dd><span className="muted">уточняется</span></dd>
             </dl>
 
-            {site.stock.show && c.stock.length > 0 && (
-              <>
-                <h2 className="h-small">Таблица остатков (справочно)</h2>
-                <ul className="stock-list">
-                  {c.stock.map((s, i) => (
-                    <li key={i}>{s.composition ?? 'Состав не указан'}{s.tex ? `, ${s.tex} текс` : ''} — {formatKg(s.kg)} <span className="muted">{s.date ? `на ${formatDate(s.date)}` : `таблица на ${formatDate(META.stockDate)}`}</span></li>
-                  ))}
-                </ul>
-                <p className="hint">Это строки старой таблицы склада: общая масса цвета, а не вес бобины, и не подтверждение наличия выбранной скрутки и состава.</p>
-              </>
-            )}
             {c.assorti && (
               <div className="assorti">
                 <h2 className="h-small">Из каких цветов состоит «Ассорти»</h2>
                 <ul className="tag-list">{c.assorti.map((n) => <li key={n}>{n}</li>)}</ul>
               </div>
             )}
-            {c.notes.length > 0 && <ul className="notes">{c.notes.map((n) => <li key={n}>{n}</li>)}</ul>}
             <Link className="btn btn-ghost" to={c.source === 'card' ? `/colors?pick=${c.id}` : '/colors'}><Palette aria-hidden="true" />Подобрать сочетания на палитре</Link>
           </div>
         </div>

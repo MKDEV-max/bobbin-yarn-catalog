@@ -3,6 +3,11 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { App } from './App';
 import { StoreProvider, ToastProvider } from './state/store';
+// Шрифты — из пакетов @fontsource (файлы в сборке сайта, без запросов к Google Fonts)
+import '@fontsource/golos-text/400.css';
+import '@fontsource/golos-text/500.css';
+import '@fontsource/golos-text/600.css';
+import '@fontsource/merriweather/700.css';
 import './styles/colors.css';
 import './styles/global.css';
 import './styles/components.css';

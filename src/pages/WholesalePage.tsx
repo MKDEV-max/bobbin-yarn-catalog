@@ -37,7 +37,7 @@ export function WholesalePage() {
         <div className="container">
           <ul className="adv">
             <li><Palette aria-hidden="true" /><b>Широкая палитра</b><span>{CATALOG.length} оттенков с карты расцветок — подбор по образцам.</span></li>
-            <li><Boxes aria-hidden="true" /><b>Остатки по каждому цвету</b><span>Видно, какие цвета есть на складе в большом объёме.</span></li>
+            <li><Boxes aria-hidden="true" /><b>8 вариантов каждого цвета</b><span>Скрутка 16/2 или 32/2 и состав: 30/70, 50/50, 100% ПАН или индивидуальный.</span></li>
             <li><FileSpreadsheet aria-hidden="true" /><b>Прайс по запросу</b><span>Цена зависит от объёма и состава — пришлём расчёт.</span></li>
             <li><Truck aria-hidden="true" /><b>Условия поставки</b><span>Сроки, упаковку и доставку согласуем под заказ.</span></li>
           </ul>
@@ -55,7 +55,7 @@ export function WholesalePage() {
             <p style={{ marginTop: 'var(--space-5)' }}>Уже знаете нужные оттенки? Соберите их на <Link to="/colors">палитре</Link> или в <Link to="/catalog">каталоге</Link> — список добавится к запросу.</p>
           </div>
           <div className="request-form card">
-            <ContactForm subject="Запрос оптового прайса" body={body} submitLabel="Запросить прайс"
+            <ContactForm subject="Запрос оптового прайса" body={body} submitLabel="Запросить прайс" requestTerms
               fields={() => ({ 'Объём': volume || '—', 'Составы': comps.join(', ') || '—' })}>
               <fieldset className="filter-group">
                 <legend>Планируемый объём</legend>

@@ -13,6 +13,7 @@ import { ContactsPage } from './pages/ContactsPage';
 import { FavoritesPage } from './pages/FavoritesPage';
 import { RequestPage } from './pages/RequestPage';
 import { PrivacyPage } from './pages/PrivacyPage';
+import { ConsentPage } from './pages/ConsentPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 /** Прокрутка наверх при смене страницы (фильтры каталога меняют только search — их не трогаем) */
@@ -52,6 +53,7 @@ export function App() {
         <Route path="favorites" element={<FavoritesPage />} />
         <Route path="request" element={<RequestPage />} />
         <Route path="privacy" element={<PrivacyPage />} />
+        <Route path="consent" element={<ConsentPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

@@ -40,14 +40,19 @@ export function Footer() {
             <h2>Документы</h2>
             <ul className="footer-list">
               <li><Link to="/privacy">Политика обработки персональных данных</Link></li>
-              {l.name && <li>{l.name}</li>}
-              {l.inn && <li>ИНН&nbsp;{l.inn}</li>}
-              {l.ogrn && <li>{l.ogrnLabel}&nbsp;{l.ogrn}</li>}
+              <li><Link to="/consent">Согласие на обработку персональных данных</Link></li>
+              <li><Link to="/contacts#requisites">Реквизиты</Link></li>
+            </ul>
+            <ul className="footer-list footer-requisites">
+              <li>{l.name}</li>
+              <li>ИНН&nbsp;{l.inn}, КПП&nbsp;{l.kpp}</li>
+              <li>{l.ogrnLabel}&nbsp;{l.ogrn}</li>
+              <li>{l.address}</li>
             </ul>
           </div>
         </div>
         <div className="footer-legal">
-          <span>© {new Date().getFullYear()} «{site.name}»</span>
+          <span>© {new Date().getFullYear()} {l.name}</span>
           <span>Цены — по запросу. Информация на сайте не является публичной офертой. Цвета на экране приблизительные.</span>
         </div>
       </div>

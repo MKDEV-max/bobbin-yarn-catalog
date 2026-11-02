@@ -5,7 +5,7 @@ import { Seo } from '../components/Seo';
 import { PageHead } from './PageHead';
 import { ProductCard } from '../components/ProductCard';
 import { ColorChip, ColorMark } from '../components/ColorSwatch';
-import { CATALOG, META, colorConfigs, colorSearchText, formatDate, hueOf, labels, type CatalogColor } from '../data/catalog';
+import { CATALOG, colorConfigs, colorSearchText, hueOf, labels, type CatalogColor } from '../data/catalog';
 import { COLOR_GROUPS } from '../data/taxonomy';
 import { COMPOSITION_OPTIONS, TWISTS, type CompId, type Twist } from '../data/variants';
 
@@ -20,7 +20,6 @@ const typeOf = (c: CatalogColor) => c.type ?? UNKNOWN;
 const GROUP_OPTS = [...COLOR_GROUPS.map((g) => g.id), UNKNOWN].filter((g) => CATALOG.some((c) => groupsOf(c).includes(g)));
 const TYPE_OPTS = ['solid', 'melange', 'mouline', UNKNOWN].filter((t) => CATALOG.some((c) => typeOf(c) === t));
 const groupHex = (g: string) => CATALOG.find((c) => c.group === g && c.hex)?.hex ?? null;
-const STOCK_OPTS = [{ v: 'yes', l: 'Есть в таблице остатков' }, { v: 'no', l: 'Нет в таблице остатков' }];
 
 /** Компактная выпадающая кнопка фильтра (компьютер) */
 function Popover({ label, count, id, open, setOpen, children, wide }: { label: string; count: number; id: string; open: string; setOpen: (v: string) => void; children: ReactNode; wide?: boolean }) {
@@ -68,7 +67,7 @@ export function CatalogPage() {
   /** Совпадение цвета со всеми фильтрами; skip — какой фильтр не учитывать (для счётчиков вариантов) */
   const matches = useMemo(() => {
     const words = norm(q).split(/\s+/).filter(Boolean);
-    const groups = get('group'), shades = get('color'), types = get('type'), stock = get('stock');
+    const groups = get('group'), shades = get('color'), types = get('type');
     return (c: CatalogColor, skip = '') => {
       if (words.length) { const t = colorSearchText(c); if (!words.every((w) => t.includes(w))) return false; }
       // Цвет: выбранные группы и отдельные оттенки складываются («или»)
@@ -80,7 +79,6 @@ export function CatalogPage() {
         if (!colorConfigs(c).some((k) => (!twists.length || twists.includes(k.twist)) && (!comps.length || comps.includes(k.comp)))) return false;
       }
       if (skip !== 'type' && types.length && !types.includes(typeOf(c))) return false;
-      if (skip !== 'stock' && stock.length && !stock.includes(c.stock.length ? 'yes' : 'no')) return false;
       return true;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -105,7 +103,6 @@ export function CatalogPage() {
     ...twists.map((v) => ({ k: 'twist', v, l: `Скрутка ${v}`, hex: undefined })),
     ...comps.map((v) => ({ k: 'comp', v, l: COMPOSITION_OPTIONS.find((o) => o.id === v)!.label, hex: undefined })),
     ...get('type').map((v) => ({ k: 'type', v, l: TYPE_LABEL[v] ?? v, hex: undefined })),
-    ...get('stock').map((v) => ({ k: 'stock', v, l: STOCK_OPTS.find((o) => o.v === v)?.l ?? v, hex: undefined })),
     ...(q ? [{ k: 'q', v: '', l: `«${q}»`, hex: undefined }] : []),
   ];
   const reset = () => { setSp(new URLSearchParams(sort !== 'color' ? { sort } : {}), { replace: true }); setLimit(PAGE); };
@@ -176,24 +173,12 @@ export function CatalogPage() {
       ))}
     </div>
   );
-  const stockFilter = (
-    <div className="opt-list">
-      <p className="fhint">Справочно: таблица склада на {formatDate(META.stockDate)}. Не подтверждает наличие конкретной скрутки и состава.</p>
-      {STOCK_OPTS.map((o) => (
-        <label className="check check-sm" key={o.v}>
-          <input type="checkbox" checked={get('stock').includes(o.v)} onChange={() => toggle('stock', o.v)} />
-          <span>{o.l} <span className="muted">{countFor('stock', (c) => (c.stock.length ? 'yes' : 'no') === o.v)}</span></span>
-        </label>
-      ))}
-    </div>
-  );
   const moreFilter = (
     <>
       {TYPE_OPTS.length > 1 && <fieldset className="fgroup"><legend>Тип пряжи</legend>{typeFilter}</fieldset>}
-      <fieldset className="fgroup"><legend>Таблица остатков</legend>{stockFilter}</fieldset>
     </>
   );
-  const moreCount = get('type').length + get('stock').length;
+  const moreCount = get('type').length;
 
   return (
     <>

@@ -55,11 +55,11 @@ export const validate = {
   email: (v: string) => (!v.trim() ? 'Укажите email — на него придёт ответ' : /^[^\s@]+@[^\s@]+\.[a-zа-яё]{2,}$/i.test(v.trim()) ? '' : 'Проверьте email: например, zakupki@company.ru'),
   phone: (v: string) => {
     const d = v.replace(/\D/g, '');
-    if (!d) return 'Укажите телефон для связи';
+    if (!v.trim()) return '';   // поле необязательное: для ответа достаточно почты
     if (/[^\d\s()+-]/.test(v)) return 'В телефоне допустимы цифры, пробелы, скобки, «+» и «-»';
     return d.length >= 10 && d.length <= 15 ? '' : 'Проверьте номер: например, +7 900 123-45-67';
   },
-  consent: (v: boolean) => (v ? '' : 'Нужно согласие на обработку данных'),
+  consent: (v: boolean) => (v ? '' : 'Без согласия на обработку персональных данных заявку отправить нельзя. Отметьте согласие, чтобы продолжить.'),
 };
 export function formatPhone(v: string) {
   const d = v.replace(/\D/g, '');

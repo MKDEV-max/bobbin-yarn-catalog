@@ -93,7 +93,6 @@ export function ColorSelectionPage() {
                       <span>Артикул {c.code}</span>
                       <span>{c.groups.map((g) => labels.group(g)).join(', ')}</span>
                       <span className="muted">≈ {c.hex} (приблизительно)</span>
-                      {c.inStockAs.length > 0 ? <span>В остатках: {c.inStockAs.join(', ')}</span> : <span className="muted">Нет в таблице остатков</span>}
                     </figcaption>
                   </figure>
                 ))}

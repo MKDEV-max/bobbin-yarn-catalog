@@ -1,6 +1,7 @@
-import { useState, type FormEvent, type ReactNode } from 'react';
+import { useRef, useState, type FormEvent, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { SubmitError, channels, formReady, formatPhone, sendRequest, validate } from '../lib/submit';
+import { site } from '../config/site';
 
 type Props = {
   subject: string;
@@ -12,12 +13,14 @@ type Props = {
   precheck?: () => string;
   submitLabel?: string;
   onSent?: () => void;
+  /** Показать правила подачи заявки (для заявок на пряжу) */
+  requestTerms?: boolean;
   children?: ReactNode;
 };
 type Errors = Partial<Record<'name' | 'email' | 'phone' | 'consent', string>>;
 type Result = null | { kind: 'sent' | 'manual' | 'error'; text: string; email: string };
 
-export function ContactForm({ subject, body, fields, precheck, submitLabel = 'Отправить заявку', onSent, children }: Props) {
+export function ContactForm({ subject, body, fields, precheck, submitLabel = 'Отправить заявку', onSent, requestTerms, children }: Props) {
   const [v, setV] = useState({ name: '', email: '', phone: '', comment: '', consent: false, website: '' });
   const [err, setErr] = useState<Errors>({});
   const [pre, setPre] = useState('');
@@ -25,17 +28,22 @@ export function ContactForm({ subject, body, fields, precheck, submitLabel = 'О
   const [failed, setFailed] = useState('');
   const [result, setResult] = useState<Result>(null);
   const [copied, setCopied] = useState(false);
+  const inFlight = useRef(false);            // защита от повторной отправки (двойной клик до перерисовки)
+  const consentAt = useRef<Date | null>(null); // когда отмечено согласие
 
   const check = (k: keyof Errors, val = v[k]) => {
     const m = k === 'consent' ? validate.consent(val as boolean) : validate[k](val as string);
     setErr((e) => ({ ...e, [k]: m }));
     return !m;
   };
-  const fullText = () => [body(), '', `Компания / имя: ${v.name.trim()}`, `Email: ${v.email.trim()}`, `Телефон: ${v.phone.trim()}`, v.comment.trim() ? `Комментарий: ${v.comment.trim()}` : null].filter((x) => x !== null).join('\n');
+  /** Отметка о согласии для письма: факт, время (МСК) и редакция текста. Фиксируется в самом письме с заявкой */
+  const consentRecord = () => `дано отметкой в форме сайта ${(consentAt.current ?? new Date()).toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })} (МСК); Согласие на обработку ПДн в редакции от ${site.docs.edition}`;
+  const fullText = () => [body(), '', `Компания / имя: ${v.name.trim()}`, `Email: ${v.email.trim()}`, v.phone.trim() ? `Телефон: ${v.phone.trim()}` : null,
+    v.comment.trim() ? `Комментарий: ${v.comment.trim()}` : null, `Согласие на обработку персональных данных: ${consentRecord()}`].filter((x) => x !== null).join('\n');
 
   const submit = async (e: FormEvent) => {
     e.preventDefault();
-    if (busy || v.website) return;                       // двойная отправка / бот
+    if (busy || inFlight.current || v.website) return;   // двойная отправка / бот
     const p = precheck?.() ?? ''; setPre(p);
     const ok = (['name', 'email', 'phone', 'consent'] as const).map((k) => check(k)).every(Boolean);
     if (p || !ok) {
@@ -45,14 +53,15 @@ export function ContactForm({ subject, body, fields, precheck, submitLabel = 'О
     }
     const text = fullText();
     if (!formReady()) { setResult({ kind: 'manual', text, email: v.email.trim() }); return; }
-    setBusy(true); setFailed('');
+    inFlight.current = true; setBusy(true); setFailed('');
     try {
-      await sendRequest(subject, { 'Заявка': body(), 'Компания / имя': v.name.trim(), Email: v.email.trim(), 'Телефон': v.phone.trim(), 'Комментарий': v.comment.trim() || '—', ...(fields?.() ?? {}) }, v.email.trim());
+      await sendRequest(subject, { 'Заявка': body(), 'Компания / имя': v.name.trim(), Email: v.email.trim(), 'Телефон': v.phone.trim() || 'не указан', 'Комментарий': v.comment.trim() || '—', ...(fields?.() ?? {}),
+        'Согласие на обработку персональных данных': consentRecord() }, v.email.trim());
       setResult({ kind: 'sent', text, email: v.email.trim() });
       onSent?.();
     } catch (x) {
       setFailed(x instanceof Error && x.name === 'AbortError' ? 'сервис не ответил вовремя' : navigator.onLine === false ? 'нет подключения к интернету' : x instanceof SubmitError ? `сервис отправки ответил: «${x.message}»` : 'сервис отправки недоступен');
-    } finally { setBusy(false); }
+    } finally { inFlight.current = false; setBusy(false); }
   };
 
   if (result) {
@@ -104,21 +113,23 @@ export function ContactForm({ subject, body, fields, precheck, submitLabel = 'О
           <span className="error" id="cf-email-e" aria-live="polite">{err.email}</span>
         </div>
         <div className={fieldCls('phone')}>
-          <label htmlFor="cf-phone">Телефон <span className="req">*</span></label>
+          <label htmlFor="cf-phone">Телефон <span className="opt">(необязательно)</span></label>
           <input id="cf-phone" className="input" type="tel" inputMode="tel" autoComplete="tel" placeholder="+7 900 123-45-67" value={v.phone} aria-invalid={!!err.phone} aria-describedby="cf-phone-e"
             onChange={(e) => { setV({ ...v, phone: e.target.value }); if (err.phone) check('phone', e.target.value); }}
-            onBlur={() => { const f = formatPhone(v.phone); setV({ ...v, phone: f }); if (f) check('phone', f); }} />
+            onBlur={() => { const f = formatPhone(v.phone); setV({ ...v, phone: f }); check('phone', f); }} />
           <span className="error" id="cf-phone-e" aria-live="polite">{err.phone}</span>
         </div>
         <div className="field full">
-          <label htmlFor="cf-comment">Комментарий или реквизиты <span className="opt">(необязательно)</span></label>
-          <textarea id="cf-comment" className="textarea" rows={3} placeholder="Город доставки, сроки, оборудование, реквизиты" value={v.comment} onChange={(e) => setV({ ...v, comment: e.target.value })} />
+          <label htmlFor="cf-comment">Комментарий <span className="opt">(необязательно)</span></label>
+          <textarea id="cf-comment" className="textarea" rows={3} placeholder="Город доставки, желаемые сроки, оборудование" value={v.comment} onChange={(e) => setV({ ...v, comment: e.target.value })} />
         </div>
         <div className="sr-only" aria-hidden="true"><label>Не заполняйте<input tabIndex={-1} autoComplete="off" value={v.website} onChange={(e) => setV({ ...v, website: e.target.value })} /></label></div>
         <div className={`${fieldCls('consent')} full`}>
-          <label className="check"><input type="checkbox" checked={v.consent} aria-invalid={!!err.consent} aria-describedby="cf-consent-e" onChange={(e) => { setV({ ...v, consent: e.target.checked }); check('consent', e.target.checked); }} />
-            <span>Согласен на обработку персональных данных по <Link to="/privacy" target="_blank">политике конфиденциальности</Link> <span className="req">*</span></span></label>
+          <label className="check"><input type="checkbox" checked={v.consent} aria-invalid={!!err.consent} aria-describedby="cf-consent-e"
+            onChange={(e) => { consentAt.current = e.target.checked ? new Date() : null; setV({ ...v, consent: e.target.checked }); check('consent', e.target.checked); }} />
+            <span>Даю <Link to="/consent" target="_blank" rel="noopener">согласие на обработку персональных данных</Link> {site.legal.name} <span className="req">*</span></span></label>
           <span className="error" id="cf-consent-e" aria-live="polite">{err.consent}</span>
+          <span className="hint">Порядок обработки — в <Link to="/privacy" target="_blank" rel="noopener">Политике обработки персональных данных</Link>.</span>
         </div>
       </div>
       {failed && (
@@ -128,8 +139,9 @@ export function ContactForm({ subject, body, fields, precheck, submitLabel = 'О
           <button className="btn btn-outline btn-sm" type="button" style={{ justifySelf: 'start' }} onClick={() => setResult({ kind: 'error', text: fullText(), email: v.email.trim() })}>Отправить другим способом</button>
         </div>
       )}
+      {requestTerms && <p className="request-terms">Отправка заявки не является подтверждением наличия товара, окончательной цены или согласования условий поставки. Менеджер уточнит детали заявки и согласует условия с заявителем.</p>}
       <button className="btn btn-primary btn-block form-submit" type="submit" disabled={busy} aria-busy={busy}>{busy ? 'Отправляем…' : submitLabel}</button>
-      <p className="hint">{formReady() ? 'Заявка уйдёт продавцу на почту. ' : ''}Данные нужны только для ответа на заявку — подробнее в <Link to="/privacy">политике</Link>.</p>
+      <p className="hint">{formReady() ? `Заявка уйдёт на почту ${site.contacts.email}. ` : ''}Данные нужны только для ответа на заявку.</p>
     </form>
   );
 }
