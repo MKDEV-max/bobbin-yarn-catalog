@@ -51,7 +51,6 @@ export function WholesalePage() {
               <p>Чем подробнее запрос, тем точнее расчёт. Цены на сайте не публикуются — их называет менеджер.</p></div>
             <figure className="about-photo">
               <img src={IMAGES.wholesale.srcSmall} width={800} height={500} alt={IMAGES.wholesale.alt} loading="lazy" decoding="async" />
-              <figcaption>{IMAGES.wholesale.credit} · иллюстрация</figcaption>
             </figure>
             <p style={{ marginTop: 'var(--space-5)' }}>Уже знаете нужные оттенки? Соберите их на <Link to="/colors">палитре</Link> или в <Link to="/catalog">каталоге</Link> — список добавится к запросу.</p>
           </div>

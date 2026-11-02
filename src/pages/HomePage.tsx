@@ -75,7 +75,6 @@ export function HomePage() {
               <img src={IMAGES.wholesale.srcSmall} width={800} height={500} alt={IMAGES.wholesale.alt} decoding="async" />
               <span>100% ПАН</span>
             </Link>
-            <p className="hero-media-note">Фото — иллюстрации продукции (Unsplash)</p>
           </div>
         </div>
         <Ridge />
